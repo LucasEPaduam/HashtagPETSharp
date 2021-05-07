@@ -1,17 +1,17 @@
 ﻿
 namespace ProjInter
 {
-    partial class TelaAtuPac
+    partial class TelaVisMed
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,15 +21,15 @@ namespace ProjInter
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAtuPac));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaVisMed));
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             this.SuspendLayout();
@@ -44,14 +44,14 @@ namespace ProjInter
             this.pb_Inicio.TabIndex = 24;
             this.pb_Inicio.TabStop = false;
             // 
-            // TelaAtuPac
+            // TelaVisMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 351);
             this.Controls.Add(this.pb_Inicio);
-            this.Name = "TelaAtuPac";
-            this.Text = "Atualizar Pacientes";
+            this.Name = "TelaVisMed";
+            this.Text = "Visualizar Medicamentos";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             this.ResumeLayout(false);
 
@@ -62,4 +62,3 @@ namespace ProjInter
         private System.Windows.Forms.PictureBox pb_Inicio;
     }
 }
-
