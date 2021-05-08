@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAgendamento.Designer.cs">
+      <DependentUpon>TelaAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAtuExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAtuExame.Designer.cs">
+      <DependentUpon>TelaAtuExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAtuMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAtuMed.Designer.cs">
+      <DependentUpon>TelaAtuMed.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaAtuPac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +74,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaCadExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadExame.Designer.cs">
+      <DependentUpon>TelaCadExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadMed.Designer.cs">
+      <DependentUpon>TelaCadMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConsulta.Designer.cs">
+      <DependentUpon>TelaConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaIniciarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaIniciarConsulta.Designer.cs">
+      <DependentUpon>TelaIniciarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVisExame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisExame.Designer.cs">
+      <DependentUpon>TelaVisExame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVisMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisMed.Designer.cs">
+      <DependentUpon>TelaVisMed.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,8 +119,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaAgendamento.resx">
+      <DependentUpon>TelaAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAtuExame.resx">
+      <DependentUpon>TelaAtuExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaAtuMed.resx">
+      <DependentUpon>TelaAtuMed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaAtuPac.resx">
       <DependentUpon>TelaAtuPac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadExame.resx">
+      <DependentUpon>TelaCadExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadMed.resx">
+      <DependentUpon>TelaCadMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaConsulta.resx">
+      <DependentUpon>TelaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaIniciarConsulta.resx">
+      <DependentUpon>TelaIniciarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisExame.resx">
+      <DependentUpon>TelaVisExame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisMed.resx">
+      <DependentUpon>TelaVisMed.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
