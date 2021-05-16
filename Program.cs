@@ -16,7 +16,7 @@ namespace ProjInter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaAtuPac());
+            Application.Run(new TelaLogin());
         }
     }
 }

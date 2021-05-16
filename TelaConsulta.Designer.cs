@@ -32,93 +32,132 @@ namespace ProjInter
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsulta));
             this.lbl_Mensagem_Consulta = new System.Windows.Forms.Label();
             this.lbl_Cod_PET = new System.Windows.Forms.Label();
-            this.txb_Cod_PET = new System.Windows.Forms.TextBox();
+            this.tb_Cod_PET = new System.Windows.Forms.TextBox();
             this.btn_OK = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Iniciar_Consulta = new System.Windows.Forms.Button();
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
+            this.dgv_Histórico = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_IniciarConsulta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Histórico)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Mensagem_Consulta
             // 
             this.lbl_Mensagem_Consulta.AutoSize = true;
-            this.lbl_Mensagem_Consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mensagem_Consulta.Location = new System.Drawing.Point(15, 35);
+            this.lbl_Mensagem_Consulta.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Mensagem_Consulta.Location = new System.Drawing.Point(19, 61);
             this.lbl_Mensagem_Consulta.Name = "lbl_Mensagem_Consulta";
-            this.lbl_Mensagem_Consulta.Size = new System.Drawing.Size(437, 20);
+            this.lbl_Mensagem_Consulta.Size = new System.Drawing.Size(384, 24);
             this.lbl_Mensagem_Consulta.TabIndex = 0;
-            this.lbl_Mensagem_Consulta.Text = "Para iniciar a consulta, entrar com o código do animal";
+            this.lbl_Mensagem_Consulta.Text = "Para iniciar a consulta digite o código do PET\r\n";
             // 
             // lbl_Cod_PET
             // 
             this.lbl_Cod_PET.AutoSize = true;
-            this.lbl_Cod_PET.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cod_PET.Location = new System.Drawing.Point(16, 61);
+            this.lbl_Cod_PET.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cod_PET.Location = new System.Drawing.Point(18, 89);
             this.lbl_Cod_PET.Name = "lbl_Cod_PET";
-            this.lbl_Cod_PET.Size = new System.Drawing.Size(62, 18);
+            this.lbl_Cod_PET.Size = new System.Drawing.Size(56, 22);
             this.lbl_Cod_PET.TabIndex = 1;
             this.lbl_Cod_PET.Text = "Código";
             // 
-            // txb_Cod_PET
+            // tb_Cod_PET
             // 
-            this.txb_Cod_PET.Location = new System.Drawing.Point(84, 59);
-            this.txb_Cod_PET.Name = "txb_Cod_PET";
-            this.txb_Cod_PET.Size = new System.Drawing.Size(142, 20);
-            this.txb_Cod_PET.TabIndex = 2;
+            this.tb_Cod_PET.Location = new System.Drawing.Point(73, 92);
+            this.tb_Cod_PET.Name = "tb_Cod_PET";
+            this.tb_Cod_PET.Size = new System.Drawing.Size(151, 20);
+            this.tb_Cod_PET.TabIndex = 2;
             // 
             // btn_OK
             // 
-            this.btn_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OK.Location = new System.Drawing.Point(280, 58);
+            this.btn_OK.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_OK.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OK.Location = new System.Drawing.Point(230, 90);
             this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(142, 21);
+            this.btn_OK.Size = new System.Drawing.Size(44, 25);
             this.btn_OK.TabIndex = 3;
             this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(16, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(496, 196);
-            this.panel1.TabIndex = 4;
+            this.btn_OK.UseVisualStyleBackColor = false;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // btn_Iniciar_Consulta
             // 
-            this.btn_Iniciar_Consulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Iniciar_Consulta.Location = new System.Drawing.Point(342, 304);
+            this.btn_Iniciar_Consulta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Iniciar_Consulta.Enabled = false;
+            this.btn_Iniciar_Consulta.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Iniciar_Consulta.Location = new System.Drawing.Point(442, 364);
             this.btn_Iniciar_Consulta.Name = "btn_Iniciar_Consulta";
-            this.btn_Iniciar_Consulta.Size = new System.Drawing.Size(170, 35);
+            this.btn_Iniciar_Consulta.Size = new System.Drawing.Size(130, 35);
             this.btn_Iniciar_Consulta.TabIndex = 5;
             this.btn_Iniciar_Consulta.Text = "Iniciar consulta";
-            this.btn_Iniciar_Consulta.UseVisualStyleBackColor = true;
+            this.btn_Iniciar_Consulta.UseVisualStyleBackColor = false;
+            this.btn_Iniciar_Consulta.Click += new System.EventHandler(this.btn_Iniciar_Consulta_Click);
             // 
             // pb_Inicio
             // 
             this.pb_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("pb_Inicio.Image")));
-            this.pb_Inicio.Location = new System.Drawing.Point(0, 0);
+            this.pb_Inicio.Location = new System.Drawing.Point(3, 12);
             this.pb_Inicio.Name = "pb_Inicio";
-            this.pb_Inicio.Size = new System.Drawing.Size(41, 31);
+            this.pb_Inicio.Size = new System.Drawing.Size(30, 30);
             this.pb_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Inicio.TabIndex = 23;
             this.pb_Inicio.TabStop = false;
+            this.pb_Inicio.Click += new System.EventHandler(this.pb_Inicio_Click);
+            // 
+            // dgv_Histórico
+            // 
+            this.dgv_Histórico.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Histórico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Histórico.Location = new System.Drawing.Point(20, 121);
+            this.dgv_Histórico.Name = "dgv_Histórico";
+            this.dgv_Histórico.Size = new System.Drawing.Size(552, 238);
+            this.dgv_Histórico.TabIndex = 24;
+            this.dgv_Histórico.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbl_IniciarConsulta);
+            this.panel1.Location = new System.Drawing.Point(-4, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(591, 32);
+            this.panel1.TabIndex = 25;
+            // 
+            // lbl_IniciarConsulta
+            // 
+            this.lbl_IniciarConsulta.AutoSize = true;
+            this.lbl_IniciarConsulta.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IniciarConsulta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_IniciarConsulta.Location = new System.Drawing.Point(211, 2);
+            this.lbl_IniciarConsulta.Name = "lbl_IniciarConsulta";
+            this.lbl_IniciarConsulta.Size = new System.Drawing.Size(173, 29);
+            this.lbl_IniciarConsulta.TabIndex = 0;
+            this.lbl_IniciarConsulta.Text = "Iniciar Consulta";
             // 
             // TelaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 351);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.pb_Inicio);
-            this.Controls.Add(this.btn_Iniciar_Consulta);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgv_Histórico);
+            this.Controls.Add(this.btn_Iniciar_Consulta);
             this.Controls.Add(this.btn_OK);
-            this.Controls.Add(this.txb_Cod_PET);
+            this.Controls.Add(this.tb_Cod_PET);
             this.Controls.Add(this.lbl_Cod_PET);
             this.Controls.Add(this.lbl_Mensagem_Consulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaConsulta";
-            this.Text = "Consulta";
+            this.Text = "Iniciar Consulta";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Histórico)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,10 +167,12 @@ namespace ProjInter
 
         private System.Windows.Forms.Label lbl_Mensagem_Consulta;
         private System.Windows.Forms.Label lbl_Cod_PET;
-        private System.Windows.Forms.TextBox txb_Cod_PET;
+        private System.Windows.Forms.TextBox tb_Cod_PET;
         private System.Windows.Forms.Button btn_OK;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Iniciar_Consulta;
         private System.Windows.Forms.PictureBox pb_Inicio;
+        private System.Windows.Forms.DataGridView dgv_Histórico;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_IniciarConsulta;
     }
 }

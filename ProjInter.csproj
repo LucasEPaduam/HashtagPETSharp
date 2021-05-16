@@ -54,24 +54,6 @@
     <Compile Include="TelaAgendamento.Designer.cs">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaAtuExame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaAtuExame.Designer.cs">
-      <DependentUpon>TelaAtuExame.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelaAtuMed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaAtuMed.Designer.cs">
-      <DependentUpon>TelaAtuMed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelaAtuPac.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaAtuPac.Designer.cs">
-      <DependentUpon>TelaAtuPac.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaCadExame.cs">
@@ -86,17 +68,53 @@
     <Compile Include="TelaCadMed.Designer.cs">
       <DependentUpon>TelaCadMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaCadNewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadNewLogin.Designer.cs">
+      <DependentUpon>TelaCadNewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadPac.Designer.cs">
+      <DependentUpon>TelaCadPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadUsu.Designer.cs">
+      <DependentUpon>TelaCadUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaConsulta.Designer.cs">
       <DependentUpon>TelaConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaIniciarConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaIniciarConsulta.Designer.cs">
       <DependentUpon>TelaIniciarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVisAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisAgendamento.Designer.cs">
+      <DependentUpon>TelaVisAgendamento.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaVisExame.cs">
       <SubType>Form</SubType>
@@ -110,6 +128,18 @@
     <Compile Include="TelaVisMed.Designer.cs">
       <DependentUpon>TelaVisMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaVisPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisPac.Designer.cs">
+      <DependentUpon>TelaVisPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVisUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisUsu.Designer.cs">
+      <DependentUpon>TelaVisUsu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,32 +152,47 @@
     <EmbeddedResource Include="TelaAgendamento.resx">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaAtuExame.resx">
-      <DependentUpon>TelaAtuExame.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAtuMed.resx">
-      <DependentUpon>TelaAtuMed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaAtuPac.resx">
-      <DependentUpon>TelaAtuPac.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TelaCadExame.resx">
       <DependentUpon>TelaCadExame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadMed.resx">
       <DependentUpon>TelaCadMed.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadNewLogin.resx">
+      <DependentUpon>TelaCadNewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadPac.resx">
+      <DependentUpon>TelaCadPac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadUsu.resx">
+      <DependentUpon>TelaCadUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaConsulta.resx">
       <DependentUpon>TelaConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaIniciarConsulta.resx">
       <DependentUpon>TelaIniciarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisAgendamento.resx">
+      <DependentUpon>TelaVisAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaVisExame.resx">
       <DependentUpon>TelaVisExame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaVisMed.resx">
       <DependentUpon>TelaVisMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisPac.resx">
+      <DependentUpon>TelaVisPac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisUsu.resx">
+      <DependentUpon>TelaVisUsu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

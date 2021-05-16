@@ -30,193 +30,247 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadMed));
-            this.lbl_Rem = new System.Windows.Forms.Label();
+            this.lbl_Med = new System.Windows.Forms.Label();
             this.lbl_Cod_Rem = new System.Windows.Forms.Label();
-            this.txb_Cod_Rem = new System.Windows.Forms.TextBox();
-            this.txb_Nome_Med = new System.Windows.Forms.TextBox();
+            this.tb_Cod_Med = new System.Windows.Forms.TextBox();
+            this.tb_Nome_Med = new System.Windows.Forms.TextBox();
             this.lbl_Nome_Med = new System.Windows.Forms.Label();
-            this.txb_Preco_Rem = new System.Windows.Forms.TextBox();
+            this.tb_Preco_Med = new System.Windows.Forms.TextBox();
             this.lbl_Preco_Rem = new System.Windows.Forms.Label();
-            this.lbl_Vac = new System.Windows.Forms.Label();
-            this.txb_Preco_Vac = new System.Windows.Forms.TextBox();
-            this.lbl_Preco_Vac = new System.Windows.Forms.Label();
-            this.txb_Nome_Vac = new System.Windows.Forms.TextBox();
-            this.lbl_Nome_Vac = new System.Windows.Forms.Label();
-            this.txb_Cod_Vac = new System.Windows.Forms.TextBox();
-            this.lbl_Cod_Vac = new System.Windows.Forms.Label();
-            this.btn_Fin_Cad_Med = new System.Windows.Forms.Button();
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.tb_Pesquisar = new System.Windows.Forms.TextBox();
+            this.pb_Pesquisar = new System.Windows.Forms.PictureBox();
+            this.btn_Limpar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gb_EscolhaTipoMed = new System.Windows.Forms.GroupBox();
+            this.ckb_opcao_Vacina = new System.Windows.Forms.CheckBox();
+            this.ckb_opcao_Remedio = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.gb_EscolhaTipoMed.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_Rem
+            // lbl_Med
             // 
-            this.lbl_Rem.AutoSize = true;
-            this.lbl_Rem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Rem.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Rem.Location = new System.Drawing.Point(101, 32);
-            this.lbl_Rem.Name = "lbl_Rem";
-            this.lbl_Rem.Size = new System.Drawing.Size(80, 20);
-            this.lbl_Rem.TabIndex = 0;
-            this.lbl_Rem.Text = "Remédio";
+            this.lbl_Med.AutoSize = true;
+            this.lbl_Med.BackColor = System.Drawing.Color.White;
+            this.lbl_Med.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Med.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_Med.Location = new System.Drawing.Point(223, 4);
+            this.lbl_Med.Name = "lbl_Med";
+            this.lbl_Med.Size = new System.Drawing.Size(155, 29);
+            this.lbl_Med.TabIndex = 0;
+            this.lbl_Med.Text = "Medicamentos";
             // 
             // lbl_Cod_Rem
             // 
             this.lbl_Cod_Rem.AutoSize = true;
-            this.lbl_Cod_Rem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cod_Rem.Location = new System.Drawing.Point(39, 83);
+            this.lbl_Cod_Rem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cod_Rem.Location = new System.Drawing.Point(171, 144);
             this.lbl_Cod_Rem.Name = "lbl_Cod_Rem";
-            this.lbl_Cod_Rem.Size = new System.Drawing.Size(62, 18);
+            this.lbl_Cod_Rem.Size = new System.Drawing.Size(58, 23);
             this.lbl_Cod_Rem.TabIndex = 1;
             this.lbl_Cod_Rem.Text = "Código";
             // 
-            // txb_Cod_Rem
+            // tb_Cod_Med
             // 
-            this.txb_Cod_Rem.Location = new System.Drawing.Point(105, 83);
-            this.txb_Cod_Rem.Name = "txb_Cod_Rem";
-            this.txb_Cod_Rem.Size = new System.Drawing.Size(115, 20);
-            this.txb_Cod_Rem.TabIndex = 2;
+            this.tb_Cod_Med.Location = new System.Drawing.Point(233, 146);
+            this.tb_Cod_Med.Name = "tb_Cod_Med";
+            this.tb_Cod_Med.Size = new System.Drawing.Size(180, 20);
+            this.tb_Cod_Med.TabIndex = 2;
             // 
-            // txb_Nome_Med
+            // tb_Nome_Med
             // 
-            this.txb_Nome_Med.Location = new System.Drawing.Point(105, 119);
-            this.txb_Nome_Med.Name = "txb_Nome_Med";
-            this.txb_Nome_Med.Size = new System.Drawing.Size(115, 20);
-            this.txb_Nome_Med.TabIndex = 4;
+            this.tb_Nome_Med.Location = new System.Drawing.Point(233, 182);
+            this.tb_Nome_Med.Name = "tb_Nome_Med";
+            this.tb_Nome_Med.Size = new System.Drawing.Size(180, 20);
+            this.tb_Nome_Med.TabIndex = 4;
             // 
             // lbl_Nome_Med
             // 
             this.lbl_Nome_Med.AutoSize = true;
-            this.lbl_Nome_Med.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nome_Med.Location = new System.Drawing.Point(48, 119);
+            this.lbl_Nome_Med.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nome_Med.Location = new System.Drawing.Point(177, 179);
             this.lbl_Nome_Med.Name = "lbl_Nome_Med";
-            this.lbl_Nome_Med.Size = new System.Drawing.Size(53, 18);
+            this.lbl_Nome_Med.Size = new System.Drawing.Size(52, 23);
             this.lbl_Nome_Med.TabIndex = 3;
             this.lbl_Nome_Med.Text = "Nome";
             // 
-            // txb_Preco_Rem
+            // tb_Preco_Med
             // 
-            this.txb_Preco_Rem.Location = new System.Drawing.Point(105, 158);
-            this.txb_Preco_Rem.Name = "txb_Preco_Rem";
-            this.txb_Preco_Rem.Size = new System.Drawing.Size(115, 20);
-            this.txb_Preco_Rem.TabIndex = 6;
+            this.tb_Preco_Med.Location = new System.Drawing.Point(233, 221);
+            this.tb_Preco_Med.Name = "tb_Preco_Med";
+            this.tb_Preco_Med.Size = new System.Drawing.Size(180, 20);
+            this.tb_Preco_Med.TabIndex = 6;
             // 
             // lbl_Preco_Rem
             // 
             this.lbl_Preco_Rem.AutoSize = true;
-            this.lbl_Preco_Rem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Preco_Rem.Location = new System.Drawing.Point(47, 158);
+            this.lbl_Preco_Rem.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Preco_Rem.Location = new System.Drawing.Point(177, 218);
             this.lbl_Preco_Rem.Name = "lbl_Preco_Rem";
-            this.lbl_Preco_Rem.Size = new System.Drawing.Size(53, 18);
+            this.lbl_Preco_Rem.Size = new System.Drawing.Size(52, 23);
             this.lbl_Preco_Rem.TabIndex = 5;
             this.lbl_Preco_Rem.Text = "Preço";
             // 
-            // lbl_Vac
-            // 
-            this.lbl_Vac.AutoSize = true;
-            this.lbl_Vac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Vac.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_Vac.Location = new System.Drawing.Point(355, 32);
-            this.lbl_Vac.Name = "lbl_Vac";
-            this.lbl_Vac.Size = new System.Drawing.Size(64, 20);
-            this.lbl_Vac.TabIndex = 7;
-            this.lbl_Vac.Text = "Vacina";
-            // 
-            // txb_Preco_Vac
-            // 
-            this.txb_Preco_Vac.Location = new System.Drawing.Point(359, 156);
-            this.txb_Preco_Vac.Name = "txb_Preco_Vac";
-            this.txb_Preco_Vac.Size = new System.Drawing.Size(115, 20);
-            this.txb_Preco_Vac.TabIndex = 13;
-            // 
-            // lbl_Preco_Vac
-            // 
-            this.lbl_Preco_Vac.AutoSize = true;
-            this.lbl_Preco_Vac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Preco_Vac.Location = new System.Drawing.Point(301, 156);
-            this.lbl_Preco_Vac.Name = "lbl_Preco_Vac";
-            this.lbl_Preco_Vac.Size = new System.Drawing.Size(53, 18);
-            this.lbl_Preco_Vac.TabIndex = 12;
-            this.lbl_Preco_Vac.Text = "Preço";
-            // 
-            // txb_Nome_Vac
-            // 
-            this.txb_Nome_Vac.Location = new System.Drawing.Point(359, 117);
-            this.txb_Nome_Vac.Name = "txb_Nome_Vac";
-            this.txb_Nome_Vac.Size = new System.Drawing.Size(115, 20);
-            this.txb_Nome_Vac.TabIndex = 11;
-            // 
-            // lbl_Nome_Vac
-            // 
-            this.lbl_Nome_Vac.AutoSize = true;
-            this.lbl_Nome_Vac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nome_Vac.Location = new System.Drawing.Point(302, 117);
-            this.lbl_Nome_Vac.Name = "lbl_Nome_Vac";
-            this.lbl_Nome_Vac.Size = new System.Drawing.Size(53, 18);
-            this.lbl_Nome_Vac.TabIndex = 10;
-            this.lbl_Nome_Vac.Text = "Nome";
-            // 
-            // txb_Cod_Vac
-            // 
-            this.txb_Cod_Vac.Location = new System.Drawing.Point(359, 81);
-            this.txb_Cod_Vac.Name = "txb_Cod_Vac";
-            this.txb_Cod_Vac.Size = new System.Drawing.Size(115, 20);
-            this.txb_Cod_Vac.TabIndex = 9;
-            // 
-            // lbl_Cod_Vac
-            // 
-            this.lbl_Cod_Vac.AutoSize = true;
-            this.lbl_Cod_Vac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cod_Vac.Location = new System.Drawing.Point(293, 81);
-            this.lbl_Cod_Vac.Name = "lbl_Cod_Vac";
-            this.lbl_Cod_Vac.Size = new System.Drawing.Size(62, 18);
-            this.lbl_Cod_Vac.TabIndex = 8;
-            this.lbl_Cod_Vac.Text = "Código";
-            // 
-            // btn_Fin_Cad_Med
-            // 
-            this.btn_Fin_Cad_Med.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Fin_Cad_Med.Location = new System.Drawing.Point(185, 262);
-            this.btn_Fin_Cad_Med.Name = "btn_Fin_Cad_Med";
-            this.btn_Fin_Cad_Med.Size = new System.Drawing.Size(170, 35);
-            this.btn_Fin_Cad_Med.TabIndex = 14;
-            this.btn_Fin_Cad_Med.Text = "Finalizar cadastro";
-            this.btn_Fin_Cad_Med.UseVisualStyleBackColor = true;
-            // 
             // pb_Inicio
             // 
+            this.pb_Inicio.BackColor = System.Drawing.Color.Transparent;
             this.pb_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("pb_Inicio.Image")));
-            this.pb_Inicio.Location = new System.Drawing.Point(0, 0);
+            this.pb_Inicio.Location = new System.Drawing.Point(2, 14);
             this.pb_Inicio.Name = "pb_Inicio";
-            this.pb_Inicio.Size = new System.Drawing.Size(41, 31);
+            this.pb_Inicio.Size = new System.Drawing.Size(30, 30);
             this.pb_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Inicio.TabIndex = 24;
             this.pb_Inicio.TabStop = false;
+            this.pb_Inicio.Click += new System.EventHandler(this.pb_Inicio_Click);
+            // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Salvar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salvar.Location = new System.Drawing.Point(344, 309);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(69, 29);
+            this.btn_Salvar.TabIndex = 50;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(271, 309);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(68, 29);
+            this.btn_Editar.TabIndex = 49;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = false;
+            // 
+            // tb_Pesquisar
+            // 
+            this.tb_Pesquisar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Pesquisar.ForeColor = System.Drawing.Color.DarkGray;
+            this.tb_Pesquisar.Location = new System.Drawing.Point(178, 283);
+            this.tb_Pesquisar.Name = "tb_Pesquisar";
+            this.tb_Pesquisar.Size = new System.Drawing.Size(249, 23);
+            this.tb_Pesquisar.TabIndex = 54;
+            this.tb_Pesquisar.Text = "Pesquisar Medicamentos";
+            // 
+            // pb_Pesquisar
+            // 
+            this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
+            this.pb_Pesquisar.Location = new System.Drawing.Point(405, 284);
+            this.pb_Pesquisar.Name = "pb_Pesquisar";
+            this.pb_Pesquisar.Size = new System.Drawing.Size(21, 21);
+            this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Pesquisar.TabIndex = 55;
+            this.pb_Pesquisar.TabStop = false;
+            // 
+            // btn_Limpar
+            // 
+            this.btn_Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.Location = new System.Drawing.Point(198, 309);
+            this.btn_Limpar.Name = "btn_Limpar";
+            this.btn_Limpar.Size = new System.Drawing.Size(67, 29);
+            this.btn_Limpar.TabIndex = 56;
+            this.btn_Limpar.Text = "Limpar";
+            this.btn_Limpar.UseVisualStyleBackColor = false;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lbl_Med);
+            this.panel1.Location = new System.Drawing.Point(0, 11);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 37);
+            this.panel1.TabIndex = 60;
+            // 
+            // gb_EscolhaTipoMed
+            // 
+            this.gb_EscolhaTipoMed.Controls.Add(this.ckb_opcao_Vacina);
+            this.gb_EscolhaTipoMed.Controls.Add(this.ckb_opcao_Remedio);
+            this.gb_EscolhaTipoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_EscolhaTipoMed.Location = new System.Drawing.Point(189, 70);
+            this.gb_EscolhaTipoMed.Name = "gb_EscolhaTipoMed";
+            this.gb_EscolhaTipoMed.Size = new System.Drawing.Size(229, 53);
+            this.gb_EscolhaTipoMed.TabIndex = 64;
+            this.gb_EscolhaTipoMed.TabStop = false;
+            this.gb_EscolhaTipoMed.Text = "Qual o tipo de medicamento?";
+            // 
+            // ckb_opcao_Vacina
+            // 
+            this.ckb_opcao_Vacina.AutoSize = true;
+            this.ckb_opcao_Vacina.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_opcao_Vacina.Location = new System.Drawing.Point(124, 20);
+            this.ckb_opcao_Vacina.Name = "ckb_opcao_Vacina";
+            this.ckb_opcao_Vacina.Size = new System.Drawing.Size(68, 23);
+            this.ckb_opcao_Vacina.TabIndex = 1;
+            this.ckb_opcao_Vacina.Text = "Vacina";
+            this.ckb_opcao_Vacina.UseVisualStyleBackColor = true;
+            // 
+            // ckb_opcao_Remedio
+            // 
+            this.ckb_opcao_Remedio.AutoSize = true;
+            this.ckb_opcao_Remedio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_opcao_Remedio.Location = new System.Drawing.Point(39, 20);
+            this.ckb_opcao_Remedio.Name = "ckb_opcao_Remedio";
+            this.ckb_opcao_Remedio.Size = new System.Drawing.Size(79, 23);
+            this.ckb_opcao_Remedio.TabIndex = 0;
+            this.ckb_opcao_Remedio.Text = "Remédio";
+            this.ckb_opcao_Remedio.UseVisualStyleBackColor = true;
             // 
             // TelaCadMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 351);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.gb_EscolhaTipoMed);
             this.Controls.Add(this.pb_Inicio);
-            this.Controls.Add(this.btn_Fin_Cad_Med);
-            this.Controls.Add(this.txb_Preco_Vac);
-            this.Controls.Add(this.lbl_Preco_Vac);
-            this.Controls.Add(this.txb_Nome_Vac);
-            this.Controls.Add(this.lbl_Nome_Vac);
-            this.Controls.Add(this.txb_Cod_Vac);
-            this.Controls.Add(this.lbl_Cod_Vac);
-            this.Controls.Add(this.lbl_Vac);
-            this.Controls.Add(this.txb_Preco_Rem);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_Limpar);
+            this.Controls.Add(this.pb_Pesquisar);
+            this.Controls.Add(this.tb_Pesquisar);
+            this.Controls.Add(this.btn_Salvar);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.tb_Preco_Med);
             this.Controls.Add(this.lbl_Preco_Rem);
-            this.Controls.Add(this.txb_Nome_Med);
+            this.Controls.Add(this.tb_Nome_Med);
             this.Controls.Add(this.lbl_Nome_Med);
-            this.Controls.Add(this.txb_Cod_Rem);
+            this.Controls.Add(this.tb_Cod_Med);
             this.Controls.Add(this.lbl_Cod_Rem);
-            this.Controls.Add(this.lbl_Rem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadMed";
             this.Text = "Cadastro Medicamentos";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.gb_EscolhaTipoMed.ResumeLayout(false);
+            this.gb_EscolhaTipoMed.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,21 +278,22 @@ namespace ProjInter
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_Rem;
+        private System.Windows.Forms.Label lbl_Med;
         private System.Windows.Forms.Label lbl_Cod_Rem;
-        private System.Windows.Forms.TextBox txb_Cod_Rem;
-        private System.Windows.Forms.TextBox txb_Nome_Med;
+        private System.Windows.Forms.TextBox tb_Cod_Med;
+        private System.Windows.Forms.TextBox tb_Nome_Med;
         private System.Windows.Forms.Label lbl_Nome_Med;
-        private System.Windows.Forms.TextBox txb_Preco_Rem;
+        private System.Windows.Forms.TextBox tb_Preco_Med;
         private System.Windows.Forms.Label lbl_Preco_Rem;
-        private System.Windows.Forms.Label lbl_Vac;
-        private System.Windows.Forms.TextBox txb_Preco_Vac;
-        private System.Windows.Forms.Label lbl_Preco_Vac;
-        private System.Windows.Forms.TextBox txb_Nome_Vac;
-        private System.Windows.Forms.Label lbl_Nome_Vac;
-        private System.Windows.Forms.TextBox txb_Cod_Vac;
-        private System.Windows.Forms.Label lbl_Cod_Vac;
-        private System.Windows.Forms.Button btn_Fin_Cad_Med;
         private System.Windows.Forms.PictureBox pb_Inicio;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.TextBox tb_Pesquisar;
+        private System.Windows.Forms.PictureBox pb_Pesquisar;
+        private System.Windows.Forms.Button btn_Limpar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox gb_EscolhaTipoMed;
+        private System.Windows.Forms.CheckBox ckb_opcao_Vacina;
+        private System.Windows.Forms.CheckBox ckb_opcao_Remedio;
     }
 }
