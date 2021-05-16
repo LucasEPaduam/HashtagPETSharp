@@ -110,7 +110,6 @@ namespace ProjInter
         public DateTimePicker GetDateTime()
         {
             return dateTimePicker1;
-            Console.WriteLine("pppp");
         }
 
 
