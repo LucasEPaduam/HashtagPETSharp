@@ -45,6 +45,7 @@ namespace ProjInter
             this.lbl_Preco_Exame = new System.Windows.Forms.Label();
             this.tb_Preco_Exame = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -82,7 +83,7 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(337, 295);
+            this.btn_Salvar.Location = new System.Drawing.Point(374, 295);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(69, 34);
             this.btn_Salvar.TabIndex = 50;
@@ -99,7 +100,7 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(264, 295);
+            this.btn_Editar.Location = new System.Drawing.Point(301, 295);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(68, 34);
             this.btn_Editar.TabIndex = 49;
@@ -136,7 +137,7 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(191, 295);
+            this.btn_Limpar.Location = new System.Drawing.Point(228, 295);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(67, 34);
             this.btn_Limpar.TabIndex = 60;
@@ -217,12 +218,24 @@ namespace ProjInter
             this.panel1.Size = new System.Drawing.Size(271, 136);
             this.panel1.TabIndex = 62;
             // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(155, 295);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(67, 34);
+            this.btn_Excluir.TabIndex = 63;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = false;
+            // 
             // TelaCadExame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pb_Inicio);
             this.Controls.Add(this.panel3);
@@ -261,5 +274,6 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_Preco_Exame;
         private System.Windows.Forms.TextBox tb_Preco_Exame;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_Excluir;
     }
 }

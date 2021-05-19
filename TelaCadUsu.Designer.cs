@@ -81,6 +81,7 @@ namespace ProjInter
             this.gb_EscolhaArea = new System.Windows.Forms.GroupBox();
             this.ckb_Veterinario = new System.Windows.Forms.CheckBox();
             this.ckb_opcao_Administrativo = new System.Windows.Forms.CheckBox();
+            this.btn_Excluir = new System.Windows.Forms.Button();
             this.pn_Veterinario.SuspendLayout();
             this.pn_Adiministrativo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
@@ -98,7 +99,7 @@ namespace ProjInter
             this.btn_Editar_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar_Usu.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar_Usu.Location = new System.Drawing.Point(397, 349);
+            this.btn_Editar_Usu.Location = new System.Drawing.Point(424, 349);
             this.btn_Editar_Usu.Name = "btn_Editar_Usu";
             this.btn_Editar_Usu.Size = new System.Drawing.Size(72, 33);
             this.btn_Editar_Usu.TabIndex = 44;
@@ -273,7 +274,7 @@ namespace ProjInter
             this.btn_Salvar_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar_Usu.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar_Usu.Location = new System.Drawing.Point(470, 349);
+            this.btn_Salvar_Usu.Location = new System.Drawing.Point(497, 349);
             this.btn_Salvar_Usu.Name = "btn_Salvar_Usu";
             this.btn_Salvar_Usu.Size = new System.Drawing.Size(73, 33);
             this.btn_Salvar_Usu.TabIndex = 45;
@@ -561,7 +562,7 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(324, 349);
+            this.btn_Limpar.Location = new System.Drawing.Point(351, 349);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(71, 33);
             this.btn_Limpar.TabIndex = 60;
@@ -625,12 +626,24 @@ namespace ProjInter
             this.ckb_opcao_Administrativo.UseVisualStyleBackColor = true;
             this.ckb_opcao_Administrativo.CheckedChanged += new System.EventHandler(this.ckb_opcao_Administrativo_CheckedChanged);
             // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(282, 349);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(67, 34);
+            this.btn_Excluir.TabIndex = 64;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = false;
+            // 
             // TelaCadUsu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.lbl_Veterinario);
             this.Controls.Add(this.lbl_Administrativo);
             this.Controls.Add(this.gb_EscolhaArea);
@@ -713,5 +726,6 @@ namespace ProjInter
         private System.Windows.Forms.GroupBox gb_EscolhaArea;
         private System.Windows.Forms.CheckBox ckb_Veterinario;
         private System.Windows.Forms.CheckBox ckb_opcao_Administrativo;
+        private System.Windows.Forms.Button btn_Excluir;
     }
 }

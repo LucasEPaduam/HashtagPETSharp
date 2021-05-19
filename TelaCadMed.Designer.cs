@@ -47,6 +47,7 @@ namespace ProjInter
             this.gb_EscolhaTipoMed = new System.Windows.Forms.GroupBox();
             this.ckb_opcao_Vacina = new System.Windows.Forms.CheckBox();
             this.ckb_opcao_Remedio = new System.Windows.Forms.CheckBox();
+            this.btn_Excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -242,12 +243,24 @@ namespace ProjInter
             this.ckb_opcao_Remedio.Text = "Remédio";
             this.ckb_opcao_Remedio.UseVisualStyleBackColor = true;
             // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(125, 309);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(67, 34);
+            this.btn_Excluir.TabIndex = 65;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = false;
+            // 
             // TelaCadMed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.gb_EscolhaTipoMed);
             this.Controls.Add(this.pb_Inicio);
             this.Controls.Add(this.panel1);
@@ -295,5 +308,6 @@ namespace ProjInter
         private System.Windows.Forms.GroupBox gb_EscolhaTipoMed;
         private System.Windows.Forms.CheckBox ckb_opcao_Vacina;
         private System.Windows.Forms.CheckBox ckb_opcao_Remedio;
+        private System.Windows.Forms.Button btn_Excluir;
     }
 }
