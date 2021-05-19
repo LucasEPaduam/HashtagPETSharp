@@ -125,7 +125,7 @@ namespace ProjInter
             // 
             this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
-            this.pb_Pesquisar.Location = new System.Drawing.Point(176, 7);
+            this.pb_Pesquisar.Location = new System.Drawing.Point(175, 7);
             this.pb_Pesquisar.Name = "pb_Pesquisar";
             this.pb_Pesquisar.Size = new System.Drawing.Size(21, 21);
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
