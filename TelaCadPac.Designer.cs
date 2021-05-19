@@ -102,9 +102,9 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(495, 361);
+            this.btn_Salvar.Location = new System.Drawing.Point(494, 361);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(69, 34);
+            this.btn_Salvar.Size = new System.Drawing.Size(71, 34);
             this.btn_Salvar.TabIndex = 47;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
@@ -119,9 +119,9 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(421, 361);
+            this.btn_Editar.Location = new System.Drawing.Point(422, 361);
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(68, 34);
+            this.btn_Editar.Size = new System.Drawing.Size(71, 34);
             this.btn_Editar.TabIndex = 46;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
@@ -135,9 +135,9 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(348, 361);
+            this.btn_Limpar.Location = new System.Drawing.Point(350, 361);
             this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(67, 34);
+            this.btn_Limpar.Size = new System.Drawing.Size(71, 34);
             this.btn_Limpar.TabIndex = 45;
             this.btn_Limpar.Text = "Limpar";
             this.btn_Limpar.UseVisualStyleBackColor = false;
@@ -378,7 +378,7 @@ namespace ProjInter
             this.btn_Histórico.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Histórico.Location = new System.Drawing.Point(39, 336);
             this.btn_Histórico.Name = "btn_Histórico";
-            this.btn_Histórico.Size = new System.Drawing.Size(84, 33);
+            this.btn_Histórico.Size = new System.Drawing.Size(91, 33);
             this.btn_Histórico.TabIndex = 58;
             this.btn_Histórico.Text = "Histórico";
             this.btn_Histórico.UseVisualStyleBackColor = false;
@@ -635,9 +635,9 @@ namespace ProjInter
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(275, 361);
+            this.btn_Excluir.Location = new System.Drawing.Point(278, 361);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(67, 34);
+            this.btn_Excluir.Size = new System.Drawing.Size(71, 34);
             this.btn_Excluir.TabIndex = 61;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;

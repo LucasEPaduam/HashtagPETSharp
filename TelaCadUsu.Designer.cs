@@ -30,7 +30,6 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadUsu));
-            this.btn_Editar_Usu = new System.Windows.Forms.Button();
             this.pn_Veterinario = new System.Windows.Forms.Panel();
             this.tb_UF_Med_Usu = new System.Windows.Forms.TextBox();
             this.lbl_UF_Vet = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@ namespace ProjInter
             this.lbl_Nome_Vet = new System.Windows.Forms.Label();
             this.lbl_CRMV = new System.Windows.Forms.Label();
             this.lbl_Veterinario = new System.Windows.Forms.Label();
-            this.btn_Salvar_Usu = new System.Windows.Forms.Button();
             this.pn_Adiministrativo = new System.Windows.Forms.Panel();
             this.tb_UF_Usu = new System.Windows.Forms.TextBox();
             this.lbl_UF = new System.Windows.Forms.Label();
@@ -75,13 +73,15 @@ namespace ProjInter
             this.lbl_Usuarios = new System.Windows.Forms.Label();
             this.pb_Pesquisar = new System.Windows.Forms.PictureBox();
             this.tb_Pesquisar = new System.Windows.Forms.TextBox();
-            this.btn_Limpar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pb_InicioTCad = new System.Windows.Forms.PictureBox();
             this.gb_EscolhaArea = new System.Windows.Forms.GroupBox();
             this.ckb_Veterinario = new System.Windows.Forms.CheckBox();
             this.ckb_opcao_Administrativo = new System.Windows.Forms.CheckBox();
             this.btn_Excluir = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Limpar = new System.Windows.Forms.Button();
             this.pn_Veterinario.SuspendLayout();
             this.pn_Adiministrativo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
@@ -89,22 +89,6 @@ namespace ProjInter
             ((System.ComponentModel.ISupportInitialize)(this.pb_InicioTCad)).BeginInit();
             this.gb_EscolhaArea.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_Editar_Usu
-            // 
-            this.btn_Editar_Usu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar_Usu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Editar_Usu.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar_Usu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Editar_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Editar_Usu.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar_Usu.Location = new System.Drawing.Point(424, 349);
-            this.btn_Editar_Usu.Name = "btn_Editar_Usu";
-            this.btn_Editar_Usu.Size = new System.Drawing.Size(72, 33);
-            this.btn_Editar_Usu.TabIndex = 44;
-            this.btn_Editar_Usu.Text = "Editar";
-            this.btn_Editar_Usu.UseVisualStyleBackColor = false;
             // 
             // pn_Veterinario
             // 
@@ -264,23 +248,6 @@ namespace ProjInter
             this.lbl_Veterinario.TabIndex = 1;
             this.lbl_Veterinario.Text = "Veterinário";
             this.lbl_Veterinario.Click += new System.EventHandler(this.lbl_Veterinario_Click);
-            // 
-            // btn_Salvar_Usu
-            // 
-            this.btn_Salvar_Usu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar_Usu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Salvar_Usu.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar_Usu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Salvar_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salvar_Usu.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar_Usu.Location = new System.Drawing.Point(497, 349);
-            this.btn_Salvar_Usu.Name = "btn_Salvar_Usu";
-            this.btn_Salvar_Usu.Size = new System.Drawing.Size(73, 33);
-            this.btn_Salvar_Usu.TabIndex = 45;
-            this.btn_Salvar_Usu.Text = "Salvar";
-            this.btn_Salvar_Usu.UseVisualStyleBackColor = false;
-            this.btn_Salvar_Usu.Click += new System.EventHandler(this.btn_Salvar_Usu_Click);
             // 
             // pn_Adiministrativo
             // 
@@ -554,22 +521,6 @@ namespace ProjInter
             this.tb_Pesquisar.TabIndex = 58;
             this.tb_Pesquisar.Text = "Pesquisar usuário";
             // 
-            // btn_Limpar
-            // 
-            this.btn_Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(351, 349);
-            this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(71, 33);
-            this.btn_Limpar.TabIndex = 60;
-            this.btn_Limpar.Text = "Limpar";
-            this.btn_Limpar.UseVisualStyleBackColor = false;
-            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -630,16 +581,65 @@ namespace ProjInter
             // 
             this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Excluir.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(282, 349);
+            this.btn_Excluir.Location = new System.Drawing.Point(289, 349);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(67, 34);
-            this.btn_Excluir.TabIndex = 64;
+            this.btn_Excluir.Size = new System.Drawing.Size(71, 34);
+            this.btn_Excluir.TabIndex = 67;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
+            // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Salvar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salvar.Location = new System.Drawing.Point(505, 349);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(71, 34);
+            this.btn_Salvar.TabIndex = 66;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = false;
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(433, 349);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(71, 34);
+            this.btn_Editar.TabIndex = 65;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = false;
+            // 
+            // btn_Limpar
+            // 
+            this.btn_Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.Location = new System.Drawing.Point(361, 349);
+            this.btn_Limpar.Name = "btn_Limpar";
+            this.btn_Limpar.Size = new System.Drawing.Size(71, 34);
+            this.btn_Limpar.TabIndex = 64;
+            this.btn_Limpar.Text = "Limpar";
+            this.btn_Limpar.UseVisualStyleBackColor = false;
             // 
             // TelaCadUsu
             // 
@@ -648,17 +648,17 @@ namespace ProjInter
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.btn_Excluir);
+            this.Controls.Add(this.btn_Salvar);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.lbl_Veterinario);
             this.Controls.Add(this.lbl_Administrativo);
             this.Controls.Add(this.gb_EscolhaArea);
             this.Controls.Add(this.lbl_Usuarios);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.pb_Pesquisar);
             this.Controls.Add(this.tb_Pesquisar);
-            this.Controls.Add(this.btn_Editar_Usu);
             this.Controls.Add(this.pn_Veterinario);
-            this.Controls.Add(this.btn_Salvar_Usu);
             this.Controls.Add(this.pn_Adiministrativo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadUsu";
@@ -678,8 +678,6 @@ namespace ProjInter
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Editar_Usu;
         private System.Windows.Forms.Panel pn_Veterinario;
         private System.Windows.Forms.TextBox tb_UF_Med_Usu;
         private System.Windows.Forms.Label lbl_UF_Vet;
@@ -696,7 +694,6 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_Nome_Vet;
         private System.Windows.Forms.Label lbl_CRMV;
         private System.Windows.Forms.Label lbl_Veterinario;
-        private System.Windows.Forms.Button btn_Salvar_Usu;
         private System.Windows.Forms.Panel pn_Adiministrativo;
         private System.Windows.Forms.TextBox tb_UF_Usu;
         private System.Windows.Forms.Label lbl_UF;
@@ -724,12 +721,14 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_Usuarios;
         private System.Windows.Forms.PictureBox pb_Pesquisar;
         private System.Windows.Forms.TextBox tb_Pesquisar;
-        private System.Windows.Forms.Button btn_Limpar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pb_InicioTCad;
         private System.Windows.Forms.GroupBox gb_EscolhaArea;
         private System.Windows.Forms.CheckBox ckb_Veterinario;
         private System.Windows.Forms.CheckBox ckb_opcao_Administrativo;
         private System.Windows.Forms.Button btn_Excluir;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Button btn_Limpar;
     }
 }
