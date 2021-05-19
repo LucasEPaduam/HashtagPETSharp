@@ -96,6 +96,11 @@ namespace ProjInter
             // btn_Salvar
             // 
             this.btn_Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Salvar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salvar.Location = new System.Drawing.Point(495, 361);
             this.btn_Salvar.Name = "btn_Salvar";
@@ -108,6 +113,11 @@ namespace ProjInter
             // btn_Editar
             // 
             this.btn_Editar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.Location = new System.Drawing.Point(421, 361);
             this.btn_Editar.Name = "btn_Editar";
@@ -119,6 +129,11 @@ namespace ProjInter
             // btn_Limpar
             // 
             this.btn_Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Limpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.Location = new System.Drawing.Point(348, 361);
             this.btn_Limpar.Name = "btn_Limpar";
@@ -355,6 +370,11 @@ namespace ProjInter
             // btn_Histórico
             // 
             this.btn_Histórico.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Histórico.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Histórico.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Histórico.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Histórico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Histórico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Histórico.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Histórico.Location = new System.Drawing.Point(39, 336);
             this.btn_Histórico.Name = "btn_Histórico";
@@ -609,6 +629,11 @@ namespace ProjInter
             // btn_Excluir
             // 
             this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Excluir.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.Location = new System.Drawing.Point(275, 361);
             this.btn_Excluir.Name = "btn_Excluir";

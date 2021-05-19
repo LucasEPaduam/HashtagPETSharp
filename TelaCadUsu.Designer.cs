@@ -629,6 +629,10 @@ namespace ProjInter
             // btn_Excluir
             // 
             this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.Location = new System.Drawing.Point(282, 349);
             this.btn_Excluir.Name = "btn_Excluir";
