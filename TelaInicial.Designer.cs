@@ -294,6 +294,7 @@ namespace ProjInter
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaInicial";
             this.panel1.ResumeLayout(false);
             this.gb_NovoAtendimento.ResumeLayout(false);

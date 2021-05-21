@@ -662,6 +662,7 @@ namespace ProjInter
             this.Controls.Add(this.pn_Adiministrativo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadUsu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Usuário";
             this.pn_Veterinario.ResumeLayout(false);
             this.pn_Veterinario.PerformLayout();

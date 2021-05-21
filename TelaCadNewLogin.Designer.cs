@@ -614,6 +614,7 @@ namespace ProjInter
             this.Controls.Add(this.btn_Salvar_Usu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadNewLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadNewLogin";
             this.gb_EscolhaArea.ResumeLayout(false);
             this.gb_EscolhaArea.PerformLayout();

@@ -76,6 +76,7 @@ namespace ProjInter
             this.Controls.Add(this.dgv_TelaVisUsu);
             this.Controls.Add(this.pb_Inicio);
             this.Name = "TelaVisUsu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizar Usuários";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TelaVisUsu)).EndInit();

@@ -280,6 +280,7 @@ namespace ProjInter
             this.Controls.Add(this.lbl_Cod_Rem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadMed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Medicamentos";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).EndInit();

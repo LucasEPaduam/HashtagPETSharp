@@ -261,6 +261,7 @@ namespace ProjInter
             this.Controls.Add(this.lbl_Calendario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaAgendamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agendamento";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             this.panel1.ResumeLayout(false);

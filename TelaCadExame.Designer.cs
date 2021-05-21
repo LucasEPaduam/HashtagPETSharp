@@ -249,6 +249,7 @@ namespace ProjInter
             this.Controls.Add(this.tb_Pesquisar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadExame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Exames";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).EndInit();

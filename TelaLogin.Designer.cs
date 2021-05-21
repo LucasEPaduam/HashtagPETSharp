@@ -185,6 +185,7 @@ namespace ProjInter
             this.Controls.Add(this.pnlLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();

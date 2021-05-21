@@ -663,6 +663,7 @@ namespace ProjInter
             this.Controls.Add(this.pnl_Pac);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadPac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Paciente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

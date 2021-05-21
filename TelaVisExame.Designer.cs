@@ -76,6 +76,7 @@ namespace ProjInter
             this.Controls.Add(this.dgv_TelaVisExame);
             this.Controls.Add(this.pb_Inicio);
             this.Name = "TelaVisExame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizar Exames";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TelaVisExame)).EndInit();

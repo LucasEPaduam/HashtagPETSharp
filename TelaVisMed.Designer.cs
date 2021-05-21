@@ -76,6 +76,7 @@ namespace ProjInter
             this.Controls.Add(this.dgv_TelaVisMed);
             this.Controls.Add(this.pb_Inicio);
             this.Name = "TelaVisMed";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizar Medicamentos";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TelaVisMed)).EndInit();

@@ -108,6 +108,7 @@ namespace ProjInter
             this.Controls.Add(this.dgv_TelaVisPac);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaVisPac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Histórico do Paciente";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TelaVisPac)).EndInit();

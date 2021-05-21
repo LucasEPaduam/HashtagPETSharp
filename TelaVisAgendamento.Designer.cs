@@ -140,6 +140,7 @@ namespace ProjInter
             this.Controls.Add(this.lbl_Hor_consulta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaVisAgendamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visualizar Agendamento";
             this.Load += new System.EventHandler(this.TelaVisAgendamento_Load);
             this.panel1.ResumeLayout(false);

@@ -366,6 +366,7 @@ namespace ProjInter
             this.Controls.Add(this.gb_Vac);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaIniciarConsulta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Consulta";
             this.gb_Vac.ResumeLayout(false);
             this.gb_Vac.PerformLayout();
