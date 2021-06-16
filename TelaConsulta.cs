@@ -44,6 +44,7 @@ namespace ProjInter
 
 
             string nomepet = tb_Cod_PET.Text;
+            
 
             if (nomepet == "")
             {

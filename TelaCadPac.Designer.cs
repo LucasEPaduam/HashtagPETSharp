@@ -82,6 +82,8 @@ namespace ProjInter
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Excluir = new System.Windows.Forms.Button();
+            this.tb_UF = new System.Windows.Forms.TextBox();
+            this.UF = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.pnl_Pac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
@@ -547,7 +549,7 @@ namespace ProjInter
             // 
             this.tb_Cidade.Location = new System.Drawing.Point(63, 69);
             this.tb_Cidade.Name = "tb_Cidade";
-            this.tb_Cidade.Size = new System.Drawing.Size(186, 20);
+            this.tb_Cidade.Size = new System.Drawing.Size(118, 20);
             this.tb_Cidade.TabIndex = 24;
             // 
             // lbl_CEP
@@ -570,6 +572,8 @@ namespace ProjInter
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tb_UF);
+            this.panel1.Controls.Add(this.UF);
             this.panel1.Controls.Add(this.tb_CEP);
             this.panel1.Controls.Add(this.lbl_CEP);
             this.panel1.Controls.Add(this.tb_Cidade);
@@ -642,6 +646,23 @@ namespace ProjInter
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
             // 
+            // tb_UF
+            // 
+            this.tb_UF.Location = new System.Drawing.Point(209, 67);
+            this.tb_UF.Name = "tb_UF";
+            this.tb_UF.Size = new System.Drawing.Size(38, 20);
+            this.tb_UF.TabIndex = 28;
+            // 
+            // UF
+            // 
+            this.UF.AutoSize = true;
+            this.UF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UF.Location = new System.Drawing.Point(181, 68);
+            this.UF.Name = "UF";
+            this.UF.Size = new System.Drawing.Size(27, 19);
+            this.UF.TabIndex = 27;
+            this.UF.Text = "UF";
+            // 
             // TelaCadPac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,6 +686,7 @@ namespace ProjInter
             this.Name = "TelaCadPac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Paciente";
+            this.Load += new System.EventHandler(this.TelaCadPac_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnl_Pac.ResumeLayout(false);
@@ -739,5 +761,7 @@ namespace ProjInter
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_Excluir;
+        private System.Windows.Forms.TextBox tb_UF;
+        private System.Windows.Forms.Label UF;
     }
 }

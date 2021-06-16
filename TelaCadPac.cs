@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProjInter
 {
@@ -19,6 +20,7 @@ namespace ProjInter
         }
 
         private TelaInicial tela_inicial;
+        
 
         private void pb_Inicio_Click(object sender, EventArgs e)
         {
@@ -29,9 +31,31 @@ namespace ProjInter
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TelaInicial telainicial = new TelaInicial(this);
-            telainicial.Show();
+
+            Donopet donopet = new Donopet();
+            donopet.cpf = tb_CPF.Text;
+            donopet.nomedono = tb_NomeDono.Text;
+            donopet.rua = tb_Rua.Text;
+            donopet.numero = tb_Nº.Text;
+            donopet.cep = tb_CEP.Text;
+            donopet.cidade = tb_Cidade.Text;
+            donopet.UF = tb_UF.Text;
+
+            BancoDados.insertdono(donopet);
+
+                        
+            Paciente paciente = new Paciente();
+            paciente.codigopet = tb_Codigo_Pac.Text;
+            paciente.nomepet = tb_Nome_Pac.Text;
+            paciente.raca = tb_Raça.Text;
+            paciente.idade = tb_Idade.Text;
+            paciente.peso = tb_Peso.Text;
+            paciente.sexo = tb_Altura.Text;
+
+            BancoDados.insertpaciente(paciente);
+             //this.Hide();
+            //TelaInicial telainicial = new TelaInicial(this);
+            //telainicial.Show();
         }
 
         private void btn_Limpar_Click(object sender, EventArgs e)
@@ -67,6 +91,16 @@ namespace ProjInter
             this.Hide();
             TelaVisPac telavispac = new TelaVisPac(this);
             telavispac.Show();
+        }
+
+        
+
+        private void TelaCadPac_Load(object sender, EventArgs e)
+        {
+
+            
+
+
         }
     }
 }

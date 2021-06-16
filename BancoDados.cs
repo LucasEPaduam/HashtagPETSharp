@@ -107,51 +107,71 @@ namespace ProjInter
         }
 
 
-        public void insert()
+        public static void insertpaciente(Paciente paciente)
         {
+               
+             try
+             {
+                    using (var cmd = conexaoBanco().CreateCommand())
+                    {
+                        cmd.CommandText = "INSERT INTO paciente " +
+                                         "(codigopet, nomepet, raca, idade, peso, sexo) " +
+                                         "VALUES( @codigopet, @nomepet, @raca, @idade, @peso, @sexo)";
+                    cmd.Parameters.AddWithValue("@codigopet", paciente.codigopet);
+                    cmd.Parameters.AddWithValue("@nomepet", paciente.nomepet);
+                    cmd.Parameters.AddWithValue("@raca", paciente.raca);
+                    cmd.Parameters.AddWithValue("@idade", paciente.idade);
+                    cmd.Parameters.AddWithValue("@peso", paciente.peso);
+                    cmd.Parameters.AddWithValue("@sexo", paciente.sexo);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Novo paciente cadastrado com sucesso!");
+
+                    }                     
+                             
+             }
+            catch (Exception ex)
+             {
+               
+                MessageBox.Show("Erro ao cadastrar paciente");
+
+             }
+            
+        }
+
+        public static void insertdono(Donopet donopet)
+        {
+
             try
             {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO dono " +
+                                     "(cpf, nomedono, rua, numero, cep, cidade, UF, email, telefone) " +
+                                     "VALUES( @cpf, @nomedono, @rua, @numero, @cep, @cidade, @UF, @email, @telefone)";
+                    cmd.Parameters.AddWithValue("@cpf", donopet.cpf);
+                    cmd.Parameters.AddWithValue("@nomedono", donopet.nomedono);
+                    cmd.Parameters.AddWithValue("@rua", donopet.rua);
+                    cmd.Parameters.AddWithValue("@numero", donopet.numero);
+                    cmd.Parameters.AddWithValue("@cep", donopet.cep);
+                    cmd.Parameters.AddWithValue("@cidade", donopet.cidade);
+                    cmd.Parameters.AddWithValue("@UF", donopet.UF);
+                    cmd.Parameters.AddWithValue("@email", donopet.email);
+                    cmd.Parameters.AddWithValue("@telefone", donopet.telefone);
+                    cmd.ExecuteNonQuery();
 
-                string connString = @"server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2";
-                MySqlConnection conexao = new MySqlConnection(connString);
-                data_adapter = new MySqlDataAdapter();
-
-
-                string Insert = "INSERT INTO tb_cliente " +
-                                "(nome, cpf, endereco, cep) " +
-                                "VALUES( @nome, @cpf, @endereco, @cep);";
-
-
-                data_adapter.InsertCommand = new MySqlCommand(Insert, conexao);
-                data_adapter.InsertCommand.Parameters.Add("@nome", MySqlDbType.VarChar, 60, "nome");
-                data_adapter.InsertCommand.Parameters.Add("@cpf", MySqlDbType.VarChar, 11, "cpf");
-                data_adapter.InsertCommand.Parameters.Add("@endereco", MySqlDbType.VarChar, 255, "endereco");
-                data_adapter.InsertCommand.Parameters.Add("@cep", MySqlDbType.VarChar, 11, "cep");
-
-                
+                }
 
             }
-            catch (MySqlException erro)
+            catch (Exception ex)
             {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(erro.GetType().ToString());
-                sb.AppendLine(erro.Message);
-                sb.Append(erro.SqlState);
-                sb.AppendLine("\n");
-                sb.AppendLine(erro.StackTrace);
-                MessageBox.Show(sb.ToString());
+
+                MessageBox.Show("Erro ao cadastrar Donopet");
 
             }
-            catch (Exception erro)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(erro.GetType().ToString());
-                sb.AppendLine(erro.Message);
-                sb.AppendLine("\n");
-                sb.AppendLine(erro.StackTrace);
-                MessageBox.Show(sb.ToString());
-            }
+
         }
+
         public void Atualizar()
         {
             try
