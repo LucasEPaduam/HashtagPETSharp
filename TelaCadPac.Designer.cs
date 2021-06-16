@@ -358,6 +358,7 @@ namespace ProjInter
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Pesquisar.TabIndex = 57;
             this.pb_Pesquisar.TabStop = false;
+            this.pb_Pesquisar.Click += new System.EventHandler(this.pb_Pesquisar_Click);
             // 
             // tb_Pesquisar
             // 

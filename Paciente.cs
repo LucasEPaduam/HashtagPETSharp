@@ -9,6 +9,8 @@ namespace ProjInter
     class Paciente
     {
 
+        // VARIÁVEIS PACIENTE
+
         public string codigopet;
         public string nomepet;
         public string raca;
@@ -16,7 +18,7 @@ namespace ProjInter
         public string peso;
         public string sexo;
 
-
+       
 
     }
 }

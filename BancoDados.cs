@@ -147,9 +147,10 @@ namespace ProjInter
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
                     cmd.CommandText = "INSERT INTO dono " +
-                                     "(cpf, nomedono, rua, numero, cep, cidade, UF, email, telefone) " +
-                                     "VALUES( @cpf, @nomedono, @rua, @numero, @cep, @cidade, @UF, @email, @telefone)";
+                                     "(cpf, paciente_codigopet, nomedono, rua, numero, cep, cidade, UF, email, telefone) " +
+                                     "VALUES( @cpf, @paciente_codigopet, @nomedono, @rua, @numero, @cep, @cidade, @UF, @email, @telefone)";
                     cmd.Parameters.AddWithValue("@cpf", donopet.cpf);
+                    cmd.Parameters.AddWithValue("@paciente_codigopet", donopet.paciente_codigopet);
                     cmd.Parameters.AddWithValue("@nomedono", donopet.nomedono);
                     cmd.Parameters.AddWithValue("@rua", donopet.rua);
                     cmd.Parameters.AddWithValue("@numero", donopet.numero);

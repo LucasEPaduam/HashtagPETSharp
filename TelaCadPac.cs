@@ -20,7 +20,9 @@ namespace ProjInter
         }
 
         private TelaInicial tela_inicial;
-        
+        DataTable data_table;
+        private BindingSource bind_source;
+        private MySqlDataAdapter data_adapter;
 
         private void pb_Inicio_Click(object sender, EventArgs e)
         {
@@ -34,12 +36,15 @@ namespace ProjInter
 
             Donopet donopet = new Donopet();
             donopet.cpf = tb_CPF.Text;
+            donopet.paciente_codigopet = tb_Codigo_Pac.Text;
             donopet.nomedono = tb_NomeDono.Text;
             donopet.rua = tb_Rua.Text;
             donopet.numero = tb_Nº.Text;
             donopet.cep = tb_CEP.Text;
             donopet.cidade = tb_Cidade.Text;
             donopet.UF = tb_UF.Text;
+            donopet.email = tb_email.Text;
+            donopet.telefone = tb_Tel.Text;
 
             BancoDados.insertdono(donopet);
 
@@ -53,9 +58,7 @@ namespace ProjInter
             paciente.sexo = tb_Altura.Text;
 
             BancoDados.insertpaciente(paciente);
-             //this.Hide();
-            //TelaInicial telainicial = new TelaInicial(this);
-            //telainicial.Show();
+            
         }
 
         private void btn_Limpar_Click(object sender, EventArgs e)
@@ -77,6 +80,7 @@ namespace ProjInter
             tb_Cidade.Clear();
             tb_email.Clear();
             tb_Tel.Clear();
+            tb_UF.Clear();
         }
 
         public TelaCadPac(TelaVisPac telavispac)
@@ -100,6 +104,25 @@ namespace ProjInter
 
             
 
+
+        }
+
+        private void pb_Pesquisar_Click(object sender, EventArgs e)
+        {
+            string codpet = tb_Pesquisar.Text;
+            string consultaSQL = "SELECT * FROM paciente WHERE codigopet='" + codpet + "'";
+            data_table = BancoDados.Consulta(consultaSQL);
+            data_table = new DataTable();
+            data_adapter.Fill(data_table);
+
+            
+            bind_source = new BindingSource();
+            bind_source.DataSource = data_table;
+
+            //Associa os dados da tabela com a propriedade "Text" dos textbox
+            tb_Codigo_Pac.DataBindings.Add("Text", bind_source, "codigopet");
+            tb_Nome_Pac.DataBindings.Add("Text", bind_source, "nomepet");
+            
 
         }
     }

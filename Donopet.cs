@@ -10,6 +10,7 @@ namespace ProjInter
     {
 
         public string cpf;
+        public string paciente_codigopet;
         public string nomedono;
         public string rua;
         public string numero;
