@@ -33,19 +33,19 @@ namespace ProjInter
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Limpar = new System.Windows.Forms.Button();
-            this.ckb_Gato = new System.Windows.Forms.CheckBox();
-            this.ckb_Passaro = new System.Windows.Forms.CheckBox();
-            this.ckb_Cachorro = new System.Windows.Forms.CheckBox();
-            this.tb_Altura = new System.Windows.Forms.TextBox();
+            this.tb_Sexo = new System.Windows.Forms.TextBox();
             this.tb_Peso = new System.Windows.Forms.TextBox();
             this.tb_Idade = new System.Windows.Forms.TextBox();
             this.tb_Raça = new System.Windows.Forms.TextBox();
             this.tb_Nome_Pac = new System.Windows.Forms.TextBox();
             this.tb_Codigo_Pac = new System.Windows.Forms.TextBox();
-            this.lbl_Altura = new System.Windows.Forms.Label();
-            this.ckb_Outros = new System.Windows.Forms.CheckBox();
+            this.lbl_Sexo = new System.Windows.Forms.Label();
             this.lbl_Cad_Paciente = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb_outros = new System.Windows.Forms.RadioButton();
+            this.rb_passaro = new System.Windows.Forms.RadioButton();
+            this.rb_Gato = new System.Windows.Forms.RadioButton();
+            this.rb_Cachorro = new System.Windows.Forms.RadioButton();
             this.lbl_Peso = new System.Windows.Forms.Label();
             this.lbl_Idade = new System.Windows.Forms.Label();
             this.lbl_Raça = new System.Windows.Forms.Label();
@@ -77,13 +77,14 @@ namespace ProjInter
             this.lbl_CEP = new System.Windows.Forms.Label();
             this.tb_CEP = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_UF = new System.Windows.Forms.TextBox();
+            this.UF = new System.Windows.Forms.Label();
             this.lbl_End = new System.Windows.Forms.Label();
             this.lbl_Pessoal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Excluir = new System.Windows.Forms.Button();
-            this.tb_UF = new System.Windows.Forms.TextBox();
-            this.UF = new System.Windows.Forms.Label();
+            this.bt_NovoPac = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnl_Pac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
@@ -103,11 +104,11 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(494, 361);
+            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salvar.Location = new System.Drawing.Point(512, 361);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Salvar.TabIndex = 47;
+            this.btn_Salvar.Size = new System.Drawing.Size(61, 34);
+            this.btn_Salvar.TabIndex = 20;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
@@ -120,13 +121,14 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(422, 361);
+            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(316, 361);
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Editar.TabIndex = 46;
+            this.btn_Editar.Size = new System.Drawing.Size(66, 34);
+            this.btn_Editar.TabIndex = 19;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Limpar
             // 
@@ -136,110 +138,78 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(350, 361);
+            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.Location = new System.Drawing.Point(383, 361);
             this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Limpar.TabIndex = 45;
+            this.btn_Limpar.Size = new System.Drawing.Size(63, 34);
+            this.btn_Limpar.TabIndex = 18;
             this.btn_Limpar.Text = "Limpar";
             this.btn_Limpar.UseVisualStyleBackColor = false;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // ckb_Gato
+            // tb_Sexo
             // 
-            this.ckb_Gato.AutoSize = true;
-            this.ckb_Gato.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Gato.Location = new System.Drawing.Point(112, 24);
-            this.ckb_Gato.Name = "ckb_Gato";
-            this.ckb_Gato.Size = new System.Drawing.Size(53, 21);
-            this.ckb_Gato.TabIndex = 2;
-            this.ckb_Gato.Text = "Gato";
-            this.ckb_Gato.UseVisualStyleBackColor = true;
-            // 
-            // ckb_Passaro
-            // 
-            this.ckb_Passaro.AutoSize = true;
-            this.ckb_Passaro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Passaro.Location = new System.Drawing.Point(22, 48);
-            this.ckb_Passaro.Name = "ckb_Passaro";
-            this.ckb_Passaro.Size = new System.Drawing.Size(69, 21);
-            this.ckb_Passaro.TabIndex = 1;
-            this.ckb_Passaro.Text = "Passáro";
-            this.ckb_Passaro.UseVisualStyleBackColor = true;
-            // 
-            // ckb_Cachorro
-            // 
-            this.ckb_Cachorro.AutoSize = true;
-            this.ckb_Cachorro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Cachorro.Location = new System.Drawing.Point(22, 24);
-            this.ckb_Cachorro.Name = "ckb_Cachorro";
-            this.ckb_Cachorro.Size = new System.Drawing.Size(77, 21);
-            this.ckb_Cachorro.TabIndex = 0;
-            this.ckb_Cachorro.Text = "Cachorro";
-            this.ckb_Cachorro.UseVisualStyleBackColor = true;
-            // 
-            // tb_Altura
-            // 
-            this.tb_Altura.Location = new System.Drawing.Point(55, 135);
-            this.tb_Altura.Name = "tb_Altura";
-            this.tb_Altura.Size = new System.Drawing.Size(125, 20);
-            this.tb_Altura.TabIndex = 17;
+            this.tb_Sexo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Sexo.Enabled = false;
+            this.tb_Sexo.Location = new System.Drawing.Point(55, 135);
+            this.tb_Sexo.Name = "tb_Sexo";
+            this.tb_Sexo.Size = new System.Drawing.Size(125, 20);
+            this.tb_Sexo.TabIndex = 5;
             // 
             // tb_Peso
             // 
+            this.tb_Peso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Peso.Enabled = false;
             this.tb_Peso.Location = new System.Drawing.Point(55, 110);
             this.tb_Peso.Name = "tb_Peso";
             this.tb_Peso.Size = new System.Drawing.Size(125, 20);
-            this.tb_Peso.TabIndex = 16;
+            this.tb_Peso.TabIndex = 4;
             // 
             // tb_Idade
             // 
+            this.tb_Idade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Idade.Enabled = false;
             this.tb_Idade.Location = new System.Drawing.Point(55, 85);
             this.tb_Idade.Name = "tb_Idade";
             this.tb_Idade.Size = new System.Drawing.Size(125, 20);
-            this.tb_Idade.TabIndex = 15;
+            this.tb_Idade.TabIndex = 3;
             // 
             // tb_Raça
             // 
+            this.tb_Raça.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Raça.Enabled = false;
             this.tb_Raça.Location = new System.Drawing.Point(55, 61);
             this.tb_Raça.Name = "tb_Raça";
             this.tb_Raça.Size = new System.Drawing.Size(125, 20);
-            this.tb_Raça.TabIndex = 14;
+            this.tb_Raça.TabIndex = 2;
             // 
             // tb_Nome_Pac
             // 
+            this.tb_Nome_Pac.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Nome_Pac.Enabled = false;
             this.tb_Nome_Pac.Location = new System.Drawing.Point(55, 37);
             this.tb_Nome_Pac.Name = "tb_Nome_Pac";
             this.tb_Nome_Pac.Size = new System.Drawing.Size(125, 20);
-            this.tb_Nome_Pac.TabIndex = 13;
+            this.tb_Nome_Pac.TabIndex = 1;
             // 
             // tb_Codigo_Pac
             // 
+            this.tb_Codigo_Pac.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Codigo_Pac.Enabled = false;
             this.tb_Codigo_Pac.Location = new System.Drawing.Point(55, 13);
             this.tb_Codigo_Pac.Name = "tb_Codigo_Pac";
             this.tb_Codigo_Pac.Size = new System.Drawing.Size(125, 20);
-            this.tb_Codigo_Pac.TabIndex = 12;
+            this.tb_Codigo_Pac.TabIndex = 0;
             // 
-            // lbl_Altura
+            // lbl_Sexo
             // 
-            this.lbl_Altura.AutoSize = true;
-            this.lbl_Altura.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Altura.Location = new System.Drawing.Point(2, 136);
-            this.lbl_Altura.Name = "lbl_Altura";
-            this.lbl_Altura.Size = new System.Drawing.Size(49, 19);
-            this.lbl_Altura.TabIndex = 11;
-            this.lbl_Altura.Text = "Altura";
-            // 
-            // ckb_Outros
-            // 
-            this.ckb_Outros.AutoSize = true;
-            this.ckb_Outros.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Outros.Location = new System.Drawing.Point(112, 49);
-            this.ckb_Outros.Name = "ckb_Outros";
-            this.ckb_Outros.Size = new System.Drawing.Size(67, 21);
-            this.ckb_Outros.TabIndex = 3;
-            this.ckb_Outros.Text = "Outros";
-            this.ckb_Outros.UseVisualStyleBackColor = true;
+            this.lbl_Sexo.AutoSize = true;
+            this.lbl_Sexo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Sexo.Location = new System.Drawing.Point(10, 135);
+            this.lbl_Sexo.Name = "lbl_Sexo";
+            this.lbl_Sexo.Size = new System.Drawing.Size(40, 19);
+            this.lbl_Sexo.TabIndex = 11;
+            this.lbl_Sexo.Text = "Sexo";
             // 
             // lbl_Cad_Paciente
             // 
@@ -255,10 +225,10 @@ namespace ProjInter
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ckb_Outros);
-            this.groupBox1.Controls.Add(this.ckb_Gato);
-            this.groupBox1.Controls.Add(this.ckb_Passaro);
-            this.groupBox1.Controls.Add(this.ckb_Cachorro);
+            this.groupBox1.Controls.Add(this.rb_outros);
+            this.groupBox1.Controls.Add(this.rb_passaro);
+            this.groupBox1.Controls.Add(this.rb_Gato);
+            this.groupBox1.Controls.Add(this.rb_Cachorro);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(39, 58);
             this.groupBox1.Name = "groupBox1";
@@ -266,6 +236,62 @@ namespace ProjInter
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Qual a espécie do PET?";
+            // 
+            // rb_outros
+            // 
+            this.rb_outros.AutoSize = true;
+            this.rb_outros.Enabled = false;
+            this.rb_outros.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_outros.Location = new System.Drawing.Point(109, 50);
+            this.rb_outros.Name = "rb_outros";
+            this.rb_outros.Size = new System.Drawing.Size(66, 21);
+            this.rb_outros.TabIndex = 7;
+            this.rb_outros.TabStop = true;
+            this.rb_outros.Text = "Outros";
+            this.rb_outros.UseVisualStyleBackColor = true;
+            this.rb_outros.CheckedChanged += new System.EventHandler(this.rb_outros_CheckedChanged);
+            // 
+            // rb_passaro
+            // 
+            this.rb_passaro.AutoSize = true;
+            this.rb_passaro.Enabled = false;
+            this.rb_passaro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_passaro.Location = new System.Drawing.Point(27, 50);
+            this.rb_passaro.Name = "rb_passaro";
+            this.rb_passaro.Size = new System.Drawing.Size(68, 21);
+            this.rb_passaro.TabIndex = 6;
+            this.rb_passaro.TabStop = true;
+            this.rb_passaro.Text = "Passáro";
+            this.rb_passaro.UseVisualStyleBackColor = true;
+            this.rb_passaro.CheckedChanged += new System.EventHandler(this.rb_passaro_CheckedChanged);
+            // 
+            // rb_Gato
+            // 
+            this.rb_Gato.AutoSize = true;
+            this.rb_Gato.Enabled = false;
+            this.rb_Gato.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Gato.Location = new System.Drawing.Point(109, 23);
+            this.rb_Gato.Name = "rb_Gato";
+            this.rb_Gato.Size = new System.Drawing.Size(52, 21);
+            this.rb_Gato.TabIndex = 5;
+            this.rb_Gato.TabStop = true;
+            this.rb_Gato.Text = "Gato";
+            this.rb_Gato.UseVisualStyleBackColor = true;
+            this.rb_Gato.CheckedChanged += new System.EventHandler(this.rb_Gato_CheckedChanged);
+            // 
+            // rb_Cachorro
+            // 
+            this.rb_Cachorro.AutoSize = true;
+            this.rb_Cachorro.Enabled = false;
+            this.rb_Cachorro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Cachorro.Location = new System.Drawing.Point(27, 23);
+            this.rb_Cachorro.Name = "rb_Cachorro";
+            this.rb_Cachorro.Size = new System.Drawing.Size(76, 21);
+            this.rb_Cachorro.TabIndex = 4;
+            this.rb_Cachorro.TabStop = true;
+            this.rb_Cachorro.Text = "Cachorro";
+            this.rb_Cachorro.UseVisualStyleBackColor = true;
+            this.rb_Cachorro.CheckedChanged += new System.EventHandler(this.rb_Cachorro_CheckedChanged);
             // 
             // lbl_Peso
             // 
@@ -310,13 +336,13 @@ namespace ProjInter
             // pnl_Pac
             // 
             this.pnl_Pac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Pac.Controls.Add(this.tb_Altura);
+            this.pnl_Pac.Controls.Add(this.tb_Sexo);
             this.pnl_Pac.Controls.Add(this.tb_Peso);
             this.pnl_Pac.Controls.Add(this.tb_Idade);
             this.pnl_Pac.Controls.Add(this.tb_Raça);
             this.pnl_Pac.Controls.Add(this.tb_Nome_Pac);
             this.pnl_Pac.Controls.Add(this.tb_Codigo_Pac);
-            this.pnl_Pac.Controls.Add(this.lbl_Altura);
+            this.pnl_Pac.Controls.Add(this.lbl_Sexo);
             this.pnl_Pac.Controls.Add(this.lbl_Peso);
             this.pnl_Pac.Controls.Add(this.lbl_Idade);
             this.pnl_Pac.Controls.Add(this.lbl_Raça);
@@ -350,7 +376,9 @@ namespace ProjInter
             // 
             // pb_Pesquisar
             // 
-            this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pb_Pesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.BackgroundImage")));
+            this.pb_Pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
             this.pb_Pesquisar.Location = new System.Drawing.Point(213, 313);
             this.pb_Pesquisar.Name = "pb_Pesquisar";
@@ -363,12 +391,12 @@ namespace ProjInter
             // tb_Pesquisar
             // 
             this.tb_Pesquisar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Pesquisar.ForeColor = System.Drawing.Color.DarkGray;
+            this.tb_Pesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tb_Pesquisar.Location = new System.Drawing.Point(39, 312);
             this.tb_Pesquisar.Name = "tb_Pesquisar";
             this.tb_Pesquisar.Size = new System.Drawing.Size(196, 23);
-            this.tb_Pesquisar.TabIndex = 56;
-            this.tb_Pesquisar.Text = "Pesquisar paciente";
+            this.tb_Pesquisar.TabIndex = 15;
+            this.tb_Pesquisar.Text = "Pesquisar Paciente";
             // 
             // btn_Histórico
             // 
@@ -378,11 +406,11 @@ namespace ProjInter
             this.btn_Histórico.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Histórico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Histórico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Histórico.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Histórico.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Histórico.Location = new System.Drawing.Point(39, 336);
             this.btn_Histórico.Name = "btn_Histórico";
-            this.btn_Histórico.Size = new System.Drawing.Size(91, 33);
-            this.btn_Histórico.TabIndex = 58;
+            this.btn_Histórico.Size = new System.Drawing.Size(76, 33);
+            this.btn_Histórico.TabIndex = 16;
             this.btn_Histórico.Text = "Histórico";
             this.btn_Histórico.UseVisualStyleBackColor = false;
             this.btn_Histórico.Click += new System.EventHandler(this.btn_Histórico_Click);
@@ -410,17 +438,21 @@ namespace ProjInter
             // tb_CPF
             // 
             this.tb_CPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_CPF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_CPF.Enabled = false;
             this.tb_CPF.Location = new System.Drawing.Point(52, 13);
             this.tb_CPF.Name = "tb_CPF";
             this.tb_CPF.Size = new System.Drawing.Size(197, 20);
-            this.tb_CPF.TabIndex = 21;
+            this.tb_CPF.TabIndex = 6;
             // 
             // tb_NomeDono
             // 
+            this.tb_NomeDono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_NomeDono.Enabled = false;
             this.tb_NomeDono.Location = new System.Drawing.Point(52, 39);
             this.tb_NomeDono.Name = "tb_NomeDono";
             this.tb_NomeDono.Size = new System.Drawing.Size(197, 20);
-            this.tb_NomeDono.TabIndex = 22;
+            this.tb_NomeDono.TabIndex = 7;
             // 
             // pnl_Dono
             // 
@@ -440,7 +472,7 @@ namespace ProjInter
             this.lbl_CadDono.BackColor = System.Drawing.Color.Transparent;
             this.lbl_CadDono.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CadDono.ForeColor = System.Drawing.Color.Black;
-            this.lbl_CadDono.Location = new System.Drawing.Point(272, 55);
+            this.lbl_CadDono.Location = new System.Drawing.Point(264, 55);
             this.lbl_CadDono.Name = "lbl_CadDono";
             this.lbl_CadDono.Size = new System.Drawing.Size(107, 23);
             this.lbl_CadDono.TabIndex = 38;
@@ -468,17 +500,21 @@ namespace ProjInter
             // 
             // tb_email
             // 
+            this.tb_email.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_email.Enabled = false;
             this.tb_email.Location = new System.Drawing.Point(52, 12);
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(196, 20);
-            this.tb_email.TabIndex = 21;
+            this.tb_email.TabIndex = 13;
             // 
             // tb_Tel
             // 
+            this.tb_Tel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Tel.Enabled = false;
             this.tb_Tel.Location = new System.Drawing.Point(52, 38);
             this.tb_Tel.Name = "tb_Tel";
             this.tb_Tel.Size = new System.Drawing.Size(196, 20);
-            this.tb_Tel.TabIndex = 22;
+            this.tb_Tel.TabIndex = 14;
             // 
             // panel2
             // 
@@ -524,17 +560,21 @@ namespace ProjInter
             // 
             // tb_Rua
             // 
+            this.tb_Rua.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Rua.Enabled = false;
             this.tb_Rua.Location = new System.Drawing.Point(63, 15);
             this.tb_Rua.Name = "tb_Rua";
             this.tb_Rua.Size = new System.Drawing.Size(186, 20);
-            this.tb_Rua.TabIndex = 21;
+            this.tb_Rua.TabIndex = 8;
             // 
             // tb_Nº
             // 
+            this.tb_Nº.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Nº.Enabled = false;
             this.tb_Nº.Location = new System.Drawing.Point(209, 40);
             this.tb_Nº.Name = "tb_Nº";
             this.tb_Nº.Size = new System.Drawing.Size(38, 20);
-            this.tb_Nº.TabIndex = 22;
+            this.tb_Nº.TabIndex = 10;
             // 
             // lbl_Cidade
             // 
@@ -548,10 +588,12 @@ namespace ProjInter
             // 
             // tb_Cidade
             // 
+            this.tb_Cidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Cidade.Enabled = false;
             this.tb_Cidade.Location = new System.Drawing.Point(63, 69);
             this.tb_Cidade.Name = "tb_Cidade";
             this.tb_Cidade.Size = new System.Drawing.Size(118, 20);
-            this.tb_Cidade.TabIndex = 24;
+            this.tb_Cidade.TabIndex = 11;
             // 
             // lbl_CEP
             // 
@@ -565,10 +607,12 @@ namespace ProjInter
             // 
             // tb_CEP
             // 
+            this.tb_CEP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_CEP.Enabled = false;
             this.tb_CEP.Location = new System.Drawing.Point(63, 41);
             this.tb_CEP.Name = "tb_CEP";
             this.tb_CEP.Size = new System.Drawing.Size(118, 20);
-            this.tb_CEP.TabIndex = 26;
+            this.tb_CEP.TabIndex = 9;
             // 
             // panel1
             // 
@@ -587,6 +631,25 @@ namespace ProjInter
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 98);
             this.panel1.TabIndex = 41;
+            // 
+            // tb_UF
+            // 
+            this.tb_UF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_UF.Enabled = false;
+            this.tb_UF.Location = new System.Drawing.Point(209, 67);
+            this.tb_UF.Name = "tb_UF";
+            this.tb_UF.Size = new System.Drawing.Size(38, 20);
+            this.tb_UF.TabIndex = 12;
+            // 
+            // UF
+            // 
+            this.UF.AutoSize = true;
+            this.UF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UF.Location = new System.Drawing.Point(181, 68);
+            this.UF.Name = "UF";
+            this.UF.Size = new System.Drawing.Size(27, 19);
+            this.UF.TabIndex = 27;
+            this.UF.Text = "UF";
             // 
             // lbl_End
             // 
@@ -626,7 +689,7 @@ namespace ProjInter
             this.panel4.Controls.Add(this.lbl_Contato);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.pnl_Dono);
-            this.panel4.Location = new System.Drawing.Point(277, 68);
+            this.panel4.Location = new System.Drawing.Point(269, 68);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(287, 287);
             this.panel4.TabIndex = 60;
@@ -639,30 +702,30 @@ namespace ProjInter
             this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(278, 361);
+            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(447, 361);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(71, 34);
-            this.btn_Excluir.TabIndex = 61;
+            this.btn_Excluir.Size = new System.Drawing.Size(64, 34);
+            this.btn_Excluir.TabIndex = 17;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
             // 
-            // tb_UF
+            // bt_NovoPac
             // 
-            this.tb_UF.Location = new System.Drawing.Point(209, 67);
-            this.tb_UF.Name = "tb_UF";
-            this.tb_UF.Size = new System.Drawing.Size(38, 20);
-            this.tb_UF.TabIndex = 28;
-            // 
-            // UF
-            // 
-            this.UF.AutoSize = true;
-            this.UF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UF.Location = new System.Drawing.Point(181, 68);
-            this.UF.Name = "UF";
-            this.UF.Size = new System.Drawing.Size(27, 19);
-            this.UF.TabIndex = 27;
-            this.UF.Text = "UF";
+            this.bt_NovoPac.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoPac.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_NovoPac.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoPac.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_NovoPac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_NovoPac.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_NovoPac.Location = new System.Drawing.Point(249, 361);
+            this.bt_NovoPac.Name = "bt_NovoPac";
+            this.bt_NovoPac.Size = new System.Drawing.Size(66, 34);
+            this.bt_NovoPac.TabIndex = 61;
+            this.bt_NovoPac.Text = "Novo";
+            this.bt_NovoPac.UseVisualStyleBackColor = false;
+            this.bt_NovoPac.Click += new System.EventHandler(this.bt_NovoPac_Click);
             // 
             // TelaCadPac
             // 
@@ -670,6 +733,7 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.bt_NovoPac);
             this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.lbl_CadDono);
             this.Controls.Add(this.panel4);
@@ -713,17 +777,13 @@ namespace ProjInter
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Button btn_Limpar;
-        private System.Windows.Forms.CheckBox ckb_Gato;
-        private System.Windows.Forms.CheckBox ckb_Passaro;
-        private System.Windows.Forms.CheckBox ckb_Cachorro;
-        private System.Windows.Forms.TextBox tb_Altura;
+        private System.Windows.Forms.TextBox tb_Sexo;
         private System.Windows.Forms.TextBox tb_Peso;
         private System.Windows.Forms.TextBox tb_Idade;
         private System.Windows.Forms.TextBox tb_Raça;
         private System.Windows.Forms.TextBox tb_Nome_Pac;
         private System.Windows.Forms.TextBox tb_Codigo_Pac;
-        private System.Windows.Forms.Label lbl_Altura;
-        private System.Windows.Forms.CheckBox ckb_Outros;
+        private System.Windows.Forms.Label lbl_Sexo;
         private System.Windows.Forms.Label lbl_Cad_Paciente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_Peso;
@@ -764,5 +824,10 @@ namespace ProjInter
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.TextBox tb_UF;
         private System.Windows.Forms.Label UF;
+        private System.Windows.Forms.RadioButton rb_Cachorro;
+        private System.Windows.Forms.RadioButton rb_outros;
+        private System.Windows.Forms.RadioButton rb_passaro;
+        private System.Windows.Forms.RadioButton rb_Gato;
+        private System.Windows.Forms.Button bt_NovoPac;
     }
 }
