@@ -55,7 +55,7 @@ namespace ProjInter
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
             this.pb_Pesquisar = new System.Windows.Forms.PictureBox();
             this.tb_Pesquisar = new System.Windows.Forms.TextBox();
-            this.btn_Histórico = new System.Windows.Forms.Button();
+            this.btn_VIS_PAC = new System.Windows.Forms.Button();
             this.lbl_CPF = new System.Windows.Forms.Label();
             this.lbl_NomeDono = new System.Windows.Forms.Label();
             this.tb_CPF = new System.Windows.Forms.TextBox();
@@ -398,22 +398,22 @@ namespace ProjInter
             this.tb_Pesquisar.TabIndex = 15;
             this.tb_Pesquisar.Text = "Pesquisar Paciente";
             // 
-            // btn_Histórico
+            // btn_VIS_PAC
             // 
-            this.btn_Histórico.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Histórico.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Histórico.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Histórico.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Histórico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Histórico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Histórico.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Histórico.Location = new System.Drawing.Point(39, 336);
-            this.btn_Histórico.Name = "btn_Histórico";
-            this.btn_Histórico.Size = new System.Drawing.Size(76, 33);
-            this.btn_Histórico.TabIndex = 16;
-            this.btn_Histórico.Text = "Histórico";
-            this.btn_Histórico.UseVisualStyleBackColor = false;
-            this.btn_Histórico.Click += new System.EventHandler(this.btn_Histórico_Click);
+            this.btn_VIS_PAC.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_PAC.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VIS_PAC.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_PAC.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_VIS_PAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_PAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VIS_PAC.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VIS_PAC.Location = new System.Drawing.Point(39, 336);
+            this.btn_VIS_PAC.Name = "btn_VIS_PAC";
+            this.btn_VIS_PAC.Size = new System.Drawing.Size(146, 30);
+            this.btn_VIS_PAC.TabIndex = 16;
+            this.btn_VIS_PAC.Text = "Visualizar Pacientes";
+            this.btn_VIS_PAC.UseVisualStyleBackColor = false;
+            this.btn_VIS_PAC.Click += new System.EventHandler(this.btn_Histórico_Click);
             // 
             // lbl_CPF
             // 
@@ -709,6 +709,7 @@ namespace ProjInter
             this.btn_Excluir.TabIndex = 17;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // bt_NovoPac
             // 
@@ -739,7 +740,7 @@ namespace ProjInter
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pb_Inicio);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btn_Histórico);
+            this.Controls.Add(this.btn_VIS_PAC);
             this.Controls.Add(this.pb_Pesquisar);
             this.Controls.Add(this.tb_Pesquisar);
             this.Controls.Add(this.btn_Salvar);
@@ -795,7 +796,7 @@ namespace ProjInter
         private System.Windows.Forms.PictureBox pb_Inicio;
         private System.Windows.Forms.PictureBox pb_Pesquisar;
         private System.Windows.Forms.TextBox tb_Pesquisar;
-        private System.Windows.Forms.Button btn_Histórico;
+        private System.Windows.Forms.Button btn_VIS_PAC;
         private System.Windows.Forms.Label lbl_CPF;
         private System.Windows.Forms.Label lbl_NomeDono;
         private System.Windows.Forms.TextBox tb_CPF;

@@ -18,7 +18,7 @@ namespace ProjInter
         public static MySqlConnection conexaoBanco()
         {
 
-            string connString = @"server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2";
+            string connString = @"server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=10";
             MySqlConnection conexao = new MySqlConnection(connString);
             conexao.Open();
             return conexao;
