@@ -524,7 +524,7 @@ namespace ProjInter
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
             // VERIFICA SE OS PRINCIPAIS CAMPOS DO FORMULÁRIO ESTÃO PREENCHIDOS
-            if (tb_Codigo_Pac.Text == "")
+            if (tb_Codigo_Pac.Text == "" || tb_Sexo.Text == "")
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o Pet que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
