@@ -42,12 +42,14 @@ namespace ProjInter
             this.pb_Pesquisar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gb_EscolhaTipoMed = new System.Windows.Forms.GroupBox();
-            this.ckb_opcao_Vacina = new System.Windows.Forms.CheckBox();
-            this.ckb_opcao_Remedio = new System.Windows.Forms.CheckBox();
-            this.btn_Excluir = new System.Windows.Forms.Button();
-            this.btn_Salvar = new System.Windows.Forms.Button();
-            this.btn_Editar = new System.Windows.Forms.Button();
-            this.btn_Limpar = new System.Windows.Forms.Button();
+            this.rb_Vacina = new System.Windows.Forms.RadioButton();
+            this.rb_Remedio = new System.Windows.Forms.RadioButton();
+            this.bt_NovoMed = new System.Windows.Forms.Button();
+            this.bt_excluir = new System.Windows.Forms.Button();
+            this.bt_salvar = new System.Windows.Forms.Button();
+            this.bt_editar = new System.Windows.Forms.Button();
+            this.bt_limpar = new System.Windows.Forms.Button();
+            this.btn_VIS_MED = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,6 +80,7 @@ namespace ProjInter
             // 
             // tb_Cod_Med
             // 
+            this.tb_Cod_Med.Enabled = false;
             this.tb_Cod_Med.Location = new System.Drawing.Point(233, 146);
             this.tb_Cod_Med.Name = "tb_Cod_Med";
             this.tb_Cod_Med.Size = new System.Drawing.Size(180, 20);
@@ -85,6 +88,7 @@ namespace ProjInter
             // 
             // tb_Nome_Med
             // 
+            this.tb_Nome_Med.Enabled = false;
             this.tb_Nome_Med.Location = new System.Drawing.Point(233, 182);
             this.tb_Nome_Med.Name = "tb_Nome_Med";
             this.tb_Nome_Med.Size = new System.Drawing.Size(180, 20);
@@ -102,6 +106,7 @@ namespace ProjInter
             // 
             // tb_Preco_Med
             // 
+            this.tb_Preco_Med.Enabled = false;
             this.tb_Preco_Med.Location = new System.Drawing.Point(233, 221);
             this.tb_Preco_Med.Name = "tb_Preco_Med";
             this.tb_Preco_Med.Size = new System.Drawing.Size(180, 20);
@@ -133,7 +138,7 @@ namespace ProjInter
             // 
             this.tb_Pesquisar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Pesquisar.ForeColor = System.Drawing.Color.DarkGray;
-            this.tb_Pesquisar.Location = new System.Drawing.Point(178, 283);
+            this.tb_Pesquisar.Location = new System.Drawing.Point(170, 274);
             this.tb_Pesquisar.Name = "tb_Pesquisar";
             this.tb_Pesquisar.Size = new System.Drawing.Size(249, 23);
             this.tb_Pesquisar.TabIndex = 54;
@@ -143,12 +148,13 @@ namespace ProjInter
             // 
             this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
-            this.pb_Pesquisar.Location = new System.Drawing.Point(405, 284);
+            this.pb_Pesquisar.Location = new System.Drawing.Point(397, 275);
             this.pb_Pesquisar.Name = "pb_Pesquisar";
             this.pb_Pesquisar.Size = new System.Drawing.Size(21, 21);
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Pesquisar.TabIndex = 55;
             this.pb_Pesquisar.TabStop = false;
+            this.pb_Pesquisar.Click += new System.EventHandler(this.pb_Pesquisar_Click);
             // 
             // panel1
             // 
@@ -161,8 +167,8 @@ namespace ProjInter
             // 
             // gb_EscolhaTipoMed
             // 
-            this.gb_EscolhaTipoMed.Controls.Add(this.ckb_opcao_Vacina);
-            this.gb_EscolhaTipoMed.Controls.Add(this.ckb_opcao_Remedio);
+            this.gb_EscolhaTipoMed.Controls.Add(this.rb_Vacina);
+            this.gb_EscolhaTipoMed.Controls.Add(this.rb_Remedio);
             this.gb_EscolhaTipoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_EscolhaTipoMed.Location = new System.Drawing.Point(189, 70);
             this.gb_EscolhaTipoMed.Name = "gb_EscolhaTipoMed";
@@ -171,91 +177,134 @@ namespace ProjInter
             this.gb_EscolhaTipoMed.TabStop = false;
             this.gb_EscolhaTipoMed.Text = "Qual o tipo de medicamento?";
             // 
-            // ckb_opcao_Vacina
+            // rb_Vacina
             // 
-            this.ckb_opcao_Vacina.AutoSize = true;
-            this.ckb_opcao_Vacina.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_opcao_Vacina.Location = new System.Drawing.Point(124, 20);
-            this.ckb_opcao_Vacina.Name = "ckb_opcao_Vacina";
-            this.ckb_opcao_Vacina.Size = new System.Drawing.Size(68, 23);
-            this.ckb_opcao_Vacina.TabIndex = 1;
-            this.ckb_opcao_Vacina.Text = "Vacina";
-            this.ckb_opcao_Vacina.UseVisualStyleBackColor = true;
+            this.rb_Vacina.AutoSize = true;
+            this.rb_Vacina.Enabled = false;
+            this.rb_Vacina.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Vacina.Location = new System.Drawing.Point(119, 21);
+            this.rb_Vacina.Name = "rb_Vacina";
+            this.rb_Vacina.Size = new System.Drawing.Size(66, 22);
+            this.rb_Vacina.TabIndex = 73;
+            this.rb_Vacina.TabStop = true;
+            this.rb_Vacina.Text = "Vacina";
+            this.rb_Vacina.UseVisualStyleBackColor = true;
+            this.rb_Vacina.CheckedChanged += new System.EventHandler(this.rb_Vacina_CheckedChanged);
             // 
-            // ckb_opcao_Remedio
+            // rb_Remedio
             // 
-            this.ckb_opcao_Remedio.AutoSize = true;
-            this.ckb_opcao_Remedio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_opcao_Remedio.Location = new System.Drawing.Point(39, 20);
-            this.ckb_opcao_Remedio.Name = "ckb_opcao_Remedio";
-            this.ckb_opcao_Remedio.Size = new System.Drawing.Size(79, 23);
-            this.ckb_opcao_Remedio.TabIndex = 0;
-            this.ckb_opcao_Remedio.Text = "Remédio";
-            this.ckb_opcao_Remedio.UseVisualStyleBackColor = true;
+            this.rb_Remedio.AutoSize = true;
+            this.rb_Remedio.Enabled = false;
+            this.rb_Remedio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Remedio.Location = new System.Drawing.Point(34, 21);
+            this.rb_Remedio.Name = "rb_Remedio";
+            this.rb_Remedio.Size = new System.Drawing.Size(76, 22);
+            this.rb_Remedio.TabIndex = 72;
+            this.rb_Remedio.TabStop = true;
+            this.rb_Remedio.Text = "Remédio";
+            this.rb_Remedio.UseVisualStyleBackColor = true;
+            this.rb_Remedio.CheckedChanged += new System.EventHandler(this.rb_Remedio_CheckedChanged);
             // 
-            // btn_Excluir
+            // bt_NovoMed
             // 
-            this.btn_Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Excluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Excluir.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(159, 308);
-            this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(71, 34);
-            this.btn_Excluir.TabIndex = 71;
-            this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.UseVisualStyleBackColor = false;
+            this.bt_NovoMed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoMed.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_NovoMed.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoMed.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_NovoMed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_NovoMed.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_NovoMed.Location = new System.Drawing.Point(130, 333);
+            this.bt_NovoMed.Name = "bt_NovoMed";
+            this.bt_NovoMed.Size = new System.Drawing.Size(66, 34);
+            this.bt_NovoMed.TabIndex = 76;
+            this.bt_NovoMed.Text = "Novo";
+            this.bt_NovoMed.UseVisualStyleBackColor = false;
+            this.bt_NovoMed.Click += new System.EventHandler(this.bt_NovoMed_Click);
             // 
-            // btn_Salvar
+            // bt_excluir
             // 
-            this.btn_Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Salvar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(375, 308);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Salvar.TabIndex = 70;
-            this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.bt_excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_excluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_excluir.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_excluir.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_excluir.Location = new System.Drawing.Point(328, 333);
+            this.bt_excluir.Name = "bt_excluir";
+            this.bt_excluir.Size = new System.Drawing.Size(64, 34);
+            this.bt_excluir.TabIndex = 72;
+            this.bt_excluir.Text = "Excluir";
+            this.bt_excluir.UseVisualStyleBackColor = false;
+            this.bt_excluir.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
-            // btn_Editar
+            // bt_salvar
             // 
-            this.btn_Editar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(303, 308);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Editar.TabIndex = 69;
-            this.btn_Editar.Text = "Editar";
-            this.btn_Editar.UseVisualStyleBackColor = false;
+            this.bt_salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_salvar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_salvar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_salvar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_salvar.Location = new System.Drawing.Point(393, 333);
+            this.bt_salvar.Name = "bt_salvar";
+            this.bt_salvar.Size = new System.Drawing.Size(61, 34);
+            this.bt_salvar.TabIndex = 75;
+            this.bt_salvar.Text = "Salvar";
+            this.bt_salvar.UseVisualStyleBackColor = false;
+            this.bt_salvar.Click += new System.EventHandler(this.bt_salvar_Click);
             // 
-            // btn_Limpar
+            // bt_editar
             // 
-            this.btn_Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Limpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(231, 308);
-            this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Limpar.TabIndex = 68;
-            this.btn_Limpar.Text = "Limpar";
-            this.btn_Limpar.UseVisualStyleBackColor = false;
+            this.bt_editar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_editar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_editar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_editar.Location = new System.Drawing.Point(197, 333);
+            this.bt_editar.Name = "bt_editar";
+            this.bt_editar.Size = new System.Drawing.Size(66, 34);
+            this.bt_editar.TabIndex = 74;
+            this.bt_editar.Text = "Editar";
+            this.bt_editar.UseVisualStyleBackColor = false;
+            this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
+            // 
+            // bt_limpar
+            // 
+            this.bt_limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_limpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_limpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_limpar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_limpar.Location = new System.Drawing.Point(264, 333);
+            this.bt_limpar.Name = "bt_limpar";
+            this.bt_limpar.Size = new System.Drawing.Size(63, 34);
+            this.bt_limpar.TabIndex = 73;
+            this.bt_limpar.Text = "Limpar";
+            this.bt_limpar.UseVisualStyleBackColor = false;
+            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
+            // 
+            // btn_VIS_MED
+            // 
+            this.btn_VIS_MED.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_MED.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VIS_MED.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_MED.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_VIS_MED.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_MED.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VIS_MED.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VIS_MED.Location = new System.Drawing.Point(170, 297);
+            this.btn_VIS_MED.Name = "btn_VIS_MED";
+            this.btn_VIS_MED.Size = new System.Drawing.Size(176, 30);
+            this.btn_VIS_MED.TabIndex = 77;
+            this.btn_VIS_MED.Text = "Visualizar Medicamentos";
+            this.btn_VIS_MED.UseVisualStyleBackColor = false;
             // 
             // TelaCadMed
             // 
@@ -263,10 +312,12 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.btn_Excluir);
-            this.Controls.Add(this.btn_Salvar);
-            this.Controls.Add(this.btn_Editar);
-            this.Controls.Add(this.btn_Limpar);
+            this.Controls.Add(this.btn_VIS_MED);
+            this.Controls.Add(this.bt_NovoMed);
+            this.Controls.Add(this.bt_excluir);
+            this.Controls.Add(this.bt_salvar);
+            this.Controls.Add(this.bt_editar);
+            this.Controls.Add(this.bt_limpar);
             this.Controls.Add(this.gb_EscolhaTipoMed);
             this.Controls.Add(this.pb_Inicio);
             this.Controls.Add(this.panel1);
@@ -307,11 +358,13 @@ namespace ProjInter
         private System.Windows.Forms.PictureBox pb_Pesquisar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox gb_EscolhaTipoMed;
-        private System.Windows.Forms.CheckBox ckb_opcao_Vacina;
-        private System.Windows.Forms.CheckBox ckb_opcao_Remedio;
-        private System.Windows.Forms.Button btn_Excluir;
-        private System.Windows.Forms.Button btn_Salvar;
-        private System.Windows.Forms.Button btn_Editar;
-        private System.Windows.Forms.Button btn_Limpar;
+        private System.Windows.Forms.RadioButton rb_Remedio;
+        private System.Windows.Forms.RadioButton rb_Vacina;
+        private System.Windows.Forms.Button bt_NovoMed;
+        private System.Windows.Forms.Button bt_excluir;
+        private System.Windows.Forms.Button bt_salvar;
+        private System.Windows.Forms.Button bt_editar;
+        private System.Windows.Forms.Button bt_limpar;
+        private System.Windows.Forms.Button btn_VIS_MED;
     }
 }

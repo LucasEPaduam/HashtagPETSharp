@@ -43,7 +43,7 @@ namespace ProjInter
 
         private void btn_Histórico_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            //this.Hide();l
             TelaVisPac telavispac = new TelaVisPac(this);
             telavispac.ShowDialog();
         }
@@ -111,11 +111,11 @@ namespace ProjInter
                             {
 
                                 tb_Codigo_Pac.Text = reader.GetString(0);
-                                tb_Nome_Pac.Text = reader.GetString(1);
-                                tb_Raça.Text = reader.GetString(2);
-                                tb_Idade.Text = reader.GetString(3);
-                                tb_Peso.Text = reader.GetString(4);
-                                tb_Sexo.Text = reader.GetString(5);
+                                tb_Nome_Pac.Text = reader.GetString(2);
+                                tb_Raça.Text = reader.GetString(3);
+                                tb_Idade.Text = reader.GetString(4);
+                                tb_Peso.Text = reader.GetString(5);
+                                tb_Sexo.Text = reader.GetString(6);
 
                             }                           
 
@@ -139,19 +139,34 @@ namespace ProjInter
 
                             if (reader.HasRows)
                             {
-                                if (codpet.StartsWith("C"))
+                                if (codpet.StartsWith("C") || (codpet.StartsWith("c")))
                                 {
                                     rb_Cachorro.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
+                                
+                                else if (codpet.StartsWith("G") || (codpet.StartsWith("g")))
+                                {
+                                    rb_Gato.Checked = true;
+                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
+                                }
+                                
+                                else if (codpet.StartsWith("P") || (codpet.StartsWith("p")))
+                                {
+                                    rb_passaro.Checked = true;
+                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
+                                }
+                                
+                                else if (codpet.StartsWith("O") || (codpet.StartsWith("o")))
+                                {
+                                    rb_outros.Checked = true;
+                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
+                                }
+                                /*
+                                 * 
                                 else if (codpet.StartsWith("c"))
                                 {
                                     rb_Cachorro.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                else if (codpet.StartsWith("G"))
-                                {
-                                    rb_Gato.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
                                 else if (codpet.StartsWith("g"))
@@ -159,19 +174,9 @@ namespace ProjInter
                                     rb_Gato.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
-                                else if (codpet.StartsWith("P"))
-                                {
-                                    rb_passaro.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
                                 else if (codpet.StartsWith("p"))
                                 {
                                     rb_passaro.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                else if (codpet.StartsWith("O"))
-                                {
-                                    rb_outros.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
                                 else if (codpet.StartsWith("o"))
@@ -179,7 +184,7 @@ namespace ProjInter
                                     rb_outros.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
-
+                                */
                                 MessageBox.Show("PET localizado!!!");
                                 
                             }
@@ -524,15 +529,12 @@ namespace ProjInter
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
             // VERIFICA SE OS PRINCIPAIS CAMPOS DO FORMULÁRIO ESTÃO PREENCHIDOS
-            if (tb_Codigo_Pac.Text == "" || tb_Sexo.Text == "")
+            if (tb_Codigo_Pac.Text == "" )
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o Pet que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
-            else if (tb_Nome_Pac.Text == "")
-            {
-                MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
-            }
-            else if (tb_CPF.Text == "")
+            //TODOS OS CAMPOS SENDO VERIFICADOS
+            else if (tb_Nome_Pac.Text == "" || tb_Raça.Text == "" || tb_Idade.Text == "" || tb_Peso.Text == "" || tb_Sexo.Text == "" || tb_CPF.Text == "" || tb_NomeDono.Text == "" || tb_Rua.Text == "" || tb_Nº.Text == "" || tb_CEP.Text == "" || tb_Cidade.Text == "" || tb_email.Text == "" || tb_Tel.Text == "" || tb_UF.Text == "")
             {
                 MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
             }
@@ -551,8 +553,10 @@ namespace ProjInter
                 donopet.email = tb_email.Text;
                 donopet.telefone = tb_Tel.Text;
 
+
                 Paciente paciente = new Paciente();
                 paciente.codigopet = tb_Codigo_Pac.Text;
+                paciente.dono_cpf = tb_CPF.Text;
                 paciente.nomepet = tb_Nome_Pac.Text;
                 paciente.raca = tb_Raça.Text;
                 paciente.idade = tb_Idade.Text;
@@ -581,7 +585,7 @@ namespace ProjInter
                         pacienteupdate.Parameters.Add("@nomepet", MySqlDbType.VarChar, 10).Value = paciente.nomepet;
                         pacienteupdate.Parameters.Add("@raca", MySqlDbType.VarChar, 10).Value = paciente.raca;
                         pacienteupdate.Parameters.Add("@IDADE", MySqlDbType.VarChar, 10).Value = paciente.idade;
-                        pacienteupdate.Parameters.Add("@PESO", MySqlDbType.VarChar, 10).Value = paciente.peso;
+                        pacienteupdate.Parameters.Add("@PESO", MySqlDbType.Double, 1).Value = paciente.peso;
                         pacienteupdate.Parameters.Add("@sexo", MySqlDbType.VarChar, 10).Value = paciente.sexo;
                         pacienteupdate.Parameters.Add("codigopet", MySqlDbType.VarChar).Value = paciente.codigopet;
                         pacienteupdate.CommandType = CommandType.Text;
@@ -614,6 +618,7 @@ namespace ProjInter
                 }
                 else
                 {
+
                     BancoDados.insertpaciente(paciente);
                     BancoDados.insertdono(donopet);
                 }

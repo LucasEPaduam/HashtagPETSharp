@@ -12,6 +12,7 @@ namespace ProjInter
         // VARIÁVEIS PACIENTE
 
         public string codigopet;
+        public string dono_cpf;
         public string nomepet;
         public string raca;
         public string idade;

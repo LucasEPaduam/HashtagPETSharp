@@ -115,9 +115,10 @@ namespace ProjInter
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
                     cmd.CommandText = "INSERT INTO paciente " +
-                                     "(codigopet, nomepet, raca, idade, peso, sexo) " +
-                                     "VALUES( @codigopet, @nomepet, @raca, @idade, @peso, @sexo)";
+                                     "(codigopet, dono_cpf, nomepet, raca, idade, peso, sexo) " +
+                                     "VALUES( @codigopet, @dono_cpf, @nomepet, @raca, @idade, @peso, @sexo)";
                     cmd.Parameters.AddWithValue("@codigopet", paciente.codigopet);
+                    cmd.Parameters.AddWithValue("@dono_cpf", paciente.dono_cpf);
                     cmd.Parameters.AddWithValue("@nomepet", paciente.nomepet);
                     cmd.Parameters.AddWithValue("@raca", paciente.raca);
                     cmd.Parameters.AddWithValue("@idade", paciente.idade);
@@ -133,7 +134,7 @@ namespace ProjInter
             catch (Exception ex)
             {
 
-                MessageBox.Show("Erro ao cadastrar paciente");
+                MessageBox.Show("Erro ao cadastrar paciente \n" + ex.Message);
 
             }
 
@@ -170,7 +171,7 @@ namespace ProjInter
             catch (Exception ex)
             {
 
-                MessageBox.Show("Erro ao cadastrar Donopet");
+                MessageBox.Show("Erro ao cadastrar Donopet \n" + ex.Message);
 
             }
 
@@ -249,7 +250,7 @@ namespace ProjInter
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao atualizar!");
+                MessageBox.Show("Erro ao atualizar! \n" + ex.Message);
             }
 
         }

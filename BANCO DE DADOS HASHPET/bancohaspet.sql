@@ -60,7 +60,7 @@ datahora int (15) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS paciente(
-codigopet int (10)  NOT NULL,
+codigopet varchar (10)  NOT NULL,
 nomepet varchar (10) NOT NULL,
 raca varchar (10)  NOT NULL,
 idade int (2)  NOT NULL,
