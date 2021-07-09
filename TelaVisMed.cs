@@ -28,9 +28,21 @@ namespace ProjInter
 
         private void btn_Voltarparacadastro_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TelaCadMed tela_cadmed = new TelaCadMed(this);
-            tela_cadmed.Show();
+            this.Close();
+        }
+
+        private void TelaVisMed_Load(object sender, EventArgs e)
+        {
+            
+            int i = 0;
+            string todosmedicamentos = "SELECT Vacina.codigo as 'COD VAC', vacina.nome as 'NOME VAC', vacina.preco as 'PRECO VAC', remedio.codigo as 'COD REM', remedio.nome as 'NOME REM', remedio.preco as 'PRECO REM' FROM vacina, remedio ";
+
+            dgv_TelaVisMed.DataSource = BancoDados.Consulta(todosmedicamentos);
+            dgv_TelaVisMed.Columns[0].Width = 90;
+            dgv_TelaVisMed.Columns[1].Width = 100;
+            dgv_TelaVisMed.Columns[2].Width = 130;
+            dgv_TelaVisMed.Columns[3].Width = 100;
+            dgv_TelaVisMed.Sort(dgv_TelaVisMed.Columns[i], ListSortDirection.Ascending);
         }
     }
 }

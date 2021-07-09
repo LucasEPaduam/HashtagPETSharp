@@ -129,9 +129,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrativo.cs" />
     <Compile Include="BancoDados.cs" />
     <Compile Include="Donopet.cs" />
     <Compile Include="Paciente.cs" />
+    <Compile Include="Remedio.cs" />
     <Compile Include="TelaAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +226,8 @@
     <Compile Include="TelaVisUsu.Designer.cs">
       <DependentUpon>TelaVisUsu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vacina.cs" />
+    <Compile Include="Veterinario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

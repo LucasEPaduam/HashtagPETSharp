@@ -18,8 +18,5 @@ namespace ProjInter
         public string idade;
         public string peso;
         public string sexo;
-
-       
-
     }
 }

@@ -263,10 +263,8 @@ namespace ProjInter
 
         public static void atualizardono(Donopet donopet)
         {
-            
             try
             {
-
                 using (var connect = conexaoBanco())
                 using (var cmd = connect.CreateCommand())
                 {
@@ -298,7 +296,51 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao atualizar!");
             }
+        }
 
+
+        public static void insertremedio(Remedio remedio)
+        {
+            try
+            {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO remedio (codigo, nome, preco) VALUES( @codigo, @nome, @preco)";
+                    cmd.Parameters.AddWithValue("@codigo", remedio.codigo);
+                    cmd.Parameters.AddWithValue("@nome", remedio.nome);
+                    cmd.Parameters.AddWithValue("@preco", remedio.preco);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Novo remédio cadastrado com sucesso!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar remédio \n" + ex.Message);
+            }
+        }
+
+        public static void insertvacina(Vacina vacina)
+        {
+            try
+            {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO vacina (codigo, nome, preco) VALUES( @codigo, @nome, @preco)";
+                    cmd.Parameters.AddWithValue("@codigo", vacina.codigo);
+                    cmd.Parameters.AddWithValue("@nome", vacina.nome);
+                    cmd.Parameters.AddWithValue("@preco", vacina.preco);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Nova vacina cadastrada com sucesso!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar vacina \n" + ex.Message);
+            }
         }
 
 

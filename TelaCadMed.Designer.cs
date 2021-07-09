@@ -305,6 +305,7 @@ namespace ProjInter
             this.btn_VIS_MED.TabIndex = 77;
             this.btn_VIS_MED.Text = "Visualizar Medicamentos";
             this.btn_VIS_MED.UseVisualStyleBackColor = false;
+            this.btn_VIS_MED.Click += new System.EventHandler(this.btn_VIS_MED_Click);
             // 
             // TelaCadMed
             // 

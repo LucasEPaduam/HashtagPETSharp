@@ -30,7 +30,6 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
-            this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.btn_Acessar = new System.Windows.Forms.Button();
             this.tb_Senha_login = new System.Windows.Forms.TextBox();
             this.tb_Usu_login = new System.Windows.Forms.TextBox();
@@ -40,27 +39,9 @@ namespace ProjInter
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_Titulo_Pet_Sharp = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_cadastrar = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_Cadastrar
-            // 
-            this.btn_Cadastrar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Cadastrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Cadastrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Cadastrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_Cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cadastrar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(264, 330);
-            this.btn_Cadastrar.Name = "btn_Cadastrar";
-            this.btn_Cadastrar.Size = new System.Drawing.Size(90, 49);
-            this.btn_Cadastrar.TabIndex = 19;
-            this.btn_Cadastrar.Text = "Cadastrar";
-            this.btn_Cadastrar.UseVisualStyleBackColor = false;
-            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
             // 
             // btn_Acessar
             // 
@@ -105,7 +86,7 @@ namespace ProjInter
             this.pnlLogin.Controls.Add(this.btn_Acessar);
             this.pnlLogin.Controls.Add(this.lbl_Log_Senha);
             this.pnlLogin.Controls.Add(this.lbl_Log_Usuario);
-            this.pnlLogin.Location = new System.Drawing.Point(212, 111);
+            this.pnlLogin.Location = new System.Drawing.Point(213, 143);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(184, 190);
             this.pnlLogin.TabIndex = 16;
@@ -135,7 +116,7 @@ namespace ProjInter
             this.lbl_login.AutoSize = true;
             this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_login.Location = new System.Drawing.Point(208, 102);
+            this.lbl_login.Location = new System.Drawing.Point(209, 134);
             this.lbl_login.Name = "lbl_login";
             this.lbl_login.Size = new System.Drawing.Size(38, 15);
             this.lbl_login.TabIndex = 20;
@@ -162,26 +143,14 @@ namespace ProjInter
             this.panel1.Size = new System.Drawing.Size(601, 78);
             this.panel1.TabIndex = 22;
             // 
-            // lbl_cadastrar
-            // 
-            this.lbl_cadastrar.AutoSize = true;
-            this.lbl_cadastrar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_cadastrar.Location = new System.Drawing.Point(231, 310);
-            this.lbl_cadastrar.Name = "lbl_cadastrar";
-            this.lbl_cadastrar.Size = new System.Drawing.Size(150, 13);
-            this.lbl_cadastrar.TabIndex = 23;
-            this.lbl_cadastrar.Text = "Acesse aqui para cadastrar-se";
-            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.lbl_cadastrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_login);
-            this.Controls.Add(this.btn_Cadastrar);
             this.Controls.Add(this.pnlLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLogin";
@@ -197,7 +166,6 @@ namespace ProjInter
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_Cadastrar;
         private System.Windows.Forms.Button btn_Acessar;
         private System.Windows.Forms.TextBox tb_Senha_login;
         private System.Windows.Forms.TextBox tb_Usu_login;
@@ -207,6 +175,5 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_login;
         private System.Windows.Forms.Label lbl_Titulo_Pet_Sharp;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbl_cadastrar;
     }
 }
