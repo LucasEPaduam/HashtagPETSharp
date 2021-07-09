@@ -272,7 +272,7 @@ namespace ProjInter
             // 
             this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
-            this.pb_Pesquisar.Location = new System.Drawing.Point(530, 312);
+            this.pb_Pesquisar.Location = new System.Drawing.Point(530, 306);
             this.pb_Pesquisar.Name = "pb_Pesquisar";
             this.pb_Pesquisar.Size = new System.Drawing.Size(21, 21);
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +284,7 @@ namespace ProjInter
             // 
             this.tb_Pesquisar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Pesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tb_Pesquisar.Location = new System.Drawing.Point(311, 311);
+            this.tb_Pesquisar.Location = new System.Drawing.Point(311, 305);
             this.tb_Pesquisar.Name = "tb_Pesquisar";
             this.tb_Pesquisar.Size = new System.Drawing.Size(241, 23);
             this.tb_Pesquisar.TabIndex = 58;
@@ -315,7 +315,7 @@ namespace ProjInter
             this.gb_EscolhaArea.Controls.Add(this.rb_vet);
             this.gb_EscolhaArea.Controls.Add(this.rb_adm);
             this.gb_EscolhaArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_EscolhaArea.Location = new System.Drawing.Point(8, 51);
+            this.gb_EscolhaArea.Location = new System.Drawing.Point(8, 65);
             this.gb_EscolhaArea.Name = "gb_EscolhaArea";
             this.gb_EscolhaArea.Size = new System.Drawing.Size(280, 48);
             this.gb_EscolhaArea.TabIndex = 63;
@@ -355,10 +355,10 @@ namespace ProjInter
             this.btn_Excluir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(453, 370);
+            this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(464, 370);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(64, 34);
+            this.btn_Excluir.Size = new System.Drawing.Size(59, 34);
             this.btn_Excluir.TabIndex = 64;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
@@ -372,10 +372,10 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(518, 370);
+            this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salvar.Location = new System.Drawing.Point(523, 370);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(61, 34);
+            this.btn_Salvar.Size = new System.Drawing.Size(56, 34);
             this.btn_Salvar.TabIndex = 67;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
@@ -389,10 +389,10 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(322, 370);
+            this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(345, 370);
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(66, 34);
+            this.btn_Editar.Size = new System.Drawing.Size(61, 34);
             this.btn_Editar.TabIndex = 66;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
@@ -406,10 +406,10 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(389, 370);
+            this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.Location = new System.Drawing.Point(406, 370);
             this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(63, 34);
+            this.btn_Limpar.Size = new System.Drawing.Size(58, 34);
             this.btn_Limpar.TabIndex = 65;
             this.btn_Limpar.Text = "Limpar";
             this.btn_Limpar.UseVisualStyleBackColor = false;
@@ -419,7 +419,7 @@ namespace ProjInter
             // 
             this.lbl_CadSenha.AutoSize = true;
             this.lbl_CadSenha.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CadSenha.Location = new System.Drawing.Point(307, 242);
+            this.lbl_CadSenha.Location = new System.Drawing.Point(306, 235);
             this.lbl_CadSenha.Name = "lbl_CadSenha";
             this.lbl_CadSenha.Size = new System.Drawing.Size(106, 16);
             this.lbl_CadSenha.TabIndex = 81;
@@ -430,7 +430,7 @@ namespace ProjInter
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tb_Senha);
             this.panel1.Controls.Add(this.lbl_Senha);
-            this.panel1.Location = new System.Drawing.Point(313, 251);
+            this.panel1.Location = new System.Drawing.Point(312, 244);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 43);
             this.panel1.TabIndex = 80;
@@ -465,7 +465,7 @@ namespace ProjInter
             this.btn_VIS_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_VIS_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_VIS_Usu.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VIS_Usu.Location = new System.Drawing.Point(311, 334);
+            this.btn_VIS_Usu.Location = new System.Drawing.Point(407, 330);
             this.btn_VIS_Usu.Name = "btn_VIS_Usu";
             this.btn_VIS_Usu.Size = new System.Drawing.Size(146, 30);
             this.btn_VIS_Usu.TabIndex = 82;
@@ -481,10 +481,10 @@ namespace ProjInter
             this.bt_NovoUsu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
             this.bt_NovoUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.bt_NovoUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_NovoUsu.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_NovoUsu.Location = new System.Drawing.Point(255, 370);
+            this.bt_NovoUsu.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_NovoUsu.Location = new System.Drawing.Point(284, 370);
             this.bt_NovoUsu.Name = "bt_NovoUsu";
-            this.bt_NovoUsu.Size = new System.Drawing.Size(66, 34);
+            this.bt_NovoUsu.Size = new System.Drawing.Size(61, 34);
             this.bt_NovoUsu.TabIndex = 68;
             this.bt_NovoUsu.Text = "Novo";
             this.bt_NovoUsu.UseVisualStyleBackColor = false;
@@ -713,7 +713,7 @@ namespace ProjInter
             this.pn_Adiministrativo.Controls.Add(this.lbl_CPF_Usu);
             this.pn_Adiministrativo.Controls.Add(this.lbl_Nome_Usu);
             this.pn_Adiministrativo.Controls.Add(this.lbl_Cod_Usu);
-            this.pn_Adiministrativo.Location = new System.Drawing.Point(8, 111);
+            this.pn_Adiministrativo.Location = new System.Drawing.Point(18, 131);
             this.pn_Adiministrativo.Name = "pn_Adiministrativo";
             this.pn_Adiministrativo.Size = new System.Drawing.Size(244, 258);
             this.pn_Adiministrativo.TabIndex = 41;
@@ -722,7 +722,7 @@ namespace ProjInter
             // 
             this.lbl_Administrativo.AutoSize = true;
             this.lbl_Administrativo.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Administrativo.Location = new System.Drawing.Point(3, 96);
+            this.lbl_Administrativo.Location = new System.Drawing.Point(13, 115);
             this.lbl_Administrativo.Name = "lbl_Administrativo";
             this.lbl_Administrativo.Size = new System.Drawing.Size(143, 27);
             this.lbl_Administrativo.TabIndex = 1;

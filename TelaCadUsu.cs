@@ -394,29 +394,7 @@ namespace ProjInter
         }
     
 
-        private void rb_adm_CheckedChanged(object sender, EventArgs e)
-        {
-            Random numeros = new Random();
-            int numerosrandom;
-            string novocodigoadm;
-            DataTable dt = new DataTable();
-            string consultaSQL;
-
-            if (rb_adm.Checked)
-            {
-                do
-                {
-                    numerosrandom = numeros.Next(0100, 0300);
-                    novocodigoadm = numerosrandom.ToString();
-                    novocodigoadm = "A" + novocodigoadm;
-                    consultaSQL = "SELECT * FROM administrativo WHERE codigo='" + novocodigoadm + "'";
-                    dt = BancoDados.Consulta(consultaSQL);
-                    tb_Cod_Usu.Text = novocodigoadm;
-
-                } while (dt.Rows.Count > 0);
-            }
-        }
-
+        
         private void pb_Pesquisar_Click(object sender, EventArgs e)
         {
             rb_adm.Enabled = false;
@@ -527,6 +505,11 @@ namespace ProjInter
             }
 
         
+        }
+
+        private void rb_adm_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
