@@ -115,13 +115,13 @@ namespace ProjInter
                                 if (codmed.StartsWith("R") || (codmed.StartsWith("r")))
                                 {
                                     rb_Vacina.Checked = true;
-                                    rb_Vacina.Text = tb_Pesquisar.Text;
+                                    tb_Cod_Med.Text = tb_Pesquisar.Text;
                                     MessageBox.Show("Remédio localizado!!!");
                                 }
                                 else if (codmed.StartsWith("v") || (codmed.StartsWith("V")))
                                 {
                                     rb_Remedio.Checked = true;
-                                    rb_Remedio.Text = tb_Pesquisar.Text;
+                                    tb_Cod_Med.Text = tb_Pesquisar.Text;
                                     MessageBox.Show("Vacina localizada!!!");
                                 }
                                 else

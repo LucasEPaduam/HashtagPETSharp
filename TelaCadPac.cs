@@ -162,29 +162,7 @@ namespace ProjInter
                                     rb_outros.Checked = true;
                                     tb_Codigo_Pac.Text = tb_Pesquisar.Text;
                                 }
-                                /*
-                                 * 
-                                else if (codpet.StartsWith("c"))
-                                {
-                                    rb_Cachorro.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                else if (codpet.StartsWith("g"))
-                                {
-                                    rb_Gato.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                else if (codpet.StartsWith("p"))
-                                {
-                                    rb_passaro.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                else if (codpet.StartsWith("o"))
-                                {
-                                    rb_outros.Checked = true;
-                                    tb_Codigo_Pac.Text = tb_Pesquisar.Text;
-                                }
-                                */
+                               
                                 MessageBox.Show("PET localizado!!!");
                                 
                             }
