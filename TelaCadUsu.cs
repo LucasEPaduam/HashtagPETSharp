@@ -91,14 +91,14 @@ namespace ProjInter
             telainicial.Show();
         }
 
-        private void btn_VIS_PAC_Click(object sender, EventArgs e)
+        private void btn_VIS_Usu_Click(object sender, EventArgs e)
         {
             this.Hide();
             TelaVisUsu telavisusu = new TelaVisUsu(this);
             telavisusu.Show();
         }
 
-        private void bt_NovoPac_Click(object sender, EventArgs e)
+        private void bt_NovoUsu_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Escolha qual o tipo de usuário.\nEm seguida, preencha todos os dados do formulário e clique em salvar.");
 
@@ -128,25 +128,32 @@ namespace ProjInter
             tb_UF_Med_Usu.Clear();
             tb_Cid_Usu.Clear();
 
-            tb_Cargo_Usu.Enabled = true;
-            tb_Cidade_Usu.Enabled = true;
-            tb_CEP_Usu.Enabled = true;
-            tb_CPF_Usu.Enabled = true;
-            tb_Cod_Usu.Enabled = true;
-            tb_Idade_Usu.Enabled = true;
-            tb_Nasc_Usu.Enabled = true;
-            tb_Nome_Usu.Enabled = true;
-            tb_Num_Usu.Enabled = true;
-            tb_Rua_Av_Usu.Enabled = true;
-            tb_UF_Usu.Enabled = true;
+            if (rb_adm.Checked)
+            {
+                tb_Cod_Usu.Enabled = false;
 
-            tb_Cep_Med_Usu.Enabled = false;
-            tb_CRMV_Usu.Enabled = false;
-            tb_Nome_Vet_Usu.Enabled = false;
-            tb_N_Usu.Enabled = false;
-            tb_Rua_Usu.Enabled = false;
-            tb_UF_Med_Usu.Enabled = false;
-            tb_Cid_Usu.Enabled = false;
+                tb_Cargo_Usu.Enabled = true;
+                tb_Cidade_Usu.Enabled = true;
+                tb_CEP_Usu.Enabled = true;
+                tb_CPF_Usu.Enabled = true;
+                tb_Idade_Usu.Enabled = true;
+                tb_Nasc_Usu.Enabled = true;
+                tb_Nome_Usu.Enabled = true;
+                tb_Num_Usu.Enabled = true;
+                tb_Rua_Av_Usu.Enabled = true;
+                tb_UF_Usu.Enabled = true;
+            }
+
+            if (rb_vet.Checked)
+            {
+                tb_Cep_Med_Usu.Enabled = true;
+                tb_CRMV_Usu.Enabled = true;
+                tb_Nome_Vet_Usu.Enabled = true;
+                tb_N_Usu.Enabled = true;
+                tb_Rua_Usu.Enabled = true;
+                tb_UF_Med_Usu.Enabled = true;
+                tb_Cid_Usu.Enabled = true;
+            }
         }
 
         private void btn_Editar_Click(object sender, EventArgs e)
@@ -261,31 +268,38 @@ namespace ProjInter
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-
-            if (tb_CPF_Usu.Text == "" || tb_CRMV_Usu.Text == "")
+            if (rb_adm.Checked)
             {
-                MessageBox.Show("Erro ao salvar!\nPesquise o usuário que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
-            }
-            //TODOS OS CAMPOS SENDO VERIFICADOS
-            //else if (tb_Cargo_Usu.Text == "" || tb_Cidade_Usu.Text == "" || tb_CEP_Usu.Text == "" || tb_CPF_Usu.Text == "" || tb_Cod_Usu.Text == "" || tb_Idade_Usu.Text == "" +|| tb_Nasc_Usu.Text == "" || tb_Nome_Usu.Text == "" || tb_Num_Usu.Text == "" || tb_Rua_Av_Usu.Text == "" || tb_UF_Usu.Text == "" || tb_Cep_Med_Usu.Text == "" || tb_CRMV_Usu.Text == "" || tb_Nome_Vet_Usu.Text == "" || tb_N_Usu.Text == "" || tb_Rua_Usu.Text == "" || tb_UF_Med_Usu.Text == "" || tb_Cid_Usu.Text == "")
-            {
-                MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
-            }
-            /*
-            else
-            {
-                if (rb_adm.Checked)
+                if (tb_CPF_Usu.Text == "")
                 {
-                    Remedio remedio = new Remedio();
-                    remedio.codigo = tb_Cod_Med.Text;
-                    remedio.nome = tb_Nome_Med.Text;
-                    remedio.preco = tb_Preco_Med.Text;
+                    MessageBox.Show("Erro ao salvar!\nPesquise o usuário que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
+                }
+
+                //TODOS OS CAMPOS SENDO VERIFICADOS
+                else if (tb_Cargo_Usu.Text == "" || tb_Cidade_Usu.Text == "" || tb_CEP_Usu.Text == "" || tb_CPF_Usu.Text == "" || tb_Cod_Usu.Text == "" || tb_Idade_Usu.Text == "" || tb_Nasc_Usu.Text == "" || tb_Nome_Usu.Text == "" || tb_Num_Usu.Text == "" || tb_Rua_Av_Usu.Text == "" || tb_UF_Usu.Text == "")
+                {
+                    MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
+                }
+                else
+                {
+                    Administrativo administrativo = new Administrativo();
+                    administrativo.codigo = tb_Cod_Usu.Text;
+                    administrativo.nome = tb_Nome_Usu.Text;
+                    administrativo.cargo = tb_Cargo_Usu.Text;
+                    administrativo.cidade = tb_Cidade_Usu.Text;
+                    administrativo.CPF = tb_CPF_Usu.Text;
+                    administrativo.CEP = tb_CEP_Usu.Text;
+                    administrativo.idade = tb_Idade_Usu.Text;
+                    administrativo.nascimento = tb_Nasc_Usu.Text;
+                    administrativo.numero = tb_Num_Usu.Text;
+                    administrativo.rua = tb_Rua_Av_Usu.Text;
+                    administrativo.uf = tb_UF_Usu.Text;
 
                     DataTable data_table = new DataTable();
-                    string codmed = tb_Cod_Med.Text;
-                    string consultaSQLremedio = "SELECT * FROM remedio WHERE codigo='" + codmed + "'";
+                    string codadm = tb_Cod_Usu.Text;
+                    string consultaSQL = "SELECT * FROM administrativo WHERE cpf='" + codadm + "'";
 
-                    data_table = BancoDados.Consulta(consultaSQLremedio);
+                    data_table = BancoDados.Consulta(consultaSQL);
 
                     // SE O BANCO RETORNAR ALGUM CADASTRO SERÁ REALIZADA A ATUALIZAÇÃO
                     if (data_table.Rows.Count != 0)
@@ -294,13 +308,22 @@ namespace ProjInter
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand remedioupdate = new MySqlCommand("UPDATE remedio SET nomeremedio = ?, precoremedio = ? Where codigo = ?", conexaoupdate);
+                            MySqlCommand administrativoupdate = new MySqlCommand("UPDATE administrativo SET cargo = ?, nome = ?, cpf = ?, nascimento = ?, idade = ?, rua = ?, numero = ?, cep = ?, cidade = ?, uf = ?", conexaoupdate);
 
-                            remedioupdate.Parameters.Clear();
-                            remedioupdate.Parameters.Add("@nomeremedio", MySqlDbType.VarChar, 10).Value = remedio.nome;
-                            remedioupdate.Parameters.Add("@precoremedio", MySqlDbType.Double, 1).Value = remedio.preco;
-                            remedioupdate.CommandType = CommandType.Text;
-                            remedioupdate.ExecuteNonQuery();
+                            administrativoupdate.Parameters.Clear();
+                            administrativoupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = administrativo.nome;
+                            administrativoupdate.Parameters.Add("@cargo", MySqlDbType.VarChar, 10).Value = administrativo.cargo;
+                            administrativoupdate.Parameters.Add("@cpf", MySqlDbType.VarChar, 10).Value = administrativo.CPF;
+                            administrativoupdate.Parameters.Add("@nascimento", MySqlDbType.VarChar, 10).Value = administrativo.nascimento;
+                            administrativoupdate.Parameters.Add("@idade", MySqlDbType.VarChar, 10).Value = administrativo.idade;
+                            administrativoupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 10).Value = administrativo.rua;
+                            administrativoupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = administrativo.numero;
+                            administrativoupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = administrativo.CEP;
+                            administrativoupdate.Parameters.Add("@cidade", MySqlDbType.VarChar, 10).Value = administrativo.cidade;
+                            administrativoupdate.Parameters.Add("@uf", MySqlDbType.VarChar, 10).Value = administrativo.uf;
+
+                            administrativoupdate.CommandType = CommandType.Text;
+                            administrativoupdate.ExecuteNonQuery();
 
                             MessageBox.Show("Atualizado com sucesso!");
                         }
@@ -311,40 +334,48 @@ namespace ProjInter
                     }
                     else
                     {
-                        BancoDados.insertremedio(remedio);
+                        BancoDados.insertadministrativo(administrativo);
                     }
-
                 }
+            }
 
-                if (rb_Vacina.Checked)
+            else if (rb_vet.Checked)
+            {
+                if (tb_CRMV_Usu.Text == "")
                 {
-                    Vacina vacina = new Vacina();
-                    vacina.codigo = tb_Cod_Med.Text;
-                    vacina.nome = tb_Nome_Med.Text;
-                    vacina.preco = tb_Preco_Med.Text;
-            
-
-                    CONSULTA AO BANCO DE DADOS PARA SABER SE É UM CADASTRO NOVO OU
-                     UM CADASTRO QUE SERÁ ATUALIZADO
-
+                    MessageBox.Show("Erro ao salvar!\nPesquise o usuário que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
+                }
+                else if (tb_Cep_Med_Usu.Text == "" || tb_CRMV_Usu.Text == "" || tb_Nome_Vet_Usu.Text == "" || tb_N_Usu.Text == "" || tb_Rua_Usu.Text == "" || tb_UF_Med_Usu.Text == "" || tb_Cid_Usu.Text == "")
+                {
+                    MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
+                }
+                else
+                {
+                    Veterinario veterinario = new Veterinario();
+                    veterinario.crmv = tb_CRMV_Usu.Text;
+                    veterinario.nome = tb_Nome_Vet_Usu.Text;
+                    veterinario.cep = tb_Cep_Med_Usu.Text;
+                    veterinario.numero = tb_N_Usu.Text;
+                    veterinario.cidade = tb_Cid_Usu.Text;
+                    veterinario.uf = tb_UF_Med_Usu.Text;
 
                     DataTable data_table = new DataTable();
-                    string codmed = tb_Cod_Med.Text;
-                    string consultaSQLvacina = "SELECT * FROM vacina WHERE codigo='" + codmed + "'";
+                    string codvet = tb_CRMV_Usu.Text;
+                    string consultaSQLvacina = "SELECT * FROM veterinario WHERE crmv='" + codvet + "'";
                     if (data_table.Rows.Count != 0)
                     {
                         try
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand vacinaupdate = new MySqlCommand("UPDATE vacina SET nomevacina = ?, precovacina = ? Where codigo = ?", conexaoupdate);
+                            MySqlCommand veterinarioupdate = new MySqlCommand("UPDATE veterinario SET nomevet = ?, cep = ?, numero = ?, cidade = ?, uf = ?", conexaoupdate);
 
-                            vacinaupdate.Parameters.Clear();
-                            vacinaupdate.Parameters.Add("@nomevacina", MySqlDbType.VarChar, 10).Value = vacina.nome;
-                            vacinaupdate.Parameters.Add("@precovacina", MySqlDbType.Double, 1).Value = vacina.preco;
-                            vacinaupdate.CommandType = CommandType.Text;
-                            vacinaupdate.ExecuteNonQuery();
-
+                            veterinarioupdate.Parameters.Clear();
+                            veterinarioupdate.Parameters.Add("@nomevet", MySqlDbType.VarChar, 10).Value = veterinario.nome;
+                            veterinarioupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = veterinario.cep;
+                            veterinarioupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = veterinario.numero;
+                            veterinarioupdate.Parameters.Add("@cidade", MySqlDbType.VarChar, 10).Value = veterinario.cidade;
+                            veterinarioupdate.Parameters.Add("@uf", MySqlDbType.VarChar, 10).Value = veterinario.uf;
                             conexaoupdate.Close();
 
                             MessageBox.Show("Atualizado com sucesso!");
@@ -356,12 +387,12 @@ namespace ProjInter
                     }
                     else
                     {
-                        BancoDados.insertvacina(vacina);
+                        BancoDados.insertveterinario(veterinario);
                     }
                 }
-            }
-            */
+            }        
         }
+    
 
         private void rb_adm_CheckedChanged(object sender, EventArgs e)
         {
@@ -373,8 +404,6 @@ namespace ProjInter
 
             if (rb_adm.Checked)
             {
-                //REALIZADO SORTEIO DE NUMERO ALEATÓRIO PARA CÓDIGO DO PET
-                //LOOPING PARA VERIFICAR SE O CÓDIGO SORTEADO JÁ EXISTE NO BANCO
                 do
                 {
                     numerosrandom = numeros.Next(0100, 0300);
@@ -387,5 +416,118 @@ namespace ProjInter
                 } while (dt.Rows.Count > 0);
             }
         }
+
+        private void pb_Pesquisar_Click(object sender, EventArgs e)
+        {
+            rb_adm.Enabled = false;
+            rb_vet.Enabled = false;
+
+            tb_Cargo_Usu.Enabled = false;
+            tb_Cidade_Usu.Enabled = false;
+            tb_CEP_Usu.Enabled = false;
+            tb_CPF_Usu.Enabled = false;
+            tb_Cod_Usu.Enabled = false;
+            tb_Idade_Usu.Enabled = false;
+            tb_Nasc_Usu.Enabled = false;
+            tb_Nome_Usu.Enabled = false;
+            tb_Num_Usu.Enabled = false;
+            tb_Rua_Av_Usu.Enabled = false;
+            tb_UF_Usu.Enabled = false;
+
+            tb_Cep_Med_Usu.Enabled = false;
+            tb_CRMV_Usu.Enabled = false;
+            tb_Nome_Vet_Usu.Enabled = false;
+            tb_N_Usu.Enabled = false;
+            tb_Rua_Usu.Enabled = false;
+            tb_UF_Med_Usu.Enabled = false;
+            tb_Cid_Usu.Enabled = false;
+
+            string codadm = tb_Pesquisar.Text;
+
+            if (codadm == "")
+            {
+                MessageBox.Show("Informe o código do administrativo");
+                tb_Pesquisar.Focus();
+            }
+            else
+            {
+
+                try
+                {   // STRING PARA CONEXÃO COM O BANCO DE DADOS
+
+                    string connString = @"server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2";
+
+                    //TENTATIVA DE CONEXÃO COM O BANCO
+
+                    using (MySqlConnection conn = new MySqlConnection(connString))
+                    {
+
+                        conn.Open();
+
+                        // CONSULTA O BANCO ATRAVÉS DO CÓDIGO DO PACIENTE
+
+                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM administrativo WHERE cpf='" + codadm + "'", conn))
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                tb_Cod_Usu.Text = reader.GetString(0);
+                                tb_Nome_Usu.Text = reader.GetString(1);
+                                tb_Cargo_Usu.Text = reader.GetString(2);
+                                tb_Cidade_Usu.Text = reader.GetString(3);
+                                tb_CPF_Usu.Text = reader.GetString(4);
+                                tb_CEP_Usu.Text = reader.GetString(5);
+                                tb_Idade_Usu.Text = reader.GetString(6);
+                                tb_Nasc_Usu.Text = reader.GetString(7);
+                                tb_Num_Usu.Text = reader.GetString(8);
+                                tb_Rua_Av_Usu.Text = reader.GetString(9);
+                                tb_UF_Usu.Text = reader.GetString(10);
+                            }
+                        }
+                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM veterinario WHERE crmv='" + codadm + "'", conn))
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                tb_CRMV_Usu.Text = reader.GetString(0);
+                                tb_Nome_Vet_Usu.Text = reader.GetString(1);
+                                tb_Cep_Med_Usu.Text = reader.GetString(2);
+                                tb_N_Usu.Text = reader.GetString(3);
+                                tb_Cid_Usu.Text = reader.GetString(4);
+                                tb_UF_Med_Usu.Text = reader.GetString(5);
+                                
+                            }
+                        }
+                    }
+                }
+                catch (MySqlException erro)
+                {
+                    Console.WriteLine("Erro.Number" + erro.Number);
+                    switch (erro.Number)
+                    {
+                        case 1042:
+                            Console.WriteLine("Erro ao tentar conectar com o servidor!");
+                            Console.WriteLine("Verifique se o endereço do servidor está correto!");
+                            break;
+
+                        default:
+                            Console.WriteLine(erro.GetType());
+                            Console.WriteLine(erro.Message);
+                            Console.WriteLine(erro.ToString());
+                            break;
+                    }
+                }
+                catch (Exception erro)
+                {
+                    Console.WriteLine(erro.GetType());
+                    Console.WriteLine(erro.Message);
+                    Console.WriteLine(erro.ToString());
+                }
+
+            }
+
+        
+        }
     }
- }
+}
+

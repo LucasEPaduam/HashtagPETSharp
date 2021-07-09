@@ -52,6 +52,8 @@ namespace ProjInter
             this.panel3 = new System.Windows.Forms.Panel();
             this.pb_InicioTCad = new System.Windows.Forms.PictureBox();
             this.gb_EscolhaArea = new System.Windows.Forms.GroupBox();
+            this.rb_vet = new System.Windows.Forms.RadioButton();
+            this.rb_adm = new System.Windows.Forms.RadioButton();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
@@ -60,10 +62,8 @@ namespace ProjInter
             this.panel1 = new System.Windows.Forms.Panel();
             this.tb_Senha = new System.Windows.Forms.TextBox();
             this.lbl_Senha = new System.Windows.Forms.Label();
-            this.btn_VIS_PAC = new System.Windows.Forms.Button();
-            this.rb_adm = new System.Windows.Forms.RadioButton();
-            this.rb_vet = new System.Windows.Forms.RadioButton();
-            this.bt_NovoPac = new System.Windows.Forms.Button();
+            this.btn_VIS_Usu = new System.Windows.Forms.Button();
+            this.bt_NovoUsu = new System.Windows.Forms.Button();
             this.lbl_Cod_Usu = new System.Windows.Forms.Label();
             this.lbl_Nome_Usu = new System.Windows.Forms.Label();
             this.lbl_CPF_Usu = new System.Windows.Forms.Label();
@@ -278,6 +278,7 @@ namespace ProjInter
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Pesquisar.TabIndex = 59;
             this.pb_Pesquisar.TabStop = false;
+            this.pb_Pesquisar.Click += new System.EventHandler(this.pb_Pesquisar_Click);
             // 
             // tb_Pesquisar
             // 
@@ -320,6 +321,31 @@ namespace ProjInter
             this.gb_EscolhaArea.TabIndex = 63;
             this.gb_EscolhaArea.TabStop = false;
             this.gb_EscolhaArea.Text = "Qual a área de atuação do usuário?";
+            // 
+            // rb_vet
+            // 
+            this.rb_vet.AutoSize = true;
+            this.rb_vet.Enabled = false;
+            this.rb_vet.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_vet.Location = new System.Drawing.Point(148, 21);
+            this.rb_vet.Name = "rb_vet";
+            this.rb_vet.Size = new System.Drawing.Size(90, 21);
+            this.rb_vet.TabIndex = 6;
+            this.rb_vet.Text = "Veterinário";
+            this.rb_vet.UseVisualStyleBackColor = true;
+            // 
+            // rb_adm
+            // 
+            this.rb_adm.AutoSize = true;
+            this.rb_adm.Enabled = false;
+            this.rb_adm.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_adm.Location = new System.Drawing.Point(29, 21);
+            this.rb_adm.Name = "rb_adm";
+            this.rb_adm.Size = new System.Drawing.Size(105, 21);
+            this.rb_adm.TabIndex = 5;
+            this.rb_adm.Text = "Adminstrativo";
+            this.rb_adm.UseVisualStyleBackColor = true;
+            this.rb_adm.CheckedChanged += new System.EventHandler(this.rb_adm_CheckedChanged);
             // 
             // btn_Excluir
             // 
@@ -430,64 +456,39 @@ namespace ProjInter
             this.lbl_Senha.TabIndex = 76;
             this.lbl_Senha.Text = "Senha";
             // 
-            // btn_VIS_PAC
+            // btn_VIS_Usu
             // 
-            this.btn_VIS_PAC.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_VIS_PAC.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_VIS_PAC.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_VIS_PAC.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_VIS_PAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_VIS_PAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_VIS_PAC.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VIS_PAC.Location = new System.Drawing.Point(311, 334);
-            this.btn_VIS_PAC.Name = "btn_VIS_PAC";
-            this.btn_VIS_PAC.Size = new System.Drawing.Size(146, 30);
-            this.btn_VIS_PAC.TabIndex = 82;
-            this.btn_VIS_PAC.Text = "Visualizar Pacientes";
-            this.btn_VIS_PAC.UseVisualStyleBackColor = false;
-            this.btn_VIS_PAC.Click += new System.EventHandler(this.btn_VIS_PAC_Click);
+            this.btn_VIS_Usu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_Usu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VIS_Usu.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_Usu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_VIS_Usu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VIS_Usu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VIS_Usu.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VIS_Usu.Location = new System.Drawing.Point(311, 334);
+            this.btn_VIS_Usu.Name = "btn_VIS_Usu";
+            this.btn_VIS_Usu.Size = new System.Drawing.Size(146, 30);
+            this.btn_VIS_Usu.TabIndex = 82;
+            this.btn_VIS_Usu.Text = "Visualizar Usuários";
+            this.btn_VIS_Usu.UseVisualStyleBackColor = false;
+            this.btn_VIS_Usu.Click += new System.EventHandler(this.btn_VIS_Usu_Click);
             // 
-            // rb_adm
+            // bt_NovoUsu
             // 
-            this.rb_adm.AutoSize = true;
-            this.rb_adm.Enabled = false;
-            this.rb_adm.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_adm.Location = new System.Drawing.Point(29, 21);
-            this.rb_adm.Name = "rb_adm";
-            this.rb_adm.Size = new System.Drawing.Size(105, 21);
-            this.rb_adm.TabIndex = 5;
-            this.rb_adm.Text = "Adminstrativo";
-            this.rb_adm.UseVisualStyleBackColor = true;
-            this.rb_adm.CheckedChanged += new System.EventHandler(this.rb_adm_CheckedChanged);
-            // 
-            // rb_vet
-            // 
-            this.rb_vet.AutoSize = true;
-            this.rb_vet.Enabled = false;
-            this.rb_vet.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_vet.Location = new System.Drawing.Point(148, 21);
-            this.rb_vet.Name = "rb_vet";
-            this.rb_vet.Size = new System.Drawing.Size(90, 21);
-            this.rb_vet.TabIndex = 6;
-            this.rb_vet.Text = "Veterinário";
-            this.rb_vet.UseVisualStyleBackColor = true;
-            // 
-            // bt_NovoPac
-            // 
-            this.bt_NovoPac.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_NovoPac.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_NovoPac.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_NovoPac.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.bt_NovoPac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_NovoPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_NovoPac.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_NovoPac.Location = new System.Drawing.Point(255, 370);
-            this.bt_NovoPac.Name = "bt_NovoPac";
-            this.bt_NovoPac.Size = new System.Drawing.Size(66, 34);
-            this.bt_NovoPac.TabIndex = 68;
-            this.bt_NovoPac.Text = "Novo";
-            this.bt_NovoPac.UseVisualStyleBackColor = false;
-            this.bt_NovoPac.Click += new System.EventHandler(this.bt_NovoPac_Click);
+            this.bt_NovoUsu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoUsu.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_NovoUsu.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoUsu.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.bt_NovoUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_NovoUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_NovoUsu.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_NovoUsu.Location = new System.Drawing.Point(255, 370);
+            this.bt_NovoUsu.Name = "bt_NovoUsu";
+            this.bt_NovoUsu.Size = new System.Drawing.Size(66, 34);
+            this.bt_NovoUsu.TabIndex = 68;
+            this.bt_NovoUsu.Text = "Novo";
+            this.bt_NovoUsu.UseVisualStyleBackColor = false;
+            this.bt_NovoUsu.Click += new System.EventHandler(this.bt_NovoUsu_Click);
             // 
             // lbl_Cod_Usu
             // 
@@ -733,10 +734,10 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.btn_VIS_PAC);
+            this.Controls.Add(this.btn_VIS_Usu);
             this.Controls.Add(this.lbl_CadSenha);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bt_NovoPac);
+            this.Controls.Add(this.bt_NovoUsu);
             this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Editar);
@@ -801,10 +802,10 @@ namespace ProjInter
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tb_Senha;
         private System.Windows.Forms.Label lbl_Senha;
-        private System.Windows.Forms.Button btn_VIS_PAC;
+        private System.Windows.Forms.Button btn_VIS_Usu;
         private System.Windows.Forms.RadioButton rb_vet;
         private System.Windows.Forms.RadioButton rb_adm;
-        private System.Windows.Forms.Button bt_NovoPac;
+        private System.Windows.Forms.Button bt_NovoUsu;
         private System.Windows.Forms.Label lbl_Cod_Usu;
         private System.Windows.Forms.Label lbl_Nome_Usu;
         private System.Windows.Forms.Label lbl_CPF_Usu;
