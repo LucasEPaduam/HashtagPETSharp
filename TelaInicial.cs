@@ -50,6 +50,13 @@ namespace ProjInter
         }
         private TelaCadMed tela_cadmed;
 
+        public TelaInicial(TelaVisVacina telaVisVacina)
+        {
+            InitializeComponent();
+            this.tela_visvacina = telaVisVacina;
+        }
+        private TelaVisVacina tela_visvacina;
+
         public TelaInicial(TelaCadExame telacadexame)
         {
             InitializeComponent();

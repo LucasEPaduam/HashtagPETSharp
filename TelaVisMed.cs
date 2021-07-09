@@ -21,7 +21,8 @@ namespace ProjInter
 
         private void pb_Inicio_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            this.tela_cadmed.Close();
             TelaInicial telainicial = new TelaInicial(this);
             telainicial.Show();
         }
@@ -35,13 +36,12 @@ namespace ProjInter
         {
             
             int i = 0;
-            string todosmedicamentos = "SELECT Vacina.codigo as 'COD VAC', vacina.nome as 'NOME VAC', vacina.preco as 'PRECO VAC', remedio.codigo as 'COD REM', remedio.nome as 'NOME REM', remedio.preco as 'PRECO REM' FROM vacina, remedio ";
+            string todosmedicamentos = "SELECT remedio.codigo as 'CODIGO', remedio.nome as 'NOME', remedio.preco as 'VALOR' FROM Remedio";
 
             dgv_TelaVisMed.DataSource = BancoDados.Consulta(todosmedicamentos);
             dgv_TelaVisMed.Columns[0].Width = 90;
-            dgv_TelaVisMed.Columns[1].Width = 100;
-            dgv_TelaVisMed.Columns[2].Width = 130;
-            dgv_TelaVisMed.Columns[3].Width = 100;
+            dgv_TelaVisMed.Columns[1].Width = 210;
+            dgv_TelaVisMed.Columns[2].Width = 120;
             dgv_TelaVisMed.Sort(dgv_TelaVisMed.Columns[i], ListSortDirection.Ascending);
         }
     }

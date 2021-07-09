@@ -28,6 +28,13 @@ namespace ProjInter
         }
         private TelaVisMed tela_vismed;
 
+        public TelaCadMed (TelaVisVacina telaVisVacina)
+        {
+            InitializeComponent();
+            this.tela_vivacina = telaVisVacina;
+        }
+        private TelaVisVacina tela_vivacina;
+
         private void pb_Inicio_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -42,13 +49,7 @@ namespace ProjInter
             telainicial.Show();
         }
 
-        private void btn_Histórico_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TelaVisMed telavismed = new TelaVisMed(this);
-            telavismed.Show();
-        }
-        //AQUIIIIIIIIIIIIIIII
+      
 
         private void pb_Pesquisar_Click(object sender, EventArgs e)
         {
@@ -423,6 +424,14 @@ namespace ProjInter
             TelaVisMed telavismed = new TelaVisMed(this);
             telavismed.ShowDialog();
         }
+
+        private void btn_VisuVacina_Click(object sender, EventArgs e)
+        {
+            TelaVisVacina telaVisVacina = new TelaVisVacina(this);
+            telaVisVacina.ShowDialog();
+        }
+
+       
     }
  }
 

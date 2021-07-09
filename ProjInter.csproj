@@ -227,6 +227,12 @@
     <Compile Include="TelaVisUsu.Designer.cs">
       <DependentUpon>TelaVisUsu.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaVisVacina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisVacina.Designer.cs">
+      <DependentUpon>TelaVisVacina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vacina.cs" />
     <Compile Include="Veterinario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaVisUsu.resx">
       <DependentUpon>TelaVisUsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisVacina.resx">
+      <DependentUpon>TelaVisVacina.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -50,6 +50,7 @@ namespace ProjInter
             this.bt_editar = new System.Windows.Forms.Button();
             this.bt_limpar = new System.Windows.Forms.Button();
             this.btn_VIS_MED = new System.Windows.Forms.Button();
+            this.btn_VisuVacina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,6 +81,7 @@ namespace ProjInter
             // 
             // tb_Cod_Med
             // 
+            this.tb_Cod_Med.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cod_Med.Enabled = false;
             this.tb_Cod_Med.Location = new System.Drawing.Point(233, 146);
             this.tb_Cod_Med.Name = "tb_Cod_Med";
@@ -88,6 +90,7 @@ namespace ProjInter
             // 
             // tb_Nome_Med
             // 
+            this.tb_Nome_Med.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Nome_Med.Enabled = false;
             this.tb_Nome_Med.Location = new System.Drawing.Point(233, 182);
             this.tb_Nome_Med.Name = "tb_Nome_Med";
@@ -106,6 +109,7 @@ namespace ProjInter
             // 
             // tb_Preco_Med
             // 
+            this.tb_Preco_Med.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Preco_Med.Enabled = false;
             this.tb_Preco_Med.Location = new System.Drawing.Point(233, 221);
             this.tb_Preco_Med.Name = "tb_Preco_Med";
@@ -299,13 +303,30 @@ namespace ProjInter
             this.btn_VIS_MED.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_VIS_MED.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_VIS_MED.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VIS_MED.Location = new System.Drawing.Point(170, 297);
+            this.btn_VIS_MED.Location = new System.Drawing.Point(152, 300);
             this.btn_VIS_MED.Name = "btn_VIS_MED";
-            this.btn_VIS_MED.Size = new System.Drawing.Size(176, 30);
+            this.btn_VIS_MED.Size = new System.Drawing.Size(141, 30);
             this.btn_VIS_MED.TabIndex = 77;
-            this.btn_VIS_MED.Text = "Visualizar Medicamentos";
+            this.btn_VIS_MED.Text = "Visualizar Remédio";
             this.btn_VIS_MED.UseVisualStyleBackColor = false;
             this.btn_VIS_MED.Click += new System.EventHandler(this.btn_VIS_MED_Click);
+            // 
+            // btn_VisuVacina
+            // 
+            this.btn_VisuVacina.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuVacina.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VisuVacina.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuVacina.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_VisuVacina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuVacina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VisuVacina.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VisuVacina.Location = new System.Drawing.Point(295, 300);
+            this.btn_VisuVacina.Name = "btn_VisuVacina";
+            this.btn_VisuVacina.Size = new System.Drawing.Size(141, 30);
+            this.btn_VisuVacina.TabIndex = 78;
+            this.btn_VisuVacina.Text = "Visualizar Vacina";
+            this.btn_VisuVacina.UseVisualStyleBackColor = false;
+            this.btn_VisuVacina.Click += new System.EventHandler(this.btn_VisuVacina_Click);
             // 
             // TelaCadMed
             // 
@@ -313,6 +334,7 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.btn_VisuVacina);
             this.Controls.Add(this.btn_VIS_MED);
             this.Controls.Add(this.bt_NovoMed);
             this.Controls.Add(this.bt_excluir);
@@ -367,5 +389,6 @@ namespace ProjInter
         private System.Windows.Forms.Button bt_editar;
         private System.Windows.Forms.Button bt_limpar;
         private System.Windows.Forms.Button btn_VIS_MED;
+        private System.Windows.Forms.Button btn_VisuVacina;
     }
 }
