@@ -47,6 +47,7 @@ namespace ProjInter
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btn_Limpar = new System.Windows.Forms.Button();
             this.btn_Novo = new System.Windows.Forms.Button();
+            this.btn_VisuExame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -79,7 +80,7 @@ namespace ProjInter
             // 
             this.pb_Pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.pb_Pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Pesquisar.Image")));
-            this.pb_Pesquisar.Location = new System.Drawing.Point(400, 267);
+            this.pb_Pesquisar.Location = new System.Drawing.Point(400, 235);
             this.pb_Pesquisar.Name = "pb_Pesquisar";
             this.pb_Pesquisar.Size = new System.Drawing.Size(21, 21);
             this.pb_Pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,10 +92,10 @@ namespace ProjInter
             // 
             this.tb_Pesquisar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Pesquisar.ForeColor = System.Drawing.Color.DarkGray;
-            this.tb_Pesquisar.Location = new System.Drawing.Point(173, 266);
+            this.tb_Pesquisar.Location = new System.Drawing.Point(173, 234);
             this.tb_Pesquisar.Name = "tb_Pesquisar";
             this.tb_Pesquisar.Size = new System.Drawing.Size(249, 23);
-            this.tb_Pesquisar.TabIndex = 58;
+            this.tb_Pesquisar.TabIndex = 4;
             this.tb_Pesquisar.Text = "Pesquisar Exame";
             // 
             // panel3
@@ -118,11 +119,12 @@ namespace ProjInter
             // 
             // tb_Cod_Exame
             // 
+            this.tb_Cod_Exame.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cod_Exame.Enabled = false;
             this.tb_Cod_Exame.Location = new System.Drawing.Point(66, 19);
             this.tb_Cod_Exame.Name = "tb_Cod_Exame";
             this.tb_Cod_Exame.Size = new System.Drawing.Size(180, 20);
-            this.tb_Cod_Exame.TabIndex = 2;
+            this.tb_Cod_Exame.TabIndex = 1;
             // 
             // lbl_Nome_Exame
             // 
@@ -136,11 +138,12 @@ namespace ProjInter
             // 
             // tb_Nome_Exame
             // 
+            this.tb_Nome_Exame.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Nome_Exame.Enabled = false;
             this.tb_Nome_Exame.Location = new System.Drawing.Point(66, 55);
             this.tb_Nome_Exame.Name = "tb_Nome_Exame";
             this.tb_Nome_Exame.Size = new System.Drawing.Size(180, 20);
-            this.tb_Nome_Exame.TabIndex = 4;
+            this.tb_Nome_Exame.TabIndex = 2;
             // 
             // lbl_Preco_Exame
             // 
@@ -154,11 +157,12 @@ namespace ProjInter
             // 
             // tb_Preco_Exame
             // 
+            this.tb_Preco_Exame.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Preco_Exame.Enabled = false;
             this.tb_Preco_Exame.Location = new System.Drawing.Point(66, 94);
             this.tb_Preco_Exame.Name = "tb_Preco_Exame";
             this.tb_Preco_Exame.Size = new System.Drawing.Size(180, 20);
-            this.tb_Preco_Exame.TabIndex = 6;
+            this.tb_Preco_Exame.TabIndex = 3;
             // 
             // panel1
             // 
@@ -182,10 +186,10 @@ namespace ProjInter
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(187, 291);
+            this.btn_Excluir.Location = new System.Drawing.Point(191, 307);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(71, 34);
-            this.btn_Excluir.TabIndex = 71;
+            this.btn_Excluir.TabIndex = 7;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
@@ -199,12 +203,13 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(403, 291);
+            this.btn_Salvar.Location = new System.Drawing.Point(407, 307);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Salvar.TabIndex = 70;
+            this.btn_Salvar.TabIndex = 10;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // btn_Editar
             // 
@@ -215,10 +220,10 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(331, 291);
+            this.btn_Editar.Location = new System.Drawing.Point(335, 307);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Editar.TabIndex = 69;
+            this.btn_Editar.TabIndex = 9;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = false;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
@@ -232,12 +237,13 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(259, 291);
+            this.btn_Limpar.Location = new System.Drawing.Point(263, 307);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(71, 34);
-            this.btn_Limpar.TabIndex = 68;
+            this.btn_Limpar.TabIndex = 8;
             this.btn_Limpar.Text = "Limpar";
             this.btn_Limpar.UseVisualStyleBackColor = false;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
             // btn_Novo
             // 
@@ -248,13 +254,30 @@ namespace ProjInter
             this.btn_Novo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Novo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Novo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Novo.Location = new System.Drawing.Point(115, 291);
+            this.btn_Novo.Location = new System.Drawing.Point(119, 307);
             this.btn_Novo.Name = "btn_Novo";
             this.btn_Novo.Size = new System.Drawing.Size(71, 34);
-            this.btn_Novo.TabIndex = 72;
+            this.btn_Novo.TabIndex = 6;
             this.btn_Novo.Text = "Novo";
             this.btn_Novo.UseVisualStyleBackColor = false;
             this.btn_Novo.Click += new System.EventHandler(this.btn_Novo_Click);
+            // 
+            // btn_VisuExame
+            // 
+            this.btn_VisuExame.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuExame.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_VisuExame.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuExame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_VisuExame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_VisuExame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VisuExame.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VisuExame.Location = new System.Drawing.Point(277, 258);
+            this.btn_VisuExame.Name = "btn_VisuExame";
+            this.btn_VisuExame.Size = new System.Drawing.Size(146, 30);
+            this.btn_VisuExame.TabIndex = 5;
+            this.btn_VisuExame.Text = "Visualizar Exames";
+            this.btn_VisuExame.UseVisualStyleBackColor = false;
+            this.btn_VisuExame.Click += new System.EventHandler(this.btn_VisuExame_Click);
             // 
             // TelaCadExame
             // 
@@ -262,6 +285,7 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.btn_VisuExame);
             this.Controls.Add(this.btn_Novo);
             this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.panel1);
@@ -305,5 +329,6 @@ namespace ProjInter
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Button btn_Limpar;
         private System.Windows.Forms.Button btn_Novo;
+        private System.Windows.Forms.Button btn_VisuExame;
     }
 }

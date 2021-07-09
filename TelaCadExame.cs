@@ -54,6 +54,11 @@ namespace ProjInter
                 /*CONSULTA AO BANCO DE DADOS PARA SABER SE É UM CADASTRO NOVO OU
                  UM CADASTRO QUE SERÁ ATUALIZADO*/
 
+                Exame exame = new Exame();
+                exame.codigo = tb_Cod_Exame.Text;
+                exame.nome = tb_Nome_Exame.Text;
+                exame.preco = tb_Preco_Exame.Text;
+
                 DataTable data_table = new DataTable();
                 string codexame = tb_Cod_Exame.Text;
                 string consultaSQL = "SELECT * FROM Exame WHERE codigo='" + codexame + "'";
@@ -69,8 +74,9 @@ namespace ProjInter
                         MySqlCommand exameupdate = new MySqlCommand("UPDATE Exame SET nome = ?, preco = ? Where codigo = ?", conexaoupdate);
 
                         exameupdate.Parameters.Clear();
-                        exameupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 20).Value = tb_Nome_Exame.Text;
-                        exameupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = tb_Preco_Exame.Text;
+                        exameupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 20).Value = exame.nome;
+                        exameupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = exame.preco;
+                        exameupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = exame.codigo;
                         exameupdate.CommandType = CommandType.Text;
                         exameupdate.ExecuteNonQuery();
                         conexaoupdate.Close();
@@ -81,47 +87,23 @@ namespace ProjInter
                     {
                         MessageBox.Show("Erro ao atualizar!" + erro);
                     }
-
-
                 }
                 else
                 {
 
-                    try
-                    {
+                    BancoDados.insertexame(exame);
 
-                        MySqlConnection conexaoinsert = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
-                        conexaoinsert.Open();
-                        MySqlCommand exameinsert = new MySqlCommand("INSERT INTO Exame (codigo, nome, preco) VALUES (@codigo, @nome, @preco)", conexaoinsert);
-
-
-                        exameinsert.Parameters.AddWithValue("@codigo", tb_Cod_Exame.Text);
-                        exameinsert.Parameters.AddWithValue("@nome", tb_Nome_Exame.Text);
-                        exameinsert.Parameters.AddWithValue("@nomepet", double.Parse(tb_Preco_Exame.Text));
-
-                        exameinsert.ExecuteNonQuery();
-
-                        MessageBox.Show("Novo Exame cadastrado com sucesso!");
-
-
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Erro ao cadastrar exame \n" + ex.Message);
-
-                    }
                 }
             }
         }
+    
 
 
-        private void btn_Histórico_Click(object sender, EventArgs e)
+        private void btn_VisuExame_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             TelaVisExame telavisexame = new TelaVisExame(this);
-            telavisexame.Show();
+            telavisexame.ShowDialog();
         }
 
         private void btn_Novo_Click(object sender, EventArgs e)
@@ -317,5 +299,7 @@ namespace ProjInter
             tb_Preco_Exame.Enabled = true;
             
         }
+
+        
     }
 }

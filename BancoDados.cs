@@ -402,5 +402,32 @@ namespace ProjInter
                 MessageBox.Show("Erro ao cadastrar veterinario \n" + ex.Message);
             }
         }
+
+        public static void insertexame(Exame exame)
+        {
+            try
+            {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Exame (codigo, nome, preco) VALUES( @codigo, @nome, @preco)";
+                    cmd.Parameters.AddWithValue("@codigo", exame.codigo);
+                    cmd.Parameters.AddWithValue("@nome", exame.nome);
+                    cmd.Parameters.AddWithValue("@preco", exame.preco);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Novo exame cadastrado com sucesso!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar exame \n" + ex.Message);
+            }
+        }
+
+
+
+
+
     }
 }
