@@ -34,20 +34,60 @@ namespace ProjInter
 
         private TelaCadNewLogin telacadlogin;
 
-
+        DataTable dt = new DataTable();
 
         private void btn_Acessar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TelaInicial tela_inicial = new TelaInicial(this);
-            tela_inicial.Show();
+            /*string usuario = tb_Usu_login.Text;
+            string senha = tb_Senha_login.Text;
+
+            if (usuario == "" || senha == "")
+            {
+                MessageBox.Show("Usuário ou Senha inválidos!\nVerifique os dados e tente novamente.");
+                tb_Usu_login.Focus();
+                return;
+            }
+            else
+            {
+                try
+                {
+                    string sql = "SELECT * FROM usuario WHERE veterinario_crmv= '" + usuario + "' AND senha= '" + senha + "'";
+                    dt = BancoDados.Consulta(sql);
+
+                    if (dt.Rows.Count == 1)
+                    {
+                        this.Hide();
+                        TelaInicial tela_inicial = new TelaInicial(this);
+                        tela_inicial.Show();
+                    }
+                    else
+                    {
+                        string sql2 = "SELECT * FROM usuario WHERE administrativo_cpf= '" + usuario + "' AND senha= '" + senha + "'";
+                        dt = BancoDados.Consulta(sql2);
+
+                        if (dt.Rows.Count == 1)
+                        {*/
+                            this.Hide();
+                            TelaInicial tela_inicial = new TelaInicial(this);
+                            tela_inicial.Show();
+                        /*}
+                        else
+                        {
+                            MessageBox.Show("Usuário ou Senha inválidos!\nVerifique os dados e tente novamente.");
+                            tb_Usu_login.Focus();
+                            return;
+                        }
+                    }
+
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro de login!" + erro);
+                }
+            }*/
+                      
         }
 
-        private void btn_Cadastrar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TelaCadNewLogin tela_cadnewusu = new TelaCadNewLogin(this);
-            tela_cadnewusu.Show();
-        }
+       
     }
 }
