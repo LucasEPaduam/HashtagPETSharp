@@ -41,12 +41,7 @@ namespace ProjInter
             tb_Pesquisar.Focus();
         }
 
-        private void btn_Histórico_Click(object sender, EventArgs e)
-        {
-            //this.Hide();l
-            TelaVisPac telavispac = new TelaVisPac(this);
-            telavispac.ShowDialog();
-        }
+        
 
         private void pb_Pesquisar_Click(object sender, EventArgs e)
         {
@@ -564,7 +559,7 @@ namespace ProjInter
                         pacienteupdate.Parameters.Add("@raca", MySqlDbType.VarChar, 10).Value = paciente.raca;
                         pacienteupdate.Parameters.Add("@IDADE", MySqlDbType.VarChar, 10).Value = paciente.idade;
                         pacienteupdate.Parameters.Add("@PESO", MySqlDbType.Double, 1).Value = paciente.peso;
-                        pacienteupdate.Parameters.Add("@sexo", MySqlDbType.VarChar, 10).Value = paciente.sexo;
+                        pacienteupdate.Parameters.Add("@sexo", MySqlDbType.VarChar, 20).Value = paciente.sexo;
                         pacienteupdate.Parameters.Add("codigopet", MySqlDbType.VarChar).Value = paciente.codigopet;
                         pacienteupdate.CommandType = CommandType.Text;
                         pacienteupdate.ExecuteNonQuery();
@@ -604,8 +599,12 @@ namespace ProjInter
 
         }
 
-
-
+        private void btn_VIS_PAC_Click(object sender, EventArgs e)
+        {
+           
+            TelaVisPac telavispac = new TelaVisPac(this);
+            telavispac.ShowDialog();
+        }
     }
 
 

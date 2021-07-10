@@ -413,7 +413,7 @@ namespace ProjInter
             this.btn_VIS_PAC.TabIndex = 16;
             this.btn_VIS_PAC.Text = "Visualizar Pacientes";
             this.btn_VIS_PAC.UseVisualStyleBackColor = false;
-            this.btn_VIS_PAC.Click += new System.EventHandler(this.btn_Histórico_Click);
+            this.btn_VIS_PAC.Click += new System.EventHandler(this.btn_VIS_PAC_Click);
             // 
             // lbl_CPF
             // 
