@@ -30,6 +30,7 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaConsulta));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_Mensagem_Consulta = new System.Windows.Forms.Label();
             this.lbl_Cod_PET = new System.Windows.Forms.Label();
             this.tb_Cod_PET = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@ namespace ProjInter
             this.dgv_Histórico = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_IniciarConsulta = new System.Windows.Forms.Label();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Histórico)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,6 +68,7 @@ namespace ProjInter
             // 
             // tb_Cod_PET
             // 
+            this.tb_Cod_PET.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cod_PET.Location = new System.Drawing.Point(73, 92);
             this.tb_Cod_PET.Name = "tb_Cod_PET";
             this.tb_Cod_PET.Size = new System.Drawing.Size(151, 20);
@@ -110,9 +113,19 @@ namespace ProjInter
             // dgv_Histórico
             // 
             this.dgv_Histórico.BackgroundColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Histórico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Histórico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Histórico.EnableHeadersVisualStyles = false;
             this.dgv_Histórico.Location = new System.Drawing.Point(20, 121);
             this.dgv_Histórico.Name = "dgv_Histórico";
+            this.dgv_Histórico.RowHeadersVisible = false;
             this.dgv_Histórico.Size = new System.Drawing.Size(552, 238);
             this.dgv_Histórico.TabIndex = 24;
             this.dgv_Histórico.Visible = false;
@@ -137,12 +150,20 @@ namespace ProjInter
             this.lbl_IniciarConsulta.TabIndex = 0;
             this.lbl_IniciarConsulta.Text = "Iniciar Consulta";
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(554, 123);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 233);
+            this.vScrollBar1.TabIndex = 30;
+            // 
             // TelaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 411);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.pb_Inicio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_Histórico);
@@ -175,5 +196,6 @@ namespace ProjInter
         private System.Windows.Forms.DataGridView dgv_Histórico;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_IniciarConsulta;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

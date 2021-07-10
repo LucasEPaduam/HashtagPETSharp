@@ -41,12 +41,13 @@ namespace ProjInter
         {
             data_table.Clear();
             dgv_Histórico.Visible = false;
+            vScrollBar1.Visible = false;
 
 
-            string nomepet = tb_Cod_PET.Text;
+            string codpet = tb_Cod_PET.Text;
             
 
-            if (nomepet == "")
+            if (codpet == "")
             {
                 MessageBox.Show("Código do PET não preenchido!");
                 tb_Cod_PET.Focus();
@@ -54,15 +55,24 @@ namespace ProjInter
             else
             {
 
-                string consultaSQL = "SELECT * FROM paciente WHERE nomepet='" + nomepet + "'";
+                string consultaSQL = "SELECT paciente.codigopet as 'COD PET',  paciente.nomepet as 'NOME PET', paciente.raca as 'RACA', paciente.idade as 'IDADE', paciente.peso as 'PESO', paciente.sexo as 'SEXO' FROM paciente WHERE codigopet ='" + codpet + "'";
                 data_table = BancoDados.Consulta(consultaSQL);
 
                 if (data_table.Rows.Count == 1)
                 {
+                    int i = 0;
                     btn_Iniciar_Consulta.Enabled = true;
                     dgv_Histórico.Visible = true;
+                    vScrollBar1.Visible = true;
                     dgv_Histórico.DataSource = data_table;
-                    //dgv_Histórico.Columns["codigopet"].Visible = false;
+                    dgv_Histórico.Columns[0].Width = 70;
+                    dgv_Histórico.Columns[1].Width = 160;
+                    dgv_Histórico.Columns[2].Width = 130;
+                    dgv_Histórico.Columns[3].Width = 60;
+                    dgv_Histórico.Columns[4].Width = 60;
+                    dgv_Histórico.Columns[5].Width = 50;
+                    dgv_Histórico.Sort(dgv_Histórico.Columns[i], ListSortDirection.Ascending);
+
                 }
                 else
                 {
