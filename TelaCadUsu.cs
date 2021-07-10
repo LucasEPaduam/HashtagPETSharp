@@ -28,59 +28,58 @@ namespace ProjInter
         private TelaLogin tela_login;
         private TelaInicial tela_inicial;
 
-        public TelaCadUsu(TelaVisUsu telavisusu)
+        public TelaCadUsu(TelaVisAdm telavisadm)
         {
             InitializeComponent();
-            this.tela_visusu = telavisusu;
+            this.tela_visadm = telavisadm;
         }
-        private TelaVisUsu tela_visusu;
+        private TelaVisAdm tela_visadm;
 
+        public TelaCadUsu(TelaVisVet telavisvet)
+        {
+            InitializeComponent();
+            this.tela_visvet = telavisvet;
+        }
+        private TelaVisVet tela_visvet;
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             //TextBox do Administrativo
-            tb_Cod_Usu.Clear();
-            tb_Cargo_Usu.Clear();
-            tb_Nasc_Usu.Clear();
-            tb_CPF_Usu.Clear();
-            tb_Nasc_Usu.Clear();
-            tb_Idade_Usu.Clear();
-            tb_Rua_Av_Usu.Clear();
-            tb_Num_Usu.Clear();
-            tb_CEP_Usu.Clear();
-            tb_Cidade_Usu.Clear();
-            tb_UF_Usu.Clear();
+            tb_CPF_Adm.Clear();
+            tb_Nome_Adm.Clear();
+            tb_Rua_Adm.Clear();
+            tb_Num_Adm.Clear();
+            tb_CEP_Adm.Clear();
+            tb_Cidade_Adm.Clear();
+            tb_UF_Adm.Clear();
 
             //TextBox do Veterinário
-            tb_CRMV_Usu.Clear();
-            tb_Nome_Vet_Usu.Clear();
-            tb_Rua_Usu.Clear();
-            tb_N_Usu.Clear();
-            tb_Cep_Med_Usu.Clear();
-            tb_Cid_Usu.Clear();
-            tb_UF_Med_Usu.Clear();
+            tb_CRMV_Vet.Clear();
+            tb_Nome_Vet.Clear();
+            tb_Rua_Vet.Clear();
+            tb_Num_Vet.Clear();
+            tb_Cep_Vet.Clear();
+            tb_Cidade_Vet.Clear();
+            tb_UF_Vet.Clear();
 
             rb_adm.Enabled = false;
             rb_vet.Enabled = false;
 
-            tb_Cargo_Usu.Enabled = false;
-            tb_Cidade_Usu.Enabled = false;
-            tb_CEP_Usu.Enabled = false;
-            tb_CPF_Usu.Enabled = false;
-            tb_Cod_Usu.Enabled = false;
-            tb_Idade_Usu.Enabled = false;
-            tb_Nasc_Usu.Enabled = false;
-            tb_Nome_Usu.Enabled = false;
-            tb_Num_Usu.Enabled = false;
-            tb_Rua_Av_Usu.Enabled = false;
-            tb_UF_Usu.Enabled = false;
 
-            tb_Cep_Med_Usu.Enabled = false;
-            tb_CRMV_Usu.Enabled = false;
-            tb_Nome_Vet_Usu.Enabled = false;
-            tb_N_Usu.Enabled = false;
-            tb_Rua_Usu.Enabled = false;
-            tb_UF_Med_Usu.Enabled = false;
-            tb_Cid_Usu.Enabled = false;
+            tb_CPF_Adm.Enabled = false;
+            tb_Nome_Adm.Enabled = false;
+            tb_Rua_Adm.Enabled = false;
+            tb_Num_Adm.Enabled = false;
+            tb_CEP_Adm.Enabled = false;
+            tb_Cidade_Adm.Enabled = false;
+            tb_UF_Adm.Enabled = false;
+
+            tb_CRMV_Vet.Enabled = false;
+            tb_Nome_Vet.Enabled = false;
+            tb_Rua_Vet.Enabled = false;
+            tb_Num_Vet.Enabled = false;
+            tb_Cep_Vet.Enabled = false;
+            tb_Cidade_Vet.Enabled = false;
+            tb_UF_Vet.Enabled = false;
         }
 
 
@@ -91,11 +90,15 @@ namespace ProjInter
             telainicial.Show();
         }
 
-        private void btn_VIS_Usu_Click(object sender, EventArgs e)
+        private void btn_VIS_Adm_Click(object sender, EventArgs e)
+        { 
+            TelaVisAdm telavisadm = new TelaVisAdm(this);
+            telavisadm.ShowDialog();
+        }
+        private void btn_VIS_Vet_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TelaVisUsu telavisusu = new TelaVisUsu(this);
-            telavisusu.Show();
+            TelaVisVet telavisvet = new TelaVisVet(this);
+            telavisvet.ShowDialog();
         }
 
         private void bt_NovoUsu_Click(object sender, EventArgs e)
@@ -107,84 +110,58 @@ namespace ProjInter
             rb_adm.Enabled = true;
             rb_vet.Enabled = true;
 
-            tb_Pesquisar.Clear();
-            tb_Cargo_Usu.Clear();
-            tb_Cidade_Usu.Clear();
-            tb_CEP_Usu.Clear();
-            tb_CPF_Usu.Clear();
-            tb_Cod_Usu.Clear();
-            tb_Idade_Usu.Clear();
-            tb_Nasc_Usu.Clear();
-            tb_Nome_Usu.Clear();
-            tb_Num_Usu.Clear();
-            tb_Rua_Av_Usu.Clear();
-            tb_UF_Usu.Clear();
+            tb_CPF_Adm.Clear();
+            tb_Nome_Adm.Clear();
+            tb_Rua_Adm.Clear();
+            tb_Num_Adm.Clear();
+            tb_CEP_Adm.Clear();
+            tb_Cidade_Adm.Clear();
+            tb_UF_Adm.Clear();
 
-            tb_Cep_Med_Usu.Clear();
-            tb_CRMV_Usu.Clear();
-            tb_Nome_Vet_Usu.Clear();
-            tb_N_Usu.Clear();
-            tb_Rua_Usu.Clear();
-            tb_UF_Med_Usu.Clear();
-            tb_Cid_Usu.Clear();
 
-            if (rb_adm.Checked)
-            {
-                tb_Cod_Usu.Enabled = false;
-
-                tb_Cargo_Usu.Enabled = true;
-                tb_Cidade_Usu.Enabled = true;
-                tb_CEP_Usu.Enabled = true;
-                tb_CPF_Usu.Enabled = true;
-                tb_Idade_Usu.Enabled = true;
-                tb_Nasc_Usu.Enabled = true;
-                tb_Nome_Usu.Enabled = true;
-                tb_Num_Usu.Enabled = true;
-                tb_Rua_Av_Usu.Enabled = true;
-                tb_UF_Usu.Enabled = true;
-            }
-
-            if (rb_vet.Checked)
-            {
-                tb_Cep_Med_Usu.Enabled = true;
-                tb_CRMV_Usu.Enabled = true;
-                tb_Nome_Vet_Usu.Enabled = true;
-                tb_N_Usu.Enabled = true;
-                tb_Rua_Usu.Enabled = true;
-                tb_UF_Med_Usu.Enabled = true;
-                tb_Cid_Usu.Enabled = true;
-            }
+            tb_CRMV_Vet.Clear();
+            tb_Nome_Vet.Clear();
+            tb_Rua_Vet.Clear();
+            tb_Num_Vet.Clear();
+            tb_Cep_Vet.Clear();
+            tb_Cidade_Vet.Clear();
+            tb_UF_Vet.Clear();
         }
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            if (tb_Nome_Usu.Text == "")
+            if (rb_adm.Checked)
             {
-                MessageBox.Show("Utilize a barra de pesquisa para\nlocalizar o cadastro que deseja atualizar!");
+                if (tb_CPF_Adm.Text == "")
+                {
+                    MessageBox.Show("Utilize a barra de pesquisa para\nlocalizar o cadastro que deseja atualizar!");
+                }
+                // BOTÃO EXCLUIR DESABILITADO
+                btn_Excluir.Enabled = false;
+
+                tb_CPF_Adm.Enabled = true;
+                tb_Nome_Adm.Enabled = true;
+                tb_Rua_Adm.Enabled = true;
+                tb_Num_Adm.Enabled = true;
+                tb_CEP_Adm.Enabled = true;
+                tb_Cidade_Adm.Enabled = true;
+                tb_UF_Adm.Enabled = true;
+            }
+            else if (rb_vet.Checked)
+            {
+                if (tb_CRMV_Vet.Text == "")
+                {
+                    MessageBox.Show("Utilize a barra de pesquisa para\nlocalizar o cadastro que deseja atualizar!");
+                }
+                tb_CRMV_Vet.Enabled = true;
+                tb_Nome_Vet.Enabled = true;
+                tb_Rua_Vet.Enabled = true;
+                tb_Num_Vet.Enabled = true;
+                tb_Cep_Vet.Enabled = true;
+                tb_Cidade_Vet.Enabled = true;
+                tb_UF_Vet.Enabled = true;
             }
 
-            // BOTÃO EXCLUIR DESABILITADO
-            btn_Excluir.Enabled = false;
-
-            tb_Cargo_Usu.Enabled = true;
-            tb_Cidade_Usu.Enabled = true;
-            tb_CEP_Usu.Enabled = true;
-            tb_CPF_Usu.Enabled = true;
-            tb_Cod_Usu.Enabled = true;
-            tb_Idade_Usu.Enabled = true;
-            tb_Nasc_Usu.Enabled = true;
-            tb_Nome_Usu.Enabled = true;
-            tb_Num_Usu.Enabled = true;
-            tb_Rua_Av_Usu.Enabled = true;
-            tb_UF_Usu.Enabled = true;
-
-            tb_Cep_Med_Usu.Enabled = true;
-            tb_CRMV_Usu.Enabled = true;
-            tb_Nome_Vet_Usu.Enabled = true;
-            tb_N_Usu.Enabled = true;
-            tb_Rua_Usu.Enabled = true;
-            tb_UF_Med_Usu.Enabled = true;
-            tb_Cid_Usu.Enabled = true;
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
@@ -192,7 +169,7 @@ namespace ProjInter
             Administrativo administrativo = new Administrativo();
             Veterinario veterinario = new Veterinario();
 
-            if (tb_CPF_Usu.Text == "" || tb_CRMV_Usu.Text == "")
+            if (tb_CPF_Adm.Text == "" || tb_CRMV_Vet.Text == "")
             {
                 MessageBox.Show("Erro ao excluir!\nPesquise o usuário que deseja excluir na barra de pesquisa.\nUtilize o botão VISUALIZAR USUÁRIO para ver os usuários cadastrados no sistema!");
             }
@@ -219,14 +196,14 @@ namespace ProjInter
                         conexaoexcluir.Open();
                         MySqlCommand administrativoexcluir = new MySqlCommand("DELETE FROM administrativo WHERE cpf = @cpf", conexaoexcluir);
 
-                        administrativoexcluir.Parameters.Add("@cpf", MySqlDbType.VarChar, 10).Value = tb_CPF_Usu.Text;
+                        administrativoexcluir.Parameters.Add("@cpf", MySqlDbType.VarChar, 10).Value = tb_CPF_Adm.Text;
                         administrativoexcluir.CommandType = CommandType.Text;
                         administrativoexcluir.ExecuteNonQuery();
 
 
                         MySqlCommand veterinarioexcluir = new MySqlCommand("DELETE FROM veterinario WHERE crmv = @crmv", conexaoexcluir);
 
-                        veterinarioexcluir.Parameters.Add("@crmv", MySqlDbType.VarChar, 11).Value = tb_CRMV_Usu.Text;
+                        veterinarioexcluir.Parameters.Add("@crmv", MySqlDbType.VarChar, 11).Value = tb_CRMV_Vet.Text;
                         veterinarioexcluir.CommandType = CommandType.Text;
                         veterinarioexcluir.ExecuteNonQuery();
                         conexaoexcluir.Close();
@@ -235,27 +212,23 @@ namespace ProjInter
 
                         // LIMPEZA DOS CAMPOS APÓS CONFIRMADA A EXCLUSÃO PELO BANCO
 
-                        tb_Pesquisar.Clear();
-                        tb_Cargo_Usu.Clear();
-                        tb_Cidade_Usu.Clear();
-                        tb_CEP_Usu.Clear();
-                        tb_CPF_Usu.Clear();
-                        tb_Cod_Usu.Clear();
-                        tb_Idade_Usu.Clear();
-                        tb_Nasc_Usu.Clear();
-                        tb_Nome_Usu.Clear();
-                        tb_Num_Usu.Clear();
-                        tb_Rua_Av_Usu.Clear();
-                        tb_UF_Usu.Clear();
+                        //TextBox do Administrativo
+                        tb_CPF_Adm.Clear();
+                        tb_Nome_Adm.Clear();
+                        tb_Rua_Adm.Clear();
+                        tb_Num_Adm.Clear();
+                        tb_CEP_Adm.Clear();
+                        tb_Cidade_Adm.Clear();
+                        tb_UF_Adm.Clear();
 
-                        tb_Cep_Med_Usu.Clear();
-                        tb_CRMV_Usu.Clear();
-                        tb_Nome_Vet_Usu.Clear();
-                        tb_N_Usu.Clear();
-                        tb_Rua_Usu.Clear();
-                        tb_UF_Med_Usu.Clear();
-                        tb_Cid_Usu.Clear();
-
+                        //TextBox do Veterinário
+                        tb_CRMV_Vet.Clear();
+                        tb_Nome_Vet.Clear();
+                        tb_Rua_Vet.Clear();
+                        tb_Num_Vet.Clear();
+                        tb_Cep_Vet.Clear();
+                        tb_Cidade_Vet.Clear();
+                        tb_UF_Vet.Clear();
                     }
                     catch (Exception erro)
                     {
@@ -270,33 +243,29 @@ namespace ProjInter
         {
             if (rb_adm.Checked)
             {
-                if (tb_CPF_Usu.Text == "")
+                if (tb_CPF_Adm.Text == "")
                 {
                     MessageBox.Show("Erro ao salvar!\nPesquise o usuário que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
                 }
 
                 //TODOS OS CAMPOS SENDO VERIFICADOS
-                else if (tb_Cargo_Usu.Text == "" || tb_Cidade_Usu.Text == "" || tb_CEP_Usu.Text == "" || tb_CPF_Usu.Text == "" || tb_Cod_Usu.Text == "" || tb_Idade_Usu.Text == "" || tb_Nasc_Usu.Text == "" || tb_Nome_Usu.Text == "" || tb_Num_Usu.Text == "" || tb_Rua_Av_Usu.Text == "" || tb_UF_Usu.Text == "")
+                else if (tb_CPF_Adm.Text == "" || tb_Nome_Adm.Text == "" || tb_Rua_Adm.Text == "" || tb_Num_Adm.Text == "" || tb_CEP_Adm.Text == "" || tb_Cidade_Adm.Text == "" || tb_UF_Adm.Text == "")
                 {
                     MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
                 }
                 else
                 {
                     Administrativo administrativo = new Administrativo();
-                    administrativo.codigo = tb_Cod_Usu.Text;
-                    administrativo.nome = tb_Nome_Usu.Text;
-                    administrativo.cargo = tb_Cargo_Usu.Text;
-                    administrativo.cidade = tb_Cidade_Usu.Text;
-                    administrativo.CPF = tb_CPF_Usu.Text;
-                    administrativo.CEP = tb_CEP_Usu.Text;
-                    administrativo.idade = tb_Idade_Usu.Text;
-                    administrativo.nascimento = tb_Nasc_Usu.Text;
-                    administrativo.numero = tb_Num_Usu.Text;
-                    administrativo.rua = tb_Rua_Av_Usu.Text;
-                    administrativo.uf = tb_UF_Usu.Text;
+                    administrativo.CPF = tb_CPF_Adm.Text;
+                    administrativo.nome = tb_Nome_Adm.Text;
+                    administrativo.rua = tb_Rua_Adm.Text;
+                    administrativo.numero = tb_Num_Adm.Text;
+                    administrativo.CEP = tb_CEP_Adm.Text;
+                    administrativo.cidade = tb_Cidade_Adm.Text;
+                    administrativo.uf = tb_UF_Adm.Text;
 
                     DataTable data_table = new DataTable();
-                    string codadm = tb_Cod_Usu.Text;
+                    string codadm = tb_CPF_Adm.Text;
                     string consultaSQL = "SELECT * FROM administrativo WHERE cpf='" + codadm + "'";
 
                     data_table = BancoDados.Consulta(consultaSQL);
@@ -308,14 +277,11 @@ namespace ProjInter
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand administrativoupdate = new MySqlCommand("UPDATE administrativo SET cargo = ?, nome = ?, cpf = ?, nascimento = ?, idade = ?, rua = ?, numero = ?, cep = ?, cidade = ?, uf = ?", conexaoupdate);
+                            MySqlCommand administrativoupdate = new MySqlCommand("UPDATE administrativo SET  nome = ?, cpf = ?,  rua = ?, numero = ?, cep = ?, cidade = ?, uf = ?", conexaoupdate);
 
                             administrativoupdate.Parameters.Clear();
-                            administrativoupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = administrativo.nome;
-                            administrativoupdate.Parameters.Add("@cargo", MySqlDbType.VarChar, 10).Value = administrativo.cargo;
                             administrativoupdate.Parameters.Add("@cpf", MySqlDbType.VarChar, 10).Value = administrativo.CPF;
-                            administrativoupdate.Parameters.Add("@nascimento", MySqlDbType.VarChar, 10).Value = administrativo.nascimento;
-                            administrativoupdate.Parameters.Add("@idade", MySqlDbType.VarChar, 10).Value = administrativo.idade;
+                            administrativoupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = administrativo.nome;
                             administrativoupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 10).Value = administrativo.rua;
                             administrativoupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = administrativo.numero;
                             administrativoupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = administrativo.CEP;
@@ -341,26 +307,27 @@ namespace ProjInter
 
             else if (rb_vet.Checked)
             {
-                if (tb_CRMV_Usu.Text == "")
+                if (tb_CRMV_Vet.Text == "")
                 {
                     MessageBox.Show("Erro ao salvar!\nPesquise o usuário que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
                 }
-                else if (tb_Cep_Med_Usu.Text == "" || tb_CRMV_Usu.Text == "" || tb_Nome_Vet_Usu.Text == "" || tb_N_Usu.Text == "" || tb_Rua_Usu.Text == "" || tb_UF_Med_Usu.Text == "" || tb_Cid_Usu.Text == "")
+                else if (tb_CRMV_Vet.Text == "" || tb_Nome_Vet.Text == "" || tb_Rua_Vet.Text == "" || tb_Num_Vet.Text == "" ||  tb_Cep_Vet.Text == "" || tb_Cidade_Vet.Text == "" || tb_UF_Vet.Text == "" )
                 {
                     MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
                 }
                 else
                 {
                     Veterinario veterinario = new Veterinario();
-                    veterinario.crmv = tb_CRMV_Usu.Text;
-                    veterinario.nome = tb_Nome_Vet_Usu.Text;
-                    veterinario.cep = tb_Cep_Med_Usu.Text;
-                    veterinario.numero = tb_N_Usu.Text;
-                    veterinario.cidade = tb_Cid_Usu.Text;
-                    veterinario.uf = tb_UF_Med_Usu.Text;
+                    veterinario.crmv = tb_CRMV_Vet.Text;
+                    veterinario.nome = tb_Nome_Vet.Text;
+                    veterinario.rua = tb_Rua_Vet.Text;
+                    veterinario.cep = tb_Cep_Vet.Text;
+                    veterinario.numero = tb_Num_Vet.Text;
+                    veterinario.cidade = tb_Cidade_Vet.Text;
+                    veterinario.uf = tb_UF_Vet.Text;
 
                     DataTable data_table = new DataTable();
-                    string codvet = tb_CRMV_Usu.Text;
+                    string codvet = tb_CRMV_Vet.Text;
                     string consultaSQLvacina = "SELECT * FROM veterinario WHERE crmv='" + codvet + "'";
                     if (data_table.Rows.Count != 0)
                     {
@@ -368,14 +335,16 @@ namespace ProjInter
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand veterinarioupdate = new MySqlCommand("UPDATE veterinario SET nomevet = ?, cep = ?, numero = ?, cidade = ?, uf = ?", conexaoupdate);
+                            MySqlCommand veterinarioupdate = new MySqlCommand("UPDATE veterinario SET nomevet = ?, cep = ?, numero = ?, cidade = ?, rua= ?, uf = ?", conexaoupdate);
 
                             veterinarioupdate.Parameters.Clear();
                             veterinarioupdate.Parameters.Add("@nomevet", MySqlDbType.VarChar, 10).Value = veterinario.nome;
-                            veterinarioupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = veterinario.cep;
+                            veterinarioupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 10).Value = veterinario.rua;
                             veterinarioupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = veterinario.numero;
+                            veterinarioupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = veterinario.cep;
                             veterinarioupdate.Parameters.Add("@cidade", MySqlDbType.VarChar, 10).Value = veterinario.cidade;
                             veterinarioupdate.Parameters.Add("@uf", MySqlDbType.VarChar, 10).Value = veterinario.uf;
+
                             conexaoupdate.Close();
 
                             MessageBox.Show("Atualizado com sucesso!");
@@ -400,31 +369,28 @@ namespace ProjInter
             rb_adm.Enabled = false;
             rb_vet.Enabled = false;
 
-            tb_Cargo_Usu.Enabled = false;
-            tb_Cidade_Usu.Enabled = false;
-            tb_CEP_Usu.Enabled = false;
-            tb_CPF_Usu.Enabled = false;
-            tb_Cod_Usu.Enabled = false;
-            tb_Idade_Usu.Enabled = false;
-            tb_Nasc_Usu.Enabled = false;
-            tb_Nome_Usu.Enabled = false;
-            tb_Num_Usu.Enabled = false;
-            tb_Rua_Av_Usu.Enabled = false;
-            tb_UF_Usu.Enabled = false;
+            tb_CPF_Adm.Enabled = false;
+            tb_Nome_Adm.Enabled = false;
+            tb_Rua_Adm.Enabled = false;
+            tb_Num_Adm.Enabled = false;
+            tb_CEP_Adm.Enabled = false;
+            tb_Cidade_Adm.Enabled = false;
+            tb_UF_Adm.Enabled = false;
 
-            tb_Cep_Med_Usu.Enabled = false;
-            tb_CRMV_Usu.Enabled = false;
-            tb_Nome_Vet_Usu.Enabled = false;
-            tb_N_Usu.Enabled = false;
-            tb_Rua_Usu.Enabled = false;
-            tb_UF_Med_Usu.Enabled = false;
-            tb_Cid_Usu.Enabled = false;
+            tb_CRMV_Vet.Enabled = false;
+            tb_Nome_Vet.Enabled = false;
+            tb_Rua_Vet.Enabled = false;
+            tb_Num_Vet.Enabled = false;
+            tb_Cep_Vet.Enabled = false;
+            tb_Cidade_Vet.Enabled = false;
+            tb_UF_Vet.Enabled = false;
 
-            string codadm = tb_Pesquisar.Text;
+            string codusu = tb_Pesquisar.Text;
 
-            if (codadm == "")
+
+            if (codusu == "")
             {
-                MessageBox.Show("Informe o código do administrativo");
+                MessageBox.Show("Informe o código do usuário");
                 tb_Pesquisar.Focus();
             }
             else
@@ -444,40 +410,38 @@ namespace ProjInter
 
                         // CONSULTA O BANCO ATRAVÉS DO CÓDIGO DO PACIENTE
 
-                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM administrativo WHERE cpf='" + codadm + "'", conn))
+                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM administrativo WHERE cpf='" + codusu + "'", conn))
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                tb_Cod_Usu.Text = reader.GetString(0);
-                                tb_Nome_Usu.Text = reader.GetString(1);
-                                tb_Cargo_Usu.Text = reader.GetString(2);
-                                tb_Cidade_Usu.Text = reader.GetString(3);
-                                tb_CPF_Usu.Text = reader.GetString(4);
-                                tb_CEP_Usu.Text = reader.GetString(5);
-                                tb_Idade_Usu.Text = reader.GetString(6);
-                                tb_Nasc_Usu.Text = reader.GetString(7);
-                                tb_Num_Usu.Text = reader.GetString(8);
-                                tb_Rua_Av_Usu.Text = reader.GetString(9);
-                                tb_UF_Usu.Text = reader.GetString(10);
+                                tb_CPF_Adm.Text = reader.GetString(0);
+                                tb_Nome_Adm.Text = reader.GetString(1);
+                                tb_Rua_Adm.Text = reader.GetString(2);
+                                tb_Num_Adm.Text = reader.GetString(3);
+                                tb_CEP_Adm.Text = reader.GetString(4);
+                                tb_Cidade_Adm.Text = reader.GetString(5);
+                                tb_UF_Adm.Text = reader.GetString(6);
                             }
                         }
-                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM veterinario WHERE crmv='" + codadm + "'", conn))
+                        using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM veterinario WHERE crmv='" + codusu + "'", conn))
                         using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                tb_CRMV_Usu.Text = reader.GetString(0);
-                                tb_Nome_Vet_Usu.Text = reader.GetString(1);
-                                tb_Cep_Med_Usu.Text = reader.GetString(2);
-                                tb_N_Usu.Text = reader.GetString(3);
-                                tb_Cid_Usu.Text = reader.GetString(4);
-                                tb_UF_Med_Usu.Text = reader.GetString(5);
-                                
+                                tb_CRMV_Vet.Text = reader.GetString(0);
+                                tb_Nome_Vet.Text = reader.GetString(1);
+                                tb_Cep_Vet.Text = reader.GetString(2);
+                                tb_Num_Vet.Text = reader.GetString(3);
+                                tb_Cidade_Vet.Text = reader.GetString(4);
+                                tb_Rua_Vet.Text = reader.GetString(5);
+                                tb_UF_Vet.Text = reader.GetString(6);
+
                             }
                         }
                     }
                 }
+
                 catch (MySqlException erro)
                 {
                     Console.WriteLine("Erro.Number" + erro.Number);
@@ -501,16 +465,69 @@ namespace ProjInter
                     Console.WriteLine(erro.Message);
                     Console.WriteLine(erro.ToString());
                 }
-
             }
-
-        
         }
 
         private void rb_adm_CheckedChanged(object sender, EventArgs e)
         {
+            tb_CPF_Adm.Enabled = true;
+            tb_Nome_Adm.Enabled = true;
+            tb_Rua_Adm.Enabled = true;
+            tb_Num_Adm.Enabled = true;
+            tb_CEP_Adm.Enabled = true;
+            tb_Cidade_Adm.Enabled = true;
+            tb_UF_Adm.Enabled = true;
+
+            tb_Senha.Enabled = true;
+
+            tb_CRMV_Vet.Enabled = false;
+            tb_Nome_Vet.Enabled = false;
+            tb_Rua_Vet.Enabled = false;
+            tb_Num_Vet.Enabled = false;
+            tb_Cep_Vet.Enabled = false;
+            tb_Cidade_Vet.Enabled = false;
+            tb_UF_Vet.Enabled = false;
+
+            tb_CRMV_Vet.Clear();
+            tb_Nome_Vet.Clear();
+            tb_Rua_Vet.Clear();
+            tb_Num_Vet.Clear();
+            tb_Cep_Vet.Clear();
+            tb_Cidade_Vet.Clear();
+            tb_UF_Vet.Clear();
+        }
+
+        private void rb_vet_CheckedChanged(object sender, EventArgs e)
+        {
+            tb_CRMV_Vet.Enabled = true;
+            tb_Nome_Vet.Enabled = true;
+            tb_Rua_Vet.Enabled = true;
+            tb_Num_Vet.Enabled = true;
+            tb_Cep_Vet.Enabled = true;
+            tb_Cidade_Vet.Enabled = true;
+            tb_UF_Vet.Enabled = true;
+
+            tb_Senha.Enabled = true;
+
+            tb_CPF_Adm.Enabled = false;
+            tb_Nome_Adm.Enabled = false;
+            tb_Rua_Adm.Enabled = false;
+            tb_Num_Adm.Enabled = false;
+            tb_CEP_Adm.Enabled = false;
+            tb_Cidade_Adm.Enabled = false;
+            tb_UF_Adm.Enabled = false;
+
+            tb_CPF_Adm.Clear();
+            tb_Nome_Adm.Clear();
+            tb_Rua_Adm.Clear();
+            tb_Num_Adm.Clear();
+            tb_CEP_Adm.Clear();
+            tb_Cidade_Adm.Clear();
+            tb_UF_Adm.Clear();
 
         }
+
+
     }
 }
 

@@ -100,12 +100,20 @@ namespace ProjInter
         }
         private TelaVisPac tela_vispac;
 
-        public TelaInicial(TelaVisUsu telavisusu)
+        public TelaInicial(TelaVisAdm telavisadm)
         {
             InitializeComponent();
-            this.tela_visusu = telavisusu;
+            this.tela_visadm = telavisadm;
         }
-        private TelaVisUsu tela_visusu;
+        private TelaVisAdm tela_visadm;
+
+        public TelaInicial(TelaVisVet telavisvet)
+        {
+            InitializeComponent();
+            this.tela_visvet = telavisvet;
+        }
+        private TelaVisVet tela_visvet;
+
 
         //
         private void btn_Visualizar_Click(object sender, EventArgs e)

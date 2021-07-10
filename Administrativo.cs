@@ -8,13 +8,9 @@ namespace ProjInter
 {
     class Administrativo
     {
-        public string cargo;
         public string cidade;
         public string CEP;
         public string CPF;
-        public string codigo;
-        public string idade;
-        public string nascimento;
         public string nome;
         public string numero;
         public string rua;

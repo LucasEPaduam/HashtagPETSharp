@@ -221,17 +221,23 @@
     <Compile Include="TelaVisPac.Designer.cs">
       <DependentUpon>TelaVisPac.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaVisUsu.cs">
+    <Compile Include="TelaVisAdm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaVisUsu.Designer.cs">
-      <DependentUpon>TelaVisUsu.cs</DependentUpon>
+    <Compile Include="TelaVisAdm.Designer.cs">
+      <DependentUpon>TelaVisAdm.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaVisVacina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaVisVacina.Designer.cs">
       <DependentUpon>TelaVisVacina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVisVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVisVet.Designer.cs">
+      <DependentUpon>TelaVisVet.cs</DependentUpon>
     </Compile>
     <Compile Include="Vacina.cs" />
     <Compile Include="Veterinario.cs" />
@@ -286,11 +292,14 @@
     <EmbeddedResource Include="TelaVisPac.resx">
       <DependentUpon>TelaVisPac.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaVisUsu.resx">
-      <DependentUpon>TelaVisUsu.cs</DependentUpon>
+    <EmbeddedResource Include="TelaVisAdm.resx">
+      <DependentUpon>TelaVisAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaVisVacina.resx">
       <DependentUpon>TelaVisVacina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVisVet.resx">
+      <DependentUpon>TelaVisVet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

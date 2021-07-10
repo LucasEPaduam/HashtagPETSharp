@@ -350,14 +350,10 @@ namespace ProjInter
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
                     cmd.CommandText = "UPDATE administrativo SET " +
-                            "nome=@nome, cargo=@cargo, cpf=@cpf, nascimento=@nascimento, idade=@idade" +
-                            "rua=@rua, numero=@numero, cep=@cep, cidade=@cidade UF=@UF";
+                            "cpf=@cpf, nome=@nome, rua=@rua, numero=@numero, cep=@cep, cidade=@cidade, UF=@UF";
 
-                    cmd.Parameters.AddWithValue("@nome",  administrativo.nome);
-                    cmd.Parameters.AddWithValue("@cargo",  administrativo.cargo);
                     cmd.Parameters.AddWithValue("@cpf", administrativo.CPF);
-                    cmd.Parameters.AddWithValue("@nascimento",  administrativo.nascimento);
-                    cmd.Parameters.AddWithValue("@idade", administrativo.idade);
+                    cmd.Parameters.AddWithValue("@nome",  administrativo.nome);
                     cmd.Parameters.AddWithValue("@rua", administrativo.rua);
                     cmd.Parameters.AddWithValue("@numero", administrativo.numero);
                     cmd.Parameters.AddWithValue("@cep", administrativo.CEP);
@@ -382,11 +378,11 @@ namespace ProjInter
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
                     cmd.CommandText = "UPDATE veterinario SET " +
-                            "nome=@nome, crmv=@crmv, rua=@rua, numero=@numero, cep=@cep, cidade=@cidade UF=@UF";
+                            "crmv=@crmv, nome=@nome, rua=@rua, numero=@numero, cep=@cep, cidade=@cidade, UF=@UF";
 
 
-                    cmd.Parameters.AddWithValue("@nome", veterinario.nome);
                     cmd.Parameters.AddWithValue("@crmv", veterinario.crmv);
+                    cmd.Parameters.AddWithValue("@nome", veterinario.nome);
                     cmd.Parameters.AddWithValue("@rua", veterinario.rua);
                     cmd.Parameters.AddWithValue("@numero", veterinario.numero);
                     cmd.Parameters.AddWithValue("@cep", veterinario.cep);

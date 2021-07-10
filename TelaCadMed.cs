@@ -98,7 +98,19 @@ namespace ProjInter
                                 tb_Nome_Med.Text = reader.GetString(1);
                                 tb_Preco_Med.Text = reader.GetString(2);
                             }
-
+                            if (reader.HasRows)
+                            {
+                               if (codmed.StartsWith("v") || (codmed.StartsWith("V")))
+                               {
+                                    rb_Remedio.Checked = true;
+                                    tb_Cod_Med.Text = tb_Pesquisar.Text;
+                                    MessageBox.Show("Vacina localizada!!!");
+                               }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Vacina não encontrado!!!");
+                            }
                         }
                     
                         using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM remedio WHERE codigo='" + codmed + "'", conn))
@@ -119,16 +131,10 @@ namespace ProjInter
                                     tb_Cod_Med.Text = tb_Pesquisar.Text;
                                     MessageBox.Show("Remédio localizado!!!");
                                 }
-                                else if (codmed.StartsWith("v") || (codmed.StartsWith("V")))
-                                {
-                                    rb_Remedio.Checked = true;
-                                    tb_Cod_Med.Text = tb_Pesquisar.Text;
-                                    MessageBox.Show("Vacina localizada!!!");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Medicamento não encontrado!!!");
-                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Remédio não encontrado!!!");
                             }
                         }
                     }
@@ -367,7 +373,12 @@ namespace ProjInter
                     }
                 }
             }
+            rb_Remedio.Enabled = false;
+            rb_Vacina.Enabled = false;
 
+            tb_Cod_Med.Enabled = false;
+            tb_Nome_Med.Enabled = false;
+            tb_Preco_Med.Enabled = false;
         }
         private void rb_Remedio_CheckedChanged(object sender, EventArgs e)
         {
