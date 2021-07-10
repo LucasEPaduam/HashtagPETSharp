@@ -111,12 +111,13 @@ namespace ProjInter
             MessageBox.Show("Preencha todos os dados do formulário e clique em salvar.");
 
             btn_Excluir.Enabled = false;
+            tb_Cod_Exame.Enabled = false;
             tb_Pesquisar.Clear();
             tb_Cod_Exame.Clear();
             tb_Nome_Exame.Clear();
             tb_Preco_Exame.Clear();
 
-            tb_Cod_Exame.Enabled = true;
+            
             tb_Nome_Exame.Enabled = true;
             tb_Preco_Exame.Enabled = true;
 
@@ -292,9 +293,9 @@ namespace ProjInter
 
             // BOTÃO EXCLUIR DESABILITADO
             btn_Excluir.Enabled = false;
-
+            tb_Cod_Exame.Enabled = false;
             //CAMPOS HABILITADOS
-            tb_Cod_Exame.Enabled = true;
+
             tb_Nome_Exame.Enabled = true;
             tb_Preco_Exame.Enabled = true;
             
