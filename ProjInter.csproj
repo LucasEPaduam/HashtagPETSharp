@@ -239,6 +239,7 @@
     <Compile Include="TelaVisVet.Designer.cs">
       <DependentUpon>TelaVisVet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioLogin.cs" />
     <Compile Include="Vacina.cs" />
     <Compile Include="Veterinario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

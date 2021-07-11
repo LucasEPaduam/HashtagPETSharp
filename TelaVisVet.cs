@@ -30,16 +30,17 @@ namespace ProjInter
         private void btn_Voltarparacadastro_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void TelaVisVet_Load(object sender, EventArgs e)
         {
             int i = 0;
-            string todosvet = "SELECT veterinario.crmv as 'crmv veterinario', veterinario.nome as 'nome vet' FROM veterinario";
+            string todosvet = "SELECT veterinario.crmv as 'CRMV', veterinario.nome as 'NOME' FROM veterinario";
 
             dgv_TelaVisUsu.DataSource = BancoDados.Consulta(todosvet);
-            dgv_TelaVisUsu.Columns[0].Width = 215;
-            dgv_TelaVisUsu.Columns[1].Width = 215;
+            dgv_TelaVisUsu.Columns[0].Width = 160;
+            dgv_TelaVisUsu.Columns[1].Width = 260;
             dgv_TelaVisUsu.Sort(dgv_TelaVisUsu.Columns[i], ListSortDirection.Ascending);
         }
     }

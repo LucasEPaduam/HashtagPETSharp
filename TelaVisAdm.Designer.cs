@@ -46,15 +46,15 @@ namespace ProjInter
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(435, 55);
+            this.vScrollBar1.Location = new System.Drawing.Point(436, 55);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 291);
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 290);
             this.vScrollBar1.TabIndex = 39;
             // 
             // pb_Inicio
             // 
             this.pb_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("pb_Inicio.Image")));
-            this.pb_Inicio.Location = new System.Drawing.Point(1, 14);
+            this.pb_Inicio.Location = new System.Drawing.Point(2, 14);
             this.pb_Inicio.Name = "pb_Inicio";
             this.pb_Inicio.Size = new System.Drawing.Size(30, 30);
             this.pb_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,6 +143,7 @@ namespace ProjInter
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Voltarparacadastro);
             this.Controls.Add(this.dgv_TelaVisUsu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaVisAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Visualizar Administrativo";

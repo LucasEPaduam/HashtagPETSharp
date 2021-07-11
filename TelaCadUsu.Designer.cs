@@ -59,7 +59,6 @@ namespace ProjInter
             this.btn_Limpar = new System.Windows.Forms.Button();
             this.lbl_CadSenha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tb_Senha = new System.Windows.Forms.TextBox();
             this.lbl_Senha = new System.Windows.Forms.Label();
             this.btn_VIS_Adm = new System.Windows.Forms.Button();
             this.bt_NovoUsu = new System.Windows.Forms.Button();
@@ -81,6 +80,7 @@ namespace ProjInter
             this.lbl_Administrativo = new System.Windows.Forms.Label();
             this.tb_Pesquisar = new System.Windows.Forms.TextBox();
             this.btn_VIS_Vet = new System.Windows.Forms.Button();
+            this.tb_Senha = new System.Windows.Forms.TextBox();
             this.pn_Veterinario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).BeginInit();
             this.panel3.SuspendLayout();
@@ -114,11 +114,12 @@ namespace ProjInter
             // 
             // tb_UF_Vet
             // 
+            this.tb_UF_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_UF_Vet.Enabled = false;
             this.tb_UF_Vet.Location = new System.Drawing.Point(183, 124);
             this.tb_UF_Vet.Name = "tb_UF_Vet";
             this.tb_UF_Vet.Size = new System.Drawing.Size(36, 20);
-            this.tb_UF_Vet.TabIndex = 17;
+            this.tb_UF_Vet.TabIndex = 19;
             // 
             // lbl_UF_Vet
             // 
@@ -132,11 +133,12 @@ namespace ProjInter
             // 
             // tb_Cep_Vet
             // 
+            this.tb_Cep_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cep_Vet.Enabled = false;
             this.tb_Cep_Vet.Location = new System.Drawing.Point(140, 99);
             this.tb_Cep_Vet.Name = "tb_Cep_Vet";
             this.tb_Cep_Vet.Size = new System.Drawing.Size(79, 20);
-            this.tb_Cep_Vet.TabIndex = 15;
+            this.tb_Cep_Vet.TabIndex = 17;
             // 
             // lbl_CEP_Vet
             // 
@@ -150,11 +152,12 @@ namespace ProjInter
             // 
             // tb_Num_Vet
             // 
+            this.tb_Num_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Num_Vet.Enabled = false;
             this.tb_Num_Vet.Location = new System.Drawing.Point(65, 99);
             this.tb_Num_Vet.Name = "tb_Num_Vet";
             this.tb_Num_Vet.Size = new System.Drawing.Size(36, 20);
-            this.tb_Num_Vet.TabIndex = 14;
+            this.tb_Num_Vet.TabIndex = 16;
             // 
             // lbl_NºVet
             // 
@@ -168,11 +171,12 @@ namespace ProjInter
             // 
             // tb_Cidade_Vet
             // 
+            this.tb_Cidade_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cidade_Vet.Enabled = false;
             this.tb_Cidade_Vet.Location = new System.Drawing.Point(65, 124);
             this.tb_Cidade_Vet.Name = "tb_Cidade_Vet";
             this.tb_Cidade_Vet.Size = new System.Drawing.Size(88, 20);
-            this.tb_Cidade_Vet.TabIndex = 16;
+            this.tb_Cidade_Vet.TabIndex = 18;
             // 
             // lbl_Cidade_Vet
             // 
@@ -186,27 +190,30 @@ namespace ProjInter
             // 
             // tb_Rua_Vet
             // 
+            this.tb_Rua_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Rua_Vet.Enabled = false;
             this.tb_Rua_Vet.Location = new System.Drawing.Point(65, 73);
             this.tb_Rua_Vet.Name = "tb_Rua_Vet";
             this.tb_Rua_Vet.Size = new System.Drawing.Size(154, 20);
-            this.tb_Rua_Vet.TabIndex = 13;
+            this.tb_Rua_Vet.TabIndex = 15;
             // 
             // tb_Nome_Vet
             // 
+            this.tb_Nome_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Nome_Vet.Enabled = false;
             this.tb_Nome_Vet.Location = new System.Drawing.Point(65, 47);
             this.tb_Nome_Vet.Name = "tb_Nome_Vet";
             this.tb_Nome_Vet.Size = new System.Drawing.Size(154, 20);
-            this.tb_Nome_Vet.TabIndex = 12;
+            this.tb_Nome_Vet.TabIndex = 14;
             // 
             // tb_CRMV_Vet
             // 
+            this.tb_CRMV_Vet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_CRMV_Vet.Enabled = false;
             this.tb_CRMV_Vet.Location = new System.Drawing.Point(65, 21);
             this.tb_CRMV_Vet.Name = "tb_CRMV_Vet";
             this.tb_CRMV_Vet.Size = new System.Drawing.Size(154, 20);
-            this.tb_CRMV_Vet.TabIndex = 11;
+            this.tb_CRMV_Vet.TabIndex = 13;
             // 
             // lbl_Rua_Vet
             // 
@@ -312,7 +319,7 @@ namespace ProjInter
             this.rb_vet.Location = new System.Drawing.Point(148, 21);
             this.rb_vet.Name = "rb_vet";
             this.rb_vet.Size = new System.Drawing.Size(90, 21);
-            this.rb_vet.TabIndex = 6;
+            this.rb_vet.TabIndex = 2;
             this.rb_vet.Text = "Veterinário";
             this.rb_vet.UseVisualStyleBackColor = true;
             // 
@@ -323,7 +330,7 @@ namespace ProjInter
             this.rb_adm.Location = new System.Drawing.Point(29, 21);
             this.rb_adm.Name = "rb_adm";
             this.rb_adm.Size = new System.Drawing.Size(105, 21);
-            this.rb_adm.TabIndex = 5;
+            this.rb_adm.TabIndex = 1;
             this.rb_adm.Text = "Adminstrativo";
             this.rb_adm.UseVisualStyleBackColor = true;
             // 
@@ -336,7 +343,7 @@ namespace ProjInter
             this.btn_Excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Excluir.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.Location = new System.Drawing.Point(464, 370);
+            this.btn_Excluir.Location = new System.Drawing.Point(464, 367);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(59, 34);
             this.btn_Excluir.TabIndex = 24;
@@ -353,7 +360,7 @@ namespace ProjInter
             this.btn_Salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Salvar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salvar.Location = new System.Drawing.Point(523, 370);
+            this.btn_Salvar.Location = new System.Drawing.Point(523, 367);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(56, 34);
             this.btn_Salvar.TabIndex = 25;
@@ -370,7 +377,7 @@ namespace ProjInter
             this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Editar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(345, 370);
+            this.btn_Editar.Location = new System.Drawing.Point(345, 367);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(61, 34);
             this.btn_Editar.TabIndex = 22;
@@ -387,7 +394,7 @@ namespace ProjInter
             this.btn_Limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Limpar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Limpar.Location = new System.Drawing.Point(406, 370);
+            this.btn_Limpar.Location = new System.Drawing.Point(406, 367);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(58, 34);
             this.btn_Limpar.TabIndex = 23;
@@ -415,17 +422,6 @@ namespace ProjInter
             this.panel1.Size = new System.Drawing.Size(241, 43);
             this.panel1.TabIndex = 80;
             // 
-            // tb_Senha
-            // 
-            this.tb_Senha.Enabled = false;
-            this.tb_Senha.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Senha.ForeColor = System.Drawing.Color.DarkGray;
-            this.tb_Senha.Location = new System.Drawing.Point(65, 10);
-            this.tb_Senha.Name = "tb_Senha";
-            this.tb_Senha.Size = new System.Drawing.Size(154, 23);
-            this.tb_Senha.TabIndex = 18;
-            this.tb_Senha.Text = "   ";
-            // 
             // lbl_Senha
             // 
             this.lbl_Senha.AutoSize = true;
@@ -448,8 +444,8 @@ namespace ProjInter
             this.btn_VIS_Adm.Location = new System.Drawing.Point(17, 323);
             this.btn_VIS_Adm.Name = "btn_VIS_Adm";
             this.btn_VIS_Adm.Size = new System.Drawing.Size(242, 30);
-            this.btn_VIS_Adm.TabIndex = 20;
-            this.btn_VIS_Adm.Text = "Visualizar Administrivo";
+            this.btn_VIS_Adm.TabIndex = 11;
+            this.btn_VIS_Adm.Text = "Visualizar Administrativo";
             this.btn_VIS_Adm.UseVisualStyleBackColor = false;
             this.btn_VIS_Adm.Click += new System.EventHandler(this.btn_VIS_Adm_Click);
             // 
@@ -462,7 +458,7 @@ namespace ProjInter
             this.bt_NovoUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.bt_NovoUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_NovoUsu.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_NovoUsu.Location = new System.Drawing.Point(284, 370);
+            this.bt_NovoUsu.Location = new System.Drawing.Point(284, 367);
             this.bt_NovoUsu.Name = "bt_NovoUsu";
             this.bt_NovoUsu.Size = new System.Drawing.Size(61, 34);
             this.bt_NovoUsu.TabIndex = 21;
@@ -502,27 +498,30 @@ namespace ProjInter
             // 
             // tb_Nome_Adm
             // 
+            this.tb_Nome_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Nome_Adm.Enabled = false;
             this.tb_Nome_Adm.Location = new System.Drawing.Point(69, 45);
             this.tb_Nome_Adm.Name = "tb_Nome_Adm";
             this.tb_Nome_Adm.Size = new System.Drawing.Size(154, 20);
-            this.tb_Nome_Adm.TabIndex = 2;
+            this.tb_Nome_Adm.TabIndex = 4;
             // 
             // tb_CPF_Adm
             // 
+            this.tb_CPF_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_CPF_Adm.Enabled = false;
             this.tb_CPF_Adm.Location = new System.Drawing.Point(69, 21);
             this.tb_CPF_Adm.Name = "tb_CPF_Adm";
             this.tb_CPF_Adm.Size = new System.Drawing.Size(154, 20);
-            this.tb_CPF_Adm.TabIndex = 1;
+            this.tb_CPF_Adm.TabIndex = 3;
             // 
             // tb_Rua_Adm
             // 
+            this.tb_Rua_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Rua_Adm.Enabled = false;
             this.tb_Rua_Adm.Location = new System.Drawing.Point(69, 71);
             this.tb_Rua_Adm.Name = "tb_Rua_Adm";
             this.tb_Rua_Adm.Size = new System.Drawing.Size(154, 20);
-            this.tb_Rua_Adm.TabIndex = 6;
+            this.tb_Rua_Adm.TabIndex = 5;
             // 
             // lbl_Cidade
             // 
@@ -536,11 +535,12 @@ namespace ProjInter
             // 
             // tb_Cidade_Adm
             // 
+            this.tb_Cidade_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Cidade_Adm.Enabled = false;
             this.tb_Cidade_Adm.Location = new System.Drawing.Point(69, 123);
             this.tb_Cidade_Adm.Name = "tb_Cidade_Adm";
             this.tb_Cidade_Adm.Size = new System.Drawing.Size(88, 20);
-            this.tb_Cidade_Adm.TabIndex = 9;
+            this.tb_Cidade_Adm.TabIndex = 8;
             // 
             // lbl_Nº
             // 
@@ -554,11 +554,12 @@ namespace ProjInter
             // 
             // tb_Num_Adm
             // 
+            this.tb_Num_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_Num_Adm.Enabled = false;
             this.tb_Num_Adm.Location = new System.Drawing.Point(69, 97);
             this.tb_Num_Adm.Name = "tb_Num_Adm";
             this.tb_Num_Adm.Size = new System.Drawing.Size(36, 20);
-            this.tb_Num_Adm.TabIndex = 7;
+            this.tb_Num_Adm.TabIndex = 6;
             // 
             // lbl_CEP_Adm
             // 
@@ -572,11 +573,12 @@ namespace ProjInter
             // 
             // tb_CEP_Adm
             // 
+            this.tb_CEP_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_CEP_Adm.Enabled = false;
             this.tb_CEP_Adm.Location = new System.Drawing.Point(144, 97);
             this.tb_CEP_Adm.Name = "tb_CEP_Adm";
             this.tb_CEP_Adm.Size = new System.Drawing.Size(79, 20);
-            this.tb_CEP_Adm.TabIndex = 8;
+            this.tb_CEP_Adm.TabIndex = 7;
             // 
             // lbl_UF
             // 
@@ -590,11 +592,12 @@ namespace ProjInter
             // 
             // tb_UF_Adm
             // 
+            this.tb_UF_Adm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_UF_Adm.Enabled = false;
             this.tb_UF_Adm.Location = new System.Drawing.Point(187, 123);
             this.tb_UF_Adm.Name = "tb_UF_Adm";
             this.tb_UF_Adm.Size = new System.Drawing.Size(36, 20);
-            this.tb_UF_Adm.TabIndex = 10;
+            this.tb_UF_Adm.TabIndex = 9;
             // 
             // pn_Adiministrativo
             // 
@@ -635,7 +638,7 @@ namespace ProjInter
             this.tb_Pesquisar.Location = new System.Drawing.Point(19, 294);
             this.tb_Pesquisar.Name = "tb_Pesquisar";
             this.tb_Pesquisar.Size = new System.Drawing.Size(241, 23);
-            this.tb_Pesquisar.TabIndex = 19;
+            this.tb_Pesquisar.TabIndex = 10;
             this.tb_Pesquisar.Text = "Pesquisar usuário";
             // 
             // btn_VIS_Vet
@@ -650,10 +653,19 @@ namespace ProjInter
             this.btn_VIS_Vet.Location = new System.Drawing.Point(17, 359);
             this.btn_VIS_Vet.Name = "btn_VIS_Vet";
             this.btn_VIS_Vet.Size = new System.Drawing.Size(242, 30);
-            this.btn_VIS_Vet.TabIndex = 82;
+            this.btn_VIS_Vet.TabIndex = 12;
             this.btn_VIS_Vet.Text = "Visualizar Veterinário";
             this.btn_VIS_Vet.UseVisualStyleBackColor = false;
             this.btn_VIS_Vet.Click += new System.EventHandler(this.btn_VIS_Vet_Click);
+            // 
+            // tb_Senha
+            // 
+            this.tb_Senha.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tb_Senha.Enabled = false;
+            this.tb_Senha.Location = new System.Drawing.Point(66, 13);
+            this.tb_Senha.Name = "tb_Senha";
+            this.tb_Senha.Size = new System.Drawing.Size(154, 20);
+            this.tb_Senha.TabIndex = 77;
             // 
             // TelaCadUsu
             // 
@@ -683,6 +695,7 @@ namespace ProjInter
             this.Name = "TelaCadUsu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Usuário";
+            this.Load += new System.EventHandler(this.TelaCadUsu_Load);
             this.pn_Veterinario.ResumeLayout(false);
             this.pn_Veterinario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pesquisar)).EndInit();
@@ -727,7 +740,6 @@ namespace ProjInter
         private System.Windows.Forms.Button btn_Limpar;
         private System.Windows.Forms.Label lbl_CadSenha;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tb_Senha;
         private System.Windows.Forms.Label lbl_Senha;
         private System.Windows.Forms.Button btn_VIS_Adm;
         private System.Windows.Forms.RadioButton rb_vet;
@@ -751,5 +763,6 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_Administrativo;
         private System.Windows.Forms.TextBox tb_Pesquisar;
         private System.Windows.Forms.Button btn_VIS_Vet;
+        private System.Windows.Forms.TextBox tb_Senha;
     }
 }

@@ -8,12 +8,13 @@ namespace ProjInter
 {
     class Veterinario
     {
-        public string cep;
+        
         public string crmv;
         public string nome;
-        public string numero;
         public string rua;
-        public string uf;
+        public string numero;
+        public string cep;
         public string cidade;
+        public string uf;
     }
 }

@@ -35,11 +35,11 @@ namespace ProjInter
         private void TelaVisUsu_Load(object sender, EventArgs e)
         {
             int i = 0;
-            string todosadm = "SELECT administrativo.cpf as 'cpf administrativo', administrativo.nome as 'nome adm' FROM administrativo";
+            string todosadm = "SELECT administrativo.cpf as 'CPF', administrativo.nome as 'NOME' FROM administrativo";
 
             dgv_TelaVisUsu.DataSource = BancoDados.Consulta(todosadm);
-            dgv_TelaVisUsu.Columns[0].Width = 215;
-            dgv_TelaVisUsu.Columns[1].Width = 215;
+            dgv_TelaVisUsu.Columns[0].Width = 160;
+            dgv_TelaVisUsu.Columns[1].Width = 260;
             dgv_TelaVisUsu.Sort(dgv_TelaVisUsu.Columns[i], ListSortDirection.Ascending);
         }
     }

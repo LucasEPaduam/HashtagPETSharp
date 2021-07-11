@@ -30,9 +30,9 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaVisVet));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,15 +46,15 @@ namespace ProjInter
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(433, 52);
+            this.vScrollBar1.Location = new System.Drawing.Point(434, 54);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 291);
+            this.vScrollBar1.Size = new System.Drawing.Size(16, 287);
             this.vScrollBar1.TabIndex = 44;
             // 
             // pb_Inicio
             // 
             this.pb_Inicio.Image = ((System.Drawing.Image)(resources.GetObject("pb_Inicio.Image")));
-            this.pb_Inicio.Location = new System.Drawing.Point(-1, 11);
+            this.pb_Inicio.Location = new System.Drawing.Point(1, 11);
             this.pb_Inicio.Name = "pb_Inicio";
             this.pb_Inicio.Size = new System.Drawing.Size(30, 30);
             this.pb_Inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +76,7 @@ namespace ProjInter
             this.lbl_UsuariosCadastrados.AutoSize = true;
             this.lbl_UsuariosCadastrados.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UsuariosCadastrados.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_UsuariosCadastrados.Location = new System.Drawing.Point(98, 3);
+            this.lbl_UsuariosCadastrados.Location = new System.Drawing.Point(101, 3);
             this.lbl_UsuariosCadastrados.Name = "lbl_UsuariosCadastrados";
             this.lbl_UsuariosCadastrados.Size = new System.Drawing.Size(270, 29);
             this.lbl_UsuariosCadastrados.TabIndex = 0;
@@ -103,31 +103,31 @@ namespace ProjInter
             this.dgv_TelaVisUsu.AllowUserToAddRows = false;
             this.dgv_TelaVisUsu.AllowUserToDeleteRows = false;
             this.dgv_TelaVisUsu.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TelaVisUsu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TelaVisUsu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_TelaVisUsu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TelaVisUsu.EnableHeadersVisualStyles = false;
             this.dgv_TelaVisUsu.Location = new System.Drawing.Point(10, 51);
             this.dgv_TelaVisUsu.MultiSelect = false;
             this.dgv_TelaVisUsu.Name = "dgv_TelaVisUsu";
             this.dgv_TelaVisUsu.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TelaVisUsu.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TelaVisUsu.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_TelaVisUsu.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_TelaVisUsu.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_TelaVisUsu.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_TelaVisUsu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TelaVisUsu.Size = new System.Drawing.Size(443, 293);
             this.dgv_TelaVisUsu.TabIndex = 41;
@@ -143,7 +143,9 @@ namespace ProjInter
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Voltarparacadastro);
             this.Controls.Add(this.dgv_TelaVisUsu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaVisVet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TelaVisVet";
             this.Load += new System.EventHandler(this.TelaVisVet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).EndInit();
