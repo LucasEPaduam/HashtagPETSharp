@@ -51,7 +51,7 @@ namespace ProjInter
             {
                 try
                 {
-                    string sql = "SELECT * FROM usuario WHERE veterinario_crmv= '" + usuario + "' AND senha= '" + senha + "'";
+                    string sql = "SELECT * FROM Usuario WHERE usuario= '" + usuario + "' AND senha= '" + senha + "'";
                     dt = BancoDados.Consulta(sql);
 
                     if (dt.Rows.Count == 1)
@@ -61,22 +61,12 @@ namespace ProjInter
                         tela_inicial.Show();
                     }
                     else
-                    {
-                        string sql2 = "SELECT * FROM usuario WHERE administrativo_cpf= '" + usuario + "' AND senha= '" + senha + "'";
-                        dt = BancoDados.Consulta(sql2);
-
-                        if (dt.Rows.Count == 1)
-                        {*/
-                            this.Hide();
-                            TelaInicial tela_inicial = new TelaInicial(this);
-                            tela_inicial.Show();
-                        /*}
-                        else
-                        {
+                    {                                                
+                       
                             MessageBox.Show("Usuário ou Senha inválidos!\nVerifique os dados e tente novamente.");
                             tb_Usu_login.Focus();
                             return;
-                        }
+                        
                     }
 
                 }
