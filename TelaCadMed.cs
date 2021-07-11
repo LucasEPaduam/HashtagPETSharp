@@ -42,12 +42,7 @@ namespace ProjInter
             telainicial.Show();
         }
 
-        private void btn_Salvar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TelaInicial telainicial = new TelaInicial(this);
-            telainicial.Show();
-        }
+       
 
       
 
@@ -64,9 +59,21 @@ namespace ProjInter
 
             string codmed = tb_Pesquisar.Text;
 
+            
+
+            string consultaSQL = "SELECT * FROM Remedio WHERE codigo='" + codmed + "'";
+            DataTable dt = BancoDados.Consulta(consultaSQL);
+            string consultaSQL2 = "SELECT * FROM Vacina WHERE codigo='" + codmed + "'";
+            DataTable dt2 = BancoDados.Consulta(consultaSQL2);
+
             if (codmed == "")
             {
                 MessageBox.Show("Informe o código do medicamento");
+                tb_Pesquisar.Focus();
+            }
+            else if (dt.Rows.Count == 0 && dt2.Rows.Count == 0)
+            {
+                MessageBox.Show("Nenhum Medicamento encontrado!\nUtilize o botão Visualizar Remedio ou Visualizar Vacina.");
                 tb_Pesquisar.Focus();
             }
             else
@@ -102,15 +109,12 @@ namespace ProjInter
                             {
                                if (codmed.StartsWith("v") || (codmed.StartsWith("V")))
                                {
-                                    rb_Remedio.Checked = true;
+                                    rb_Vacina.Checked = true;
                                     tb_Cod_Med.Text = tb_Pesquisar.Text;
                                     MessageBox.Show("Vacina localizada!!!");
                                }
                             }
-                            else
-                            {
-                                MessageBox.Show("Vacina não encontrado!!!");
-                            }
+                           
                         }
                     
                         using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM remedio WHERE codigo='" + codmed + "'", conn))
@@ -127,16 +131,16 @@ namespace ProjInter
                             {
                                 if (codmed.StartsWith("R") || (codmed.StartsWith("r")))
                                 {
-                                    rb_Vacina.Checked = true;
+                                    rb_Remedio.Checked = true;
                                     tb_Cod_Med.Text = tb_Pesquisar.Text;
                                     MessageBox.Show("Remédio localizado!!!");
                                 }
                             }
-                            else
-                            {
-                                MessageBox.Show("Remédio não encontrado!!!");
-                            }
+                            
                         }
+
+                        
+
                     }
                 }
                 catch (MySqlException erro)
@@ -206,6 +210,7 @@ namespace ProjInter
             tb_Nome_Med.Clear();
             tb_Preco_Med.Clear();
 
+            tb_Pesquisar.Clear();
 
             rb_Remedio.Enabled = false;
             rb_Vacina.Enabled = false;
@@ -216,8 +221,7 @@ namespace ProjInter
         }
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-            Remedio remedio = new Remedio();
-            Vacina vacina = new Vacina();
+            
 
             if (tb_Cod_Med.Text == "")
             {
@@ -307,11 +311,12 @@ namespace ProjInter
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand remedioupdate = new MySqlCommand("UPDATE remedio SET nomeremedio = ?, precoremedio = ? Where codigo = ?", conexaoupdate);
+                            MySqlCommand remedioupdate = new MySqlCommand("UPDATE Remedio SET nome = ?, preco = ? Where codigo = ?", conexaoupdate);
 
                             remedioupdate.Parameters.Clear();
-                            remedioupdate.Parameters.Add("@nomeremedio", MySqlDbType.VarChar, 10).Value = remedio.nome;
-                            remedioupdate.Parameters.Add("@precoremedio", MySqlDbType.Double, 1).Value = remedio.preco;
+                            remedioupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = remedio.nome;
+                            remedioupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = remedio.preco;
+                            remedioupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = remedio.codigo;
                             remedioupdate.CommandType = CommandType.Text;
                             remedioupdate.ExecuteNonQuery();
 
@@ -344,17 +349,21 @@ namespace ProjInter
                     DataTable data_table = new DataTable();
                     string codmed = tb_Cod_Med.Text;
                     string consultaSQLvacina = "SELECT * FROM vacina WHERE codigo='" + codmed + "'";
+
+                    data_table = BancoDados.Consulta(consultaSQLvacina);
+
                     if (data_table.Rows.Count != 0)
                     {
                         try
                         {
                             MySqlConnection conexaoupdate = new MySqlConnection("server=127.0.0.1;uid=root;database=hashpetsharp;ConnectionTimeout=2");
                             conexaoupdate.Open();
-                            MySqlCommand vacinaupdate = new MySqlCommand("UPDATE vacina SET nomevacina = ?, precovacina = ? Where codigo = ?", conexaoupdate);
+                            MySqlCommand vacinaupdate = new MySqlCommand("UPDATE Vacina SET nome = ?, preco = ? Where codigo = ?", conexaoupdate);
 
                             vacinaupdate.Parameters.Clear();
-                            vacinaupdate.Parameters.Add("@nomevacina", MySqlDbType.VarChar, 10).Value = vacina.nome;
-                            vacinaupdate.Parameters.Add("@precovacina", MySqlDbType.Double, 1).Value = vacina.preco;
+                            vacinaupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = vacina.nome;
+                            vacinaupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = vacina.preco;
+                            vacinaupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = vacina.codigo;
                             vacinaupdate.CommandType = CommandType.Text;
                             vacinaupdate.ExecuteNonQuery();
 
