@@ -308,7 +308,6 @@ namespace ProjInter
             // rb_vet
             // 
             this.rb_vet.AutoSize = true;
-            this.rb_vet.Enabled = false;
             this.rb_vet.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_vet.Location = new System.Drawing.Point(148, 21);
             this.rb_vet.Name = "rb_vet";
@@ -316,12 +315,10 @@ namespace ProjInter
             this.rb_vet.TabIndex = 6;
             this.rb_vet.Text = "Veterinário";
             this.rb_vet.UseVisualStyleBackColor = true;
-            this.rb_vet.CheckedChanged += new System.EventHandler(this.rb_vet_CheckedChanged);
             // 
             // rb_adm
             // 
             this.rb_adm.AutoSize = true;
-            this.rb_adm.Enabled = false;
             this.rb_adm.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_adm.Location = new System.Drawing.Point(29, 21);
             this.rb_adm.Name = "rb_adm";
@@ -329,7 +326,6 @@ namespace ProjInter
             this.rb_adm.TabIndex = 5;
             this.rb_adm.Text = "Adminstrativo";
             this.rb_adm.UseVisualStyleBackColor = true;
-            this.rb_adm.CheckedChanged += new System.EventHandler(this.rb_adm_CheckedChanged);
             // 
             // btn_Excluir
             // 

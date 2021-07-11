@@ -368,6 +368,7 @@ namespace ProjInter
             this.Name = "TelaIniciarConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Consulta";
+            this.Load += new System.EventHandler(this.TelaIniciarConsulta_Load);
             this.gb_Vac.ResumeLayout(false);
             this.gb_Vac.PerformLayout();
             this.gb_Rem.ResumeLayout(false);

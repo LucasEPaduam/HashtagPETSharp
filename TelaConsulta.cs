@@ -28,6 +28,7 @@ namespace ProjInter
             this.Hide();
             TelaIniciarConsulta telainiciarconsulta = new TelaIniciarConsulta(this);
             telainiciarconsulta.Show();
+
         }
 
         private void pb_Inicio_Click(object sender, EventArgs e)
@@ -37,19 +38,24 @@ namespace ProjInter
             telainicial.Show();
         }
 
-        private void btn_OK_Click(object sender, EventArgs e)
+        private void TelaConsulta_Load(object sender, EventArgs e)
         {
             data_table.Clear();
             dgv_Histórico.Visible = false;
             vScrollBar1.Visible = false;
-
-
+        }
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            
             string codpet = tb_Cod_PET.Text;
             
 
             if (codpet == "")
             {
                 MessageBox.Show("Código do PET não preenchido!");
+                data_table.Clear();
+                dgv_Histórico.Visible = false;
+                vScrollBar1.Visible = false;
                 tb_Cod_PET.Focus();
             }
             else
@@ -66,13 +72,14 @@ namespace ProjInter
                     vScrollBar1.Visible = true;
                     dgv_Histórico.DataSource = data_table;
                     dgv_Histórico.Columns[0].Width = 70;
-                    dgv_Histórico.Columns[1].Width = 160;
-                    dgv_Histórico.Columns[2].Width = 130;
-                    dgv_Histórico.Columns[3].Width = 60;
-                    dgv_Histórico.Columns[4].Width = 60;
-                    dgv_Histórico.Columns[5].Width = 50;
+                    dgv_Histórico.Columns[1].Width = 150;
+                    dgv_Histórico.Columns[2].Width = 140;
+                    dgv_Histórico.Columns[3].Width = 50;
+                    dgv_Histórico.Columns[4].Width = 50;
+                    dgv_Histórico.Columns[5].Width = 70;
                     dgv_Histórico.Sort(dgv_Histórico.Columns[i], ListSortDirection.Ascending);
 
+                    
                 }
                 else
                 {
@@ -86,8 +93,10 @@ namespace ProjInter
 
 
 
-
-
         }
+
+        
+
+
     }
 }

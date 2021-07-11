@@ -349,8 +349,9 @@ namespace ProjInter
             {
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE administrativo SET " +
-                            "cpf=@cpf, nome=@nome, rua=@rua, numero=@numero, cep=@cep, cidade=@cidade, UF=@UF";
+                    
+                    cmd.CommandText = "INSERT INTO Administrativo (cpf, nome, rua, numero, cep, cidade, UF)" +
+                            "VALUES (@cpf, @nome, @rua, @numero, @cep, @cidade, @UF)";
 
                     cmd.Parameters.AddWithValue("@cpf", administrativo.CPF);
                     cmd.Parameters.AddWithValue("@nome",  administrativo.nome);
@@ -358,7 +359,7 @@ namespace ProjInter
                     cmd.Parameters.AddWithValue("@numero", administrativo.numero);
                     cmd.Parameters.AddWithValue("@cep", administrativo.CEP);
                     cmd.Parameters.AddWithValue("@cidade", administrativo.cidade);
-                    cmd.Parameters.AddWithValue("@uf", administrativo.uf);
+                    cmd.Parameters.AddWithValue("@UF", administrativo.uf);
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Novo administrativo cadastrado com sucesso!");
@@ -377,8 +378,8 @@ namespace ProjInter
             {
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE veterinario SET " +
-                            "crmv=@crmv, nome=@nome, rua=@rua, numero=@numero, cep=@cep, cidade=@cidade, UF=@UF";
+                    cmd.CommandText = "INSERT INTO Veterinario (crmv, nome, rua, numero, cep, cidade, UF)" +
+                            "VALUES (@crmv, @nome, @rua, @numero, @cep, @cidade, @UF)";
 
 
                     cmd.Parameters.AddWithValue("@crmv", veterinario.crmv);
@@ -387,7 +388,7 @@ namespace ProjInter
                     cmd.Parameters.AddWithValue("@numero", veterinario.numero);
                     cmd.Parameters.AddWithValue("@cep", veterinario.cep);
                     cmd.Parameters.AddWithValue("@cidade", veterinario.cidade);
-                    cmd.Parameters.AddWithValue("@uf", veterinario.uf);
+                    cmd.Parameters.AddWithValue("@UF", veterinario.uf);
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Novo veterinario cadastrado com sucesso!");

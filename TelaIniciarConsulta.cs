@@ -32,5 +32,14 @@ namespace ProjInter
             TelaInicial telainicial = new TelaInicial(this);
             telainicial.Show();
         }
+
+        private void TelaIniciarConsulta_Load(object sender, EventArgs e)
+        {
+            
+            double peso = double.Parse(tb_Peso.Text);
+            string idade = tb_Idade.Text;
+            double temperatura = double.Parse(tb_Temp.Text);
+            string observacoes = richTextBox1.Text;
+        }
     }
 }
