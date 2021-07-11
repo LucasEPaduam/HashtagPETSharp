@@ -55,11 +55,11 @@ namespace ProjInter
                     dt = BancoDados.Consulta(sql);
 
                     if (dt.Rows.Count == 1)
-                    {
+                    {*/
                         this.Hide();
                         TelaInicial tela_inicial = new TelaInicial(this);
                         tela_inicial.Show();
-                    }
+                   /* }
                     else
                     {                                                
                        

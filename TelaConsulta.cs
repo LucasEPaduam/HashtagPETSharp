@@ -23,11 +23,16 @@ namespace ProjInter
 
         private TelaInicial tela_inicial;
 
+        
+
+        
         private void btn_Iniciar_Consulta_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TelaIniciarConsulta telainiciarconsulta = new TelaIniciarConsulta(this);
-            telainiciarconsulta.Show();
+            
+            TelaIniciarConsulta telaIniciar = new TelaIniciarConsulta(tb_Cod_PET.Text);
+            telaIniciar.Show();
+
 
         }
 
@@ -43,6 +48,8 @@ namespace ProjInter
             data_table.Clear();
             dgv_Histórico.Visible = false;
             vScrollBar1.Visible = false;
+
+            
         }
         private void btn_OK_Click(object sender, EventArgs e)
         {
@@ -90,12 +97,13 @@ namespace ProjInter
 
             }
 
-
-
+        
 
         }
 
-        
+            
+
+
 
 
     }
