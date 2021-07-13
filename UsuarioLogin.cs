@@ -9,6 +9,7 @@ namespace ProjInter
     public class UsuarioLogin
     {
        public string usercod;
+        public string nome_usuario;
         public string senha;
     }
 }

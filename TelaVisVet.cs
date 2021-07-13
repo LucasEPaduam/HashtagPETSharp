@@ -19,6 +19,15 @@ namespace ProjInter
         }
         private TelaCadUsu tela_cadusu;
 
+        public TelaVisVet(TelaAgendamento telaAgendamento)
+        {
+            InitializeComponent();
+            this.tela_agendamento = telaAgendamento;
+        }
+        private TelaAgendamento tela_agendamento;
+
+
+
         private void pb_Inicio_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -371,6 +371,7 @@ namespace ProjInter
                         BancoDados.insertadministrativo(administrativo);
                         UsuarioLogin user = new UsuarioLogin();
                         user.usercod = tb_CPF_Adm.Text;
+                        user.nome_usuario = tb_Nome_Adm.Text;
                         user.senha = tb_Senha.Text;
                         BancoDados.insertuser(user);
                     }
@@ -439,6 +440,7 @@ namespace ProjInter
                         BancoDados.insertveterinario(veterinario);
                         UsuarioLogin user = new UsuarioLogin();
                         user.usercod = tb_CRMV_Vet.Text;
+                        user.nome_usuario = tb_Nome_Vet.Text;
                         user.senha = tb_Senha.Text;
                         BancoDados.insertuser(user);
                     }

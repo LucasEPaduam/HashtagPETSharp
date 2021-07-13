@@ -26,13 +26,7 @@ namespace ProjInter
 
         private TelaInicial tela_inicial; 
         
-        public TelaLogin(TelaCadNewLogin telaCadNewLogin)
-        {
-            InitializeComponent();
-            this.telacadlogin = telaCadNewLogin;
-        }
-
-        private TelaCadNewLogin telacadlogin;
+        
 
         DataTable dt = new DataTable();
 

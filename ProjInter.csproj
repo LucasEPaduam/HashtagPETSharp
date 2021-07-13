@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrativo.cs" />
+    <Compile Include="Agendamento.cs" />
     <Compile Include="BancoDados.cs" />
     <Compile Include="Donopet.cs" />
     <Compile Include="Exame.cs" />
@@ -154,12 +155,6 @@
     </Compile>
     <Compile Include="TelaCadMed.Designer.cs">
       <DependentUpon>TelaCadMed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelaCadNewLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaCadNewLogin.Designer.cs">
-      <DependentUpon>TelaCadNewLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaCadPac.cs">
       <SubType>Form</SubType>
@@ -259,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadMed.resx">
       <DependentUpon>TelaCadMed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadNewLogin.resx">
-      <DependentUpon>TelaCadNewLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadPac.resx">
       <DependentUpon>TelaCadPac.cs</DependentUpon>

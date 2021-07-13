@@ -24,7 +24,7 @@ namespace ProjInter
             return conexao;
         }
 
-       
+
         public static DataTable Consulta(string consultaSQL)
         {
 
@@ -187,12 +187,12 @@ namespace ProjInter
             {
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
-                    
+
                     cmd.CommandText = "INSERT INTO Administrativo (cpf, nome, rua, numero, cep, cidade, UF)" +
                             "VALUES (@cpf, @nome, @rua, @numero, @cep, @cidade, @UF)";
 
                     cmd.Parameters.AddWithValue("@cpf", administrativo.CPF);
-                    cmd.Parameters.AddWithValue("@nome",  administrativo.nome);
+                    cmd.Parameters.AddWithValue("@nome", administrativo.nome);
                     cmd.Parameters.AddWithValue("@rua", administrativo.rua);
                     cmd.Parameters.AddWithValue("@numero", administrativo.numero);
                     cmd.Parameters.AddWithValue("@cep", administrativo.CEP);
@@ -266,8 +266,9 @@ namespace ProjInter
             {
                 using (var cmd = conexaoBanco().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Usuario (usuario, senha) VALUES( @usuario, @senha)";
+                    cmd.CommandText = "INSERT INTO Usuario (usuario, nome_usuario, senha) VALUES( @usuario, @nome_usuario, @senha)";
                     cmd.Parameters.AddWithValue("@usuario", user.usercod);
+                    cmd.Parameters.AddWithValue("@nome_usuario", user.nome_usuario);
                     cmd.Parameters.AddWithValue("@senha", user.senha);
                     cmd.ExecuteNonQuery();
 
@@ -278,9 +279,34 @@ namespace ProjInter
             {
                 MessageBox.Show("Cadastro de usuário falhou!" + ex.Message);
             }
+
         }
 
+        public static void insertagendamento(Agendamento agendamento)
+        {
+            try
+            {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO agendamento (data_consulta, hora_consulta, agendamento_codigopet, agendamento_nomepet, agendamento_vetcrmv, agendamento_nomevet) VALUES(@data_consulta, @hora_consulta, @agendamento_codigopet, @agendamento_nomepet, @agendamento_vetcrmv, @agendamento_nomevet)";
+                    cmd.Parameters.AddWithValue("@data_consulta", agendamento.dataagendamento);
+                    cmd.Parameters.AddWithValue("@hora_consulta", agendamento.horaagendamento);
+                    cmd.Parameters.AddWithValue("@agendamento_codigopet", agendamento.codpet);
+                    cmd.Parameters.AddWithValue("@agendamento_nomepet", agendamento.nomepet);
+                    cmd.Parameters.AddWithValue("@agendamento_vetcrmv", agendamento.codvet);
+                    cmd.Parameters.AddWithValue("@agendamento_nomevet", agendamento.nomevet);
+                    cmd.ExecuteNonQuery();
 
+                    MessageBox.Show("Consulta marcada com sucesso!");
 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cadastro da consulta falhou!" + ex.Message);
+            }
+
+        }
     }
 }
