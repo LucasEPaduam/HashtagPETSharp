@@ -132,6 +132,7 @@
     <Compile Include="Administrativo.cs" />
     <Compile Include="Agendamento.cs" />
     <Compile Include="BancoDados.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Donopet.cs" />
     <Compile Include="Exame.cs" />
     <Compile Include="Paciente.cs" />

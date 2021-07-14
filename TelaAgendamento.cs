@@ -78,9 +78,9 @@ namespace ProjInter
 
             tb_Datahora.Clear();
             tb_codpet.Clear();
-            textBox1.Clear();
+            
             tb_codvet.Clear();
-            textBox2.Clear();
+           
             cb_Selecthorario.Text = "";
         }
 
@@ -96,6 +96,8 @@ namespace ProjInter
             telavisvet.ShowDialog();
         }
 
+        public string nomepet;
+        public string nomevet;
         private void btn_Agendado_Click(object sender, EventArgs e)
         {
 
@@ -131,16 +133,13 @@ namespace ProjInter
                             {
                                 while (reader.Read())
                                 {
-                                    textBox1.Text = reader.GetString(0);
+                                    nomepet = reader.GetString(0);
                                 }
-                                if (reader.HasRows)
-                                {
-                                    string nomepet = textBox1.Text;
-                                }
-                                else
+                                if (reader.HasRows == false)
                                 {
                                     MessageBox.Show("Código PET não localizado!");
                                 }
+                               
                             }
 
                         }
@@ -156,16 +155,13 @@ namespace ProjInter
                             {
                                 while (reader.Read())
                                 {
-                                    textBox2.Text = reader.GetString(0);
+                                    nomevet = reader.GetString(0);
                                 }
-                                if (reader.HasRows)
-                                {
-                                    string nomevet = textBox2.Text;
-                                }
-                                else
+                                if (reader.HasRows == false)
                                 {
                                     MessageBox.Show("Código VET não localizado!");
                                 }
+                                
                             }
 
                         }
@@ -176,11 +172,29 @@ namespace ProjInter
                         agendamento.dataagendamento = tb_Datahora.Text;
                         agendamento.horaagendamento = cb_Selecthorario.Text;
                         agendamento.codpet = tb_codpet.Text;
-                        agendamento.nomepet = textBox1.Text;
+                        agendamento.nomepet = nomepet;
                         agendamento.codvet = tb_codvet.Text;
-                        agendamento.nomevet = textBox2.Text;
+                        agendamento.nomevet = nomevet;
 
                         BancoDados.insertagendamento(agendamento);
+
+                        Consulta consulta = new Consulta();
+                        consulta.consulta_data = tb_Datahora.Text;
+                        consulta.consulta_hora = cb_Selecthorario.Text;
+                        consulta.consulta_vetcrmv = tb_codvet.Text;
+                        consulta.consulta_nomevet = nomevet;
+                        consulta.consulta_codigopet = tb_codpet.Text;
+                        consulta.consulta_nomepet = nomepet;
+                        consulta.consulta_peso = "0";
+                        consulta.consulta_idade = "";
+                        consulta.consulta_obs = "";
+                        consulta.consulta_vacina = "";
+                        consulta.consulta_remedio = "";
+                        consulta.consulta_exame = "";
+
+                        BancoDados.insertconsulta(consulta);
+
+
 
                         string selectagendamento = @"SELECT agendamento.data_consulta as 'DATA',
                                                 agendamento.hora_consulta as 'HORA',
@@ -193,10 +207,8 @@ namespace ProjInter
                         dgv_consultasagendadas.DataSource = BancoDados.Consulta(selectagendamento);
 
                         tb_Datahora.Clear();                        
-                        tb_codpet.Clear();
-                        textBox1.Clear();
-                        tb_codvet.Clear();
-                        textBox2.Clear();
+                        tb_codpet.Clear();                       
+                        tb_codvet.Clear();                        
                         cb_Selecthorario.Text = "";
 
                     }
@@ -219,6 +231,7 @@ namespace ProjInter
         {
             string data = tb_Datahora.Text;
             string hora = cb_Selecthorario.Text;
+            string codvet = tb_codvet.Text;
 
             const string mensagem = "Você tem certeza que deseja excluir o agendamento?";
             const string caption = "Exclusão de Agendamento";
@@ -238,21 +251,27 @@ namespace ProjInter
                     conexaoexcluir.Open();
                     MySqlCommand agendamentoexcluir = new MySqlCommand("DELETE FROM agendamento WHERE data_consulta = @data_consulta AND hora_consulta = @hora_consulta AND agendamento_vetcrmv = @agendamento_vetcrmv", conexaoexcluir);
 
-                    agendamentoexcluir.Parameters.Add("@data_consulta", MySqlDbType.VarChar, 10).Value = tb_Datahora.Text;
-                    agendamentoexcluir.Parameters.Add("@hora_consulta", MySqlDbType.VarChar, 5).Value = cb_Selecthorario.Text;
-                    agendamentoexcluir.Parameters.Add("@agendamento_vetcrmv", MySqlDbType.VarChar, 5).Value = tb_codvet.Text;
-
+                    agendamentoexcluir.Parameters.Add("@data_consulta", MySqlDbType.VarChar, 10).Value = data;
+                    agendamentoexcluir.Parameters.Add("@hora_consulta", MySqlDbType.VarChar, 5).Value = hora;
+                    agendamentoexcluir.Parameters.Add("@agendamento_vetcrmv", MySqlDbType.VarChar, 5).Value = codvet;
                     agendamentoexcluir.CommandType = CommandType.Text;
                     agendamentoexcluir.ExecuteNonQuery();
+
+                    MySqlCommand consultaexcluir = new MySqlCommand("DELETE FROM consulta WHERE consulta_data = @consulta_data AND consulta_hora = @consulta_hora AND consulta_vetcrmv = @consulta_vetcrmv", conexaoexcluir);
+
+                    consultaexcluir.Parameters.Add("@consulta_data", MySqlDbType.VarChar, 10).Value = data;
+                    consultaexcluir.Parameters.Add("@consulta_hora", MySqlDbType.VarChar, 5).Value = hora;
+                    consultaexcluir.Parameters.Add("@consulta_vetcrmv", MySqlDbType.VarChar, 5).Value = codvet;
+                    consultaexcluir.CommandType = CommandType.Text;
+                    consultaexcluir.ExecuteNonQuery();
+                    conexaoexcluir.Close();
 
                     MessageBox.Show("Cadastro excluído com sucesso!");
 
                     dgv_consultasagendadas.Rows.Remove(dgv_consultasagendadas.CurrentRow);
                     tb_Datahora.Clear();
-                    tb_codpet.Clear();
-                    textBox1.Clear();
-                    tb_codvet.Clear();
-                    textBox2.Clear();
+                    tb_codpet.Clear();                    
+                    tb_codvet.Clear();                    
                     cb_Selecthorario.Text = "";
                 }
                 catch (Exception erro)
@@ -287,9 +306,9 @@ namespace ProjInter
         {
             tb_Datahora.Clear();
             tb_codpet.Clear();
-            textBox1.Clear();
+          
             tb_codvet.Clear();
-            textBox2.Clear();
+            
             cb_Selecthorario.Text = "";
         }
     }

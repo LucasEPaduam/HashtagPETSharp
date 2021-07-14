@@ -91,6 +91,13 @@ namespace ProjInter
                 }
 
             }
+            catch (FormatException virgulaerro)
+            {
+
+                MessageBox.Show("No campo PESO digite '.(ponto)' ao invés de ' , (virgula)!!");
+
+               
+            }
             catch (Exception ex)
             {
 
@@ -297,7 +304,7 @@ namespace ProjInter
                     cmd.Parameters.AddWithValue("@agendamento_nomevet", agendamento.nomevet);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Consulta marcada com sucesso!");
+
 
                 }
 
@@ -307,6 +314,40 @@ namespace ProjInter
                 MessageBox.Show("Cadastro da consulta falhou!" + ex.Message);
             }
 
+        }
+
+        public static void insertconsulta(Consulta consulta)
+        {
+            try
+            {
+                using (var cmd = conexaoBanco().CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO consulta (consulta_data, consulta_hora, consulta_vetcrmv, consulta_nomevet, consulta_codigopet, consulta_nomepet, consulta_peso, consulta_idade, consulta_obs, consulta_vacina, consulta_remedio, consulta_exame) VALUES(@consulta_data, @consulta_hora, @consulta_vetcrmv, @consulta_nomevet, @consulta_codigopet, @consulta_nomepet, @consulta_peso, @consulta_idade, @consulta_obs, @consulta_vacina, @consulta_remedio, @consulta_exame)";
+                    cmd.Parameters.AddWithValue("@consulta_data", consulta.consulta_data);
+                    cmd.Parameters.AddWithValue("@consulta_hora", consulta.consulta_hora);
+                    cmd.Parameters.AddWithValue("@consulta_vetcrmv", consulta.consulta_vetcrmv);
+                    cmd.Parameters.AddWithValue("@consulta_nomevet", consulta.consulta_nomevet);
+                    cmd.Parameters.AddWithValue("@consulta_codigopet", consulta.consulta_codigopet);
+                    cmd.Parameters.AddWithValue("@consulta_nomepet", consulta.consulta_nomepet);
+                    cmd.Parameters.AddWithValue("@consulta_peso", consulta.consulta_peso);
+                    cmd.Parameters.AddWithValue("@consulta_idade", consulta.consulta_idade);
+                    cmd.Parameters.AddWithValue("@consulta_obs", consulta.consulta_obs);
+                    cmd.Parameters.AddWithValue("@consulta_vacina", consulta.consulta_vacina);
+                    cmd.Parameters.AddWithValue("@consulta_remedio", consulta.consulta_remedio);
+                    cmd.Parameters.AddWithValue("@consulta_exame", consulta.consulta_exame);
+
+
+                    cmd.ExecuteNonQuery();
+
+
+                    MessageBox.Show("Consulta marcada com sucesso!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cadastro da consulta falhou!" + ex.Message);
+            }
         }
     }
 }

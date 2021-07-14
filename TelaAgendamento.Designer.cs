@@ -30,9 +30,9 @@ namespace ProjInter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAgendamento));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pb_Inicio = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btn_Agendado = new System.Windows.Forms.Button();
@@ -53,8 +53,6 @@ namespace ProjInter
             this.Visualizarvet = new System.Windows.Forms.Button();
             this.tb_codvet = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.bt_limparagendamento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
@@ -95,7 +93,7 @@ namespace ProjInter
             this.btn_Agendado.Location = new System.Drawing.Point(505, 358);
             this.btn_Agendado.Name = "btn_Agendado";
             this.btn_Agendado.Size = new System.Drawing.Size(80, 35);
-            this.btn_Agendado.TabIndex = 31;
+            this.btn_Agendado.TabIndex = 9;
             this.btn_Agendado.Text = "Agendar";
             this.btn_Agendado.UseVisualStyleBackColor = false;
             this.btn_Agendado.Click += new System.EventHandler(this.btn_Agendado_Click);
@@ -133,7 +131,7 @@ namespace ProjInter
             this.btn_Excluir.Location = new System.Drawing.Point(424, 358);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(80, 35);
-            this.btn_Excluir.TabIndex = 72;
+            this.btn_Excluir.TabIndex = 8;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
@@ -142,29 +140,29 @@ namespace ProjInter
             // 
             this.dgv_consultasagendadas.AllowUserToAddRows = false;
             this.dgv_consultasagendadas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 6.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_consultasagendadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 6.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_consultasagendadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_consultasagendadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_consultasagendadas.Location = new System.Drawing.Point(251, 70);
             this.dgv_consultasagendadas.Name = "dgv_consultasagendadas";
             this.dgv_consultasagendadas.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_consultasagendadas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_consultasagendadas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_consultasagendadas.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_consultasagendadas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_consultasagendadas.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_consultasagendadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_consultasagendadas.Size = new System.Drawing.Size(363, 255);
             this.dgv_consultasagendadas.TabIndex = 73;
@@ -185,7 +183,7 @@ namespace ProjInter
             this.tb_Datahora.Location = new System.Drawing.Point(29, 21);
             this.tb_Datahora.Name = "tb_Datahora";
             this.tb_Datahora.Size = new System.Drawing.Size(164, 20);
-            this.tb_Datahora.TabIndex = 28;
+            this.tb_Datahora.TabIndex = 1;
             // 
             // label1
             // 
@@ -199,10 +197,11 @@ namespace ProjInter
             // 
             // tb_codpet
             // 
+            this.tb_codpet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_codpet.Location = new System.Drawing.Point(9, 21);
             this.tb_codpet.Name = "tb_codpet";
             this.tb_codpet.Size = new System.Drawing.Size(136, 20);
-            this.tb_codpet.TabIndex = 75;
+            this.tb_codpet.TabIndex = 3;
             // 
             // panel2
             // 
@@ -227,7 +226,7 @@ namespace ProjInter
             this.btn_VIS_PAC.Location = new System.Drawing.Point(9, 43);
             this.btn_VIS_PAC.Name = "btn_VIS_PAC";
             this.btn_VIS_PAC.Size = new System.Drawing.Size(136, 24);
-            this.btn_VIS_PAC.TabIndex = 78;
+            this.btn_VIS_PAC.TabIndex = 4;
             this.btn_VIS_PAC.Text = "Visualizar Pacientes";
             this.btn_VIS_PAC.UseVisualStyleBackColor = false;
             this.btn_VIS_PAC.Click += new System.EventHandler(this.btn_VIS_PAC_Click);
@@ -249,7 +248,7 @@ namespace ProjInter
             this.cb_Selecthorario.Location = new System.Drawing.Point(29, 62);
             this.cb_Selecthorario.Name = "cb_Selecthorario";
             this.cb_Selecthorario.Size = new System.Drawing.Size(164, 21);
-            this.cb_Selecthorario.TabIndex = 30;
+            this.cb_Selecthorario.TabIndex = 2;
             // 
             // label2
             // 
@@ -284,17 +283,18 @@ namespace ProjInter
             this.Visualizarvet.Location = new System.Drawing.Point(9, 43);
             this.Visualizarvet.Name = "Visualizarvet";
             this.Visualizarvet.Size = new System.Drawing.Size(136, 24);
-            this.Visualizarvet.TabIndex = 78;
+            this.Visualizarvet.TabIndex = 6;
             this.Visualizarvet.Text = "Visualizar Veterinários";
             this.Visualizarvet.UseVisualStyleBackColor = false;
             this.Visualizarvet.Click += new System.EventHandler(this.Visualizarvet_Click);
             // 
             // tb_codvet
             // 
+            this.tb_codvet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tb_codvet.Location = new System.Drawing.Point(9, 21);
             this.tb_codvet.Name = "tb_codvet";
             this.tb_codvet.Size = new System.Drawing.Size(136, 20);
-            this.tb_codvet.TabIndex = 75;
+            this.tb_codvet.TabIndex = 5;
             // 
             // label3
             // 
@@ -305,22 +305,6 @@ namespace ProjInter
             this.label3.Size = new System.Drawing.Size(152, 15);
             this.label3.TabIndex = 74;
             this.label3.Text = "Informe o COD veterinário";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(389, 399);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 20);
-            this.textBox1.TabIndex = 80;
-            this.textBox1.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(330, 399);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(53, 20);
-            this.textBox2.TabIndex = 81;
-            this.textBox2.Visible = false;
             // 
             // vScrollBar1
             // 
@@ -341,7 +325,7 @@ namespace ProjInter
             this.bt_limparagendamento.Location = new System.Drawing.Point(343, 358);
             this.bt_limparagendamento.Name = "bt_limparagendamento";
             this.bt_limparagendamento.Size = new System.Drawing.Size(80, 35);
-            this.bt_limparagendamento.TabIndex = 83;
+            this.bt_limparagendamento.TabIndex = 7;
             this.bt_limparagendamento.Text = "Limpar";
             this.bt_limparagendamento.UseVisualStyleBackColor = false;
             this.bt_limparagendamento.Click += new System.EventHandler(this.bt_limparagendamento_Click);
@@ -354,8 +338,6 @@ namespace ProjInter
             this.ClientSize = new System.Drawing.Size(626, 423);
             this.Controls.Add(this.bt_limparagendamento);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -380,7 +362,6 @@ namespace ProjInter
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -406,8 +387,6 @@ namespace ProjInter
         private System.Windows.Forms.Button Visualizarvet;
         private System.Windows.Forms.TextBox tb_codvet;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Button bt_limparagendamento;
     }

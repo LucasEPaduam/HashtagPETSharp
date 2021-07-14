@@ -48,6 +48,10 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o EXAME que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
+            else if (tb_Preco_Exame.Text.Contains(","))
+            {
+                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+            }
             else
             {
 

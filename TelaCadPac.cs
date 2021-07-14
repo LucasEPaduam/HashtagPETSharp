@@ -506,6 +506,10 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o Pet que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
+            else if (tb_Peso.Text.Contains(","))
+            {
+                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+            }
             //TODOS OS CAMPOS SENDO VERIFICADOS
             else if (tb_Nome_Pac.Text == "" || tb_Raça.Text == "" || tb_Idade.Text == "" || tb_Peso.Text == "" || tb_Sexo.Text == "" || tb_CPF.Text == "" || tb_NomeDono.Text == "" || tb_Rua.Text == "" || tb_Nº.Text == "" || tb_CEP.Text == "" || tb_Cidade.Text == "" || tb_email.Text == "" || tb_Tel.Text == "" || tb_UF.Text == "")
             {
@@ -581,6 +585,7 @@ namespace ProjInter
 
                         MessageBox.Show("Atualizado com sucesso!");
                     }
+                  
                     catch (Exception erro)
                     {
                         MessageBox.Show("Erro ao atualizar!" + erro);

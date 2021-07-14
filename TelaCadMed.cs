@@ -284,6 +284,10 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o medicamento que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
+            else if (tb_Preco_Med.Text.Contains(","))
+            {
+                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+            }
             //TODOS OS CAMPOS SENDO VERIFICADOS
             else if (tb_Nome_Med.Text == "" || tb_Preco_Med.Text == "")
             {

@@ -222,16 +222,16 @@ namespace ProjInter
             this.groupBox1.Size = new System.Drawing.Size(273, 121);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Visualizar consultas agendadas";
+            this.groupBox1.Text = "Visualizar consultas realizadas";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 29);
+            this.dateTimePicker1.Location = new System.Drawing.Point(9, 29);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(254, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(253, 24);
             this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 14, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2021, 7, 19, 0, 0, 0, 0);
             // 
             // btn_Visualizar
             // 
@@ -279,7 +279,7 @@ namespace ProjInter
             this.panel3.Controls.Add(this.gb_SelecioneData);
             this.panel3.Location = new System.Drawing.Point(276, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 313);
+            this.panel3.Size = new System.Drawing.Size(291, 313);
             this.panel3.TabIndex = 18;
             // 
             // TelaInicial

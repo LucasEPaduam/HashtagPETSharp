@@ -114,18 +114,24 @@ namespace ProjInter
         }
         private TelaVisVet tela_visvet;
 
+        public TelaInicial(TelaVisAgendamento telavisagendamento)
+        {
+            InitializeComponent();
+            this.tela_visagendamento = telavisagendamento;
+        }
+        private TelaVisAgendamento tela_visagendamento;
 
-        //
+
+        public string dataescolha;
         private void btn_Visualizar_Click(object sender, EventArgs e)
         {
-            TelaVisAgendamento janela = new TelaVisAgendamento(this);
+
+            dataescolha = dateTimePicker1.Value.ToShortDateString();
+            TelaVisAgendamento janela = new TelaVisAgendamento(dataescolha);
             janela.ShowDialog();
         }
 
-        public DateTimePicker GetDateTime()
-        {
-            return dateTimePicker1;
-        }
+        
 
 
 
@@ -181,6 +187,8 @@ namespace ProjInter
             TelaLogin telalogin = new TelaLogin(this);
             telalogin.Show();
         }
+
+       
     }
 }
 
