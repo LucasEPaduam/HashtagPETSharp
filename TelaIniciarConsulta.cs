@@ -35,9 +35,9 @@ namespace ProjInter
         private void btn_Finalizar_Consulta_Click(object sender, EventArgs e)
         {
 
-            if (tb_Peso.Text.Contains(","))
+            if (tb_Peso.Text.Contains("."))
             {
-                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+                MessageBox.Show("No campo peso utilize (Vírgula) ao invés de (Ponto).");
             }
             else
             {
@@ -77,7 +77,7 @@ namespace ProjInter
                         consultaupdate.Parameters.Add("@consulta_nomevet", MySqlDbType.VarChar, 50).Value = consulta.consulta_nomevet;
                         consultaupdate.Parameters.Add("@consulta_codigopet", MySqlDbType.VarChar, 10).Value = consulta.consulta_codigopet;
                         consultaupdate.Parameters.Add("@consulta_nomepet", MySqlDbType.VarChar, 500).Value = consulta.consulta_nomepet;
-                        consultaupdate.Parameters.Add("@consulta_peso", MySqlDbType.Double, 1).Value = consulta.consulta_peso;
+                        consultaupdate.Parameters.Add("@consulta_peso", MySqlDbType.VarChar, 10).Value = consulta.consulta_peso;
                         consultaupdate.Parameters.Add("@consulta_idade", MySqlDbType.VarChar, 4).Value = consulta.consulta_idade;
                         consultaupdate.Parameters.Add("@consulta_obs", MySqlDbType.VarChar, 500).Value = consulta.consulta_obs;
                         consultaupdate.Parameters.Add("@consulta_vacina", MySqlDbType.VarChar, 100).Value = consulta.consulta_vacina;

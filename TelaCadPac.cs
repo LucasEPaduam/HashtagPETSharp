@@ -506,9 +506,9 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o Pet que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
-            else if (tb_Peso.Text.Contains(","))
+            else if (tb_Peso.Text.Contains("."))
             {
-                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+                MessageBox.Show("No campo peso utilize (VÍRGULA) ao invés de (PONTO).");
             }
             //TODOS OS CAMPOS SENDO VERIFICADOS
             else if (tb_Nome_Pac.Text == "" || tb_Raça.Text == "" || tb_Idade.Text == "" || tb_Peso.Text == "" || tb_Sexo.Text == "" || tb_CPF.Text == "" || tb_NomeDono.Text == "" || tb_Rua.Text == "" || tb_Nº.Text == "" || tb_CEP.Text == "" || tb_Cidade.Text == "" || tb_email.Text == "" || tb_Tel.Text == "" || tb_UF.Text == "")
@@ -562,7 +562,7 @@ namespace ProjInter
                         pacienteupdate.Parameters.Add("@nomepet", MySqlDbType.VarChar, 10).Value = paciente.nomepet;
                         pacienteupdate.Parameters.Add("@raca", MySqlDbType.VarChar, 10).Value = paciente.raca;
                         pacienteupdate.Parameters.Add("@IDADE", MySqlDbType.VarChar, 10).Value = paciente.idade;
-                        pacienteupdate.Parameters.Add("@PESO", MySqlDbType.Double, 1).Value = paciente.peso;
+                        pacienteupdate.Parameters.Add("@PESO", MySqlDbType.VarChar, 10).Value = paciente.peso;
                         pacienteupdate.Parameters.Add("@sexo", MySqlDbType.VarChar, 20).Value = paciente.sexo;
                         pacienteupdate.Parameters.Add("codigopet", MySqlDbType.VarChar).Value = paciente.codigopet;
                         pacienteupdate.CommandType = CommandType.Text;

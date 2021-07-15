@@ -125,10 +125,10 @@ namespace ProjInter
         public string dataescolha;
         private void btn_Visualizar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
             dataescolha = dateTimePicker1.Value.ToShortDateString();
             TelaVisAgendamento janela = new TelaVisAgendamento(dataescolha);
-            janela.ShowDialog();
+            janela.Show();
         }
 
         
@@ -188,7 +188,11 @@ namespace ProjInter
             telalogin.Show();
         }
 
-       
+        private void TelaInicial_Load(object sender, EventArgs e)
+        {
+           
+            dateTimePicker1.Value = DateTime.Now;
+        }
     }
 }
 

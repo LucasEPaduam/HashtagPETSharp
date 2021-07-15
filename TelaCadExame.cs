@@ -48,9 +48,9 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o EXAME que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
-            else if (tb_Preco_Exame.Text.Contains(","))
+            else if (tb_Preco_Exame.Text.Contains("."))
             {
-                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+                MessageBox.Show("No campo peso utilize (VÍRGULA) ao invés de (PONTO).");
             }
             else
             {
@@ -79,7 +79,7 @@ namespace ProjInter
 
                         exameupdate.Parameters.Clear();
                         exameupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 20).Value = exame.nome;
-                        exameupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = exame.preco;
+                        exameupdate.Parameters.Add("@preco", MySqlDbType.VarChar, 10).Value = exame.preco;
                         exameupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = exame.codigo;
                         exameupdate.CommandType = CommandType.Text;
                         exameupdate.ExecuteNonQuery();

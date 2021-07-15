@@ -296,6 +296,7 @@ namespace ProjInter
             this.Name = "TelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaInicial";
+            this.Load += new System.EventHandler(this.TelaInicial_Load);
             this.panel1.ResumeLayout(false);
             this.gb_NovoAtendimento.ResumeLayout(false);
             this.gb_SelecioneData.ResumeLayout(false);

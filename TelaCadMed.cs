@@ -284,9 +284,9 @@ namespace ProjInter
             {
                 MessageBox.Show("Erro ao salvar!\nPesquise o medicamento que deseja atualizar ou clique em novo.\nTodos os campos do formulário devem ser preenchidos.");
             }
-            else if (tb_Preco_Med.Text.Contains(","))
+            else if (tb_Preco_Med.Text.Contains("."))
             {
-                MessageBox.Show("No campo peso utilize (PONTO) ao invés de (VÍRGULA).");
+                MessageBox.Show("No campo peso utilize (VÍRGULA) ao invés de (PONTO).");
             }
             //TODOS OS CAMPOS SENDO VERIFICADOS
             else if (tb_Nome_Med.Text == "" || tb_Preco_Med.Text == "")
@@ -319,7 +319,7 @@ namespace ProjInter
 
                             remedioupdate.Parameters.Clear();
                             remedioupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = remedio.nome;
-                            remedioupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = remedio.preco;
+                            remedioupdate.Parameters.Add("@preco", MySqlDbType.VarChar, 10).Value = remedio.preco;
                             remedioupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = remedio.codigo;
                             remedioupdate.CommandType = CommandType.Text;
                             remedioupdate.ExecuteNonQuery();
@@ -366,7 +366,7 @@ namespace ProjInter
 
                             vacinaupdate.Parameters.Clear();
                             vacinaupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = vacina.nome;
-                            vacinaupdate.Parameters.Add("@preco", MySqlDbType.Double, 1).Value = vacina.preco;
+                            vacinaupdate.Parameters.Add("@preco", MySqlDbType.VarChar,10).Value = vacina.preco;
                             vacinaupdate.Parameters.Add("codigo", MySqlDbType.VarChar).Value = vacina.codigo;
                             vacinaupdate.CommandType = CommandType.Text;
                             vacinaupdate.ExecuteNonQuery();

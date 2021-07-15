@@ -66,7 +66,7 @@ namespace ProjInter
                                                 agendamento.agendamento_nomepet as 'NOME PET',
                                                 agendamento.agendamento_vetcrmv as 'CRMV',
                                                 agendamento.agendamento_nomevet as 'NOME VET'
-                                                FROM agendamento ORDER BY data_consulta ASC;";
+                                                FROM agendamento ORDER BY data_consulta, hora_consulta ASC;";
 
             dgv_consultasagendadas.DataSource = BancoDados.Consulta(selectagendamento);
             dgv_consultasagendadas.Columns[0].Width = 80;
@@ -202,7 +202,7 @@ namespace ProjInter
                                                 agendamento.agendamento_nomepet as 'NOME PET',
                                                 agendamento.agendamento_vetcrmv as 'CRMV',
                                                 agendamento.agendamento_nomevet as 'NOME VET'
-                                                FROM agendamento ORDER BY data_consulta ASC;";
+                                                FROM agendamento ORDER BY data_consulta, hora_consulta ASC;";
 
                         dgv_consultasagendadas.DataSource = BancoDados.Consulta(selectagendamento);
 

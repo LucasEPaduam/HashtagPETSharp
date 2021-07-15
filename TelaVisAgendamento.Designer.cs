@@ -46,7 +46,7 @@ namespace ProjInter
             this.label1 = new System.Windows.Forms.Label();
             this.bt_voltar = new System.Windows.Forms.Button();
             this.bt_imprimir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_todascon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_consultasagendadas)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,7 @@ namespace ProjInter
             this.dgv_consultasagendadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_consultasagendadas.Size = new System.Drawing.Size(552, 217);
             this.dgv_consultasagendadas.TabIndex = 31;
+            this.dgv_consultasagendadas.SelectionChanged += new System.EventHandler(this.dgv_consultasagendadas_SelectionChanged);
             // 
             // btn_Pesdata
             // 
@@ -250,25 +251,26 @@ namespace ProjInter
             this.bt_imprimir.TabIndex = 43;
             this.bt_imprimir.Text = "Imprimir";
             this.bt_imprimir.UseVisualStyleBackColor = false;
+            this.bt_imprimir.Click += new System.EventHandler(this.bt_imprimir_Click);
             // 
-            // button1
+            // btn_todascon
             // 
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(382, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 30);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Visualizar todas as consultas";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_todascon.AutoSize = true;
+            this.btn_todascon.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_todascon.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_todascon.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_todascon.FlatAppearance.CheckedBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_todascon.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_todascon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_todascon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_todascon.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_todascon.Location = new System.Drawing.Point(382, 280);
+            this.btn_todascon.Name = "btn_todascon";
+            this.btn_todascon.Size = new System.Drawing.Size(187, 30);
+            this.btn_todascon.TabIndex = 44;
+            this.btn_todascon.Text = "Visualizar todas as consultas";
+            this.btn_todascon.UseVisualStyleBackColor = false;
+            this.btn_todascon.Click += new System.EventHandler(this.btn_todascon_Click);
             // 
             // TelaVisAgendamento
             // 
@@ -276,7 +278,7 @@ namespace ProjInter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(231)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(584, 399);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_todascon);
             this.Controls.Add(this.bt_imprimir);
             this.Controls.Add(this.bt_voltar);
             this.Controls.Add(this.label1);
@@ -320,6 +322,6 @@ namespace ProjInter
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bt_voltar;
         private System.Windows.Forms.Button bt_imprimir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_todascon;
     }
 }
