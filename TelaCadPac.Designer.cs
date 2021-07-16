@@ -65,7 +65,6 @@ namespace ProjInter
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_Tel = new System.Windows.Forms.Label();
             this.tb_email = new System.Windows.Forms.TextBox();
-            this.tb_Tel = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_Contato = new System.Windows.Forms.Label();
             this.lbl_RuaAv = new System.Windows.Forms.Label();
@@ -85,6 +84,7 @@ namespace ProjInter
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.bt_NovoPac = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.pnl_Pac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Inicio)).BeginInit();
@@ -507,19 +507,10 @@ namespace ProjInter
             this.tb_email.Size = new System.Drawing.Size(196, 20);
             this.tb_email.TabIndex = 13;
             // 
-            // tb_Tel
-            // 
-            this.tb_Tel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tb_Tel.Enabled = false;
-            this.tb_Tel.Location = new System.Drawing.Point(52, 38);
-            this.tb_Tel.Name = "tb_Tel";
-            this.tb_Tel.Size = new System.Drawing.Size(196, 20);
-            this.tb_Tel.TabIndex = 14;
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tb_Tel);
+            this.panel2.Controls.Add(this.maskedTextBox1);
             this.panel2.Controls.Add(this.tb_email);
             this.panel2.Controls.Add(this.lbl_Tel);
             this.panel2.Controls.Add(this.lbl_Email);
@@ -728,6 +719,15 @@ namespace ProjInter
             this.bt_NovoPac.UseVisualStyleBackColor = false;
             this.bt_NovoPac.Click += new System.EventHandler(this.bt_NovoPac_Click);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Enabled = false;
+            this.maskedTextBox1.Location = new System.Drawing.Point(53, 39);
+            this.maskedTextBox1.Mask = "(99) 00000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(196, 20);
+            this.maskedTextBox1.TabIndex = 20;
+            // 
             // TelaCadPac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,7 +806,6 @@ namespace ProjInter
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_Tel;
         private System.Windows.Forms.TextBox tb_email;
-        private System.Windows.Forms.TextBox tb_Tel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_Contato;
         private System.Windows.Forms.Label lbl_RuaAv;
@@ -830,5 +829,6 @@ namespace ProjInter
         private System.Windows.Forms.RadioButton rb_passaro;
         private System.Windows.Forms.RadioButton rb_Gato;
         private System.Windows.Forms.Button bt_NovoPac;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

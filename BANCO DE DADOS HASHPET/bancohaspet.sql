@@ -1,6 +1,8 @@
 CREATE DATABASE IF NOT EXISTS hashpetsharp;
 USE hashpetsharp; 
-
+describe dono;
+select *from dono;
+alter table dono change telefone telefone varchar (15) not null;
 CREATE TABLE IF NOT EXISTS Administrativo(
 cpf varchar (11) PRIMARY KEY NOT NULL,
 nome varchar (255)  NOT NULL,
@@ -100,7 +102,7 @@ cep varchar (8)  NOT NULL,
 cidade varchar (50)  NOT NULL,
 UF varchar (2)  NOT NULL,
 email varchar (255)  NOT NULL,
-telefone varchar (11)  NOT NULL,
+telefone varchar (15)  NOT NULL,
 CONSTRAINT fk_dono_paciente FOREIGN KEY (paciente_codigopet) REFERENCES hashpetsharp.paciente (codigopet)
 );
 

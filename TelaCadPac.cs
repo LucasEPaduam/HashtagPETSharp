@@ -67,7 +67,7 @@ namespace ProjInter
             tb_CEP.Enabled = false;
             tb_Cidade.Enabled = false;
             tb_email.Enabled = false;
-            tb_Tel.Enabled = false;
+            maskedTextBox1.Enabled = false;
             tb_UF.Enabled = false;
 
             btn_Excluir.Enabled = true;
@@ -129,7 +129,7 @@ namespace ProjInter
                                 tb_Cidade.Text = reader.GetString(6);
                                 tb_UF.Text = reader.GetString(7);
                                 tb_email.Text = reader.GetString(8);
-                                tb_Tel.Text = reader.GetString(9);
+                                maskedTextBox1.Text = reader.GetString(9);
                             }
 
                             if (reader.HasRows)
@@ -220,7 +220,7 @@ namespace ProjInter
             tb_CEP.Clear();
             tb_Cidade.Clear();
             tb_email.Clear();
-            tb_Tel.Clear();
+            maskedTextBox1.Clear();
             tb_UF.Clear();
 
             rb_Cachorro.Enabled = true;
@@ -241,7 +241,7 @@ namespace ProjInter
             tb_CEP.Enabled = true;
             tb_Cidade.Enabled = true;
             tb_email.Enabled = true;
-            tb_Tel.Enabled = true;
+            maskedTextBox1.Enabled = true;
             tb_UF.Enabled = true;
                                     
         }
@@ -263,7 +263,7 @@ namespace ProjInter
             tb_CEP.Clear();
             tb_Cidade.Clear();
             tb_email.Clear();
-            tb_Tel.Clear();
+            maskedTextBox1.Clear();
             tb_UF.Clear();
 
             rb_Cachorro.Enabled = false;
@@ -285,7 +285,7 @@ namespace ProjInter
             tb_CEP.Enabled = false;
             tb_Cidade.Enabled = false;
             tb_email.Enabled = false;
-            tb_Tel.Enabled = false;
+            maskedTextBox1.Enabled = false;
             tb_UF.Enabled = false;
         }
 
@@ -420,7 +420,7 @@ namespace ProjInter
             tb_CEP.Enabled = true;
             tb_Cidade.Enabled = true;
             tb_email.Enabled = true;
-            tb_Tel.Enabled = true;
+            maskedTextBox1.Enabled = true;
             tb_UF.Enabled = true;
           
         }
@@ -487,7 +487,7 @@ namespace ProjInter
                         tb_CEP.Clear();
                         tb_Cidade.Clear();
                         tb_email.Clear();
-                        tb_Tel.Clear();
+                        maskedTextBox1.Clear();
                         tb_UF.Clear();
                     }
                     catch (Exception erro)
@@ -511,7 +511,7 @@ namespace ProjInter
                 MessageBox.Show("No campo peso utilize (VÍRGULA) ao invés de (PONTO).");
             }
             //TODOS OS CAMPOS SENDO VERIFICADOS
-            else if (tb_Nome_Pac.Text == "" || tb_Raça.Text == "" || tb_Idade.Text == "" || tb_Peso.Text == "" || tb_Sexo.Text == "" || tb_CPF.Text == "" || tb_NomeDono.Text == "" || tb_Rua.Text == "" || tb_Nº.Text == "" || tb_CEP.Text == "" || tb_Cidade.Text == "" || tb_email.Text == "" || tb_Tel.Text == "" || tb_UF.Text == "")
+            else if (tb_Nome_Pac.Text == "" || tb_Raça.Text == "" || tb_Idade.Text == "" || tb_Peso.Text == "" || tb_Sexo.Text == "" || tb_CPF.Text == "" || tb_NomeDono.Text == "" || tb_Rua.Text == "" || tb_Nº.Text == "" || tb_CEP.Text == "" || tb_Cidade.Text == "" || tb_email.Text == "" || maskedTextBox1.Text == "" || tb_UF.Text == "")
             {
                 MessageBox.Show("Erro ao salvar!\nTodos os campos do formulário devem ser preenchidos.");
             }
@@ -528,7 +528,7 @@ namespace ProjInter
                 donopet.cidade = tb_Cidade.Text;
                 donopet.UF = tb_UF.Text;
                 donopet.email = tb_email.Text;
-                donopet.telefone = tb_Tel.Text;
+                donopet.telefone = maskedTextBox1.Text;
 
 
                 Paciente paciente = new Paciente();
