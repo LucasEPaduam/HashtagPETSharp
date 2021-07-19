@@ -64,6 +64,7 @@ namespace ProjInter
             // 
             this.tb_Senha_login.Location = new System.Drawing.Point(10, 95);
             this.tb_Senha_login.Name = "tb_Senha_login";
+            this.tb_Senha_login.PasswordChar = '#';
             this.tb_Senha_login.Size = new System.Drawing.Size(166, 20);
             this.tb_Senha_login.TabIndex = 4;
             // 

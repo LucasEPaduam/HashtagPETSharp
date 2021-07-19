@@ -1,8 +1,6 @@
 CREATE DATABASE IF NOT EXISTS hashpetsharp;
 USE hashpetsharp; 
-describe dono;
-select *from dono;
-alter table dono change telefone telefone varchar (15) not null;
+
 CREATE TABLE IF NOT EXISTS Administrativo(
 cpf varchar (11) PRIMARY KEY NOT NULL,
 nome varchar (255)  NOT NULL,
@@ -115,4 +113,27 @@ DESCRIBE Vacina;
 DESCRIBE Consulta;
 DESCRIBE Paciente;
 DESCRIBE Dono;
+
+SELECT consulta.consulta_data as 'DATA', consulta.consulta_hora as 'HORA',
+                                                consulta.consulta_vetcrmv as 'CRMV',
+                                                consulta.consulta_nomevet as 'NOME VET',
+                                                consulta.consulta_codigopet as 'PET',
+                                                consulta.consulta_nomepet as 'NOME PET',                                                
+                                                consulta.consulta_peso as 'PESO',
+                                                consulta.consulta_idade as 'IDADE',
+                                                consulta.consulta_obs as 'OBS:',
+                                                consulta.consulta_vacina as 'VACINA',
+                                                consulta.consulta_remedio as 'REMEDIO',
+                                                consulta.consulta_exame as 'EXAME'
+                                                FROM consulta WHERE consulta_data = "15/07/2021" ORDER BY consulta_data ASC;
+
+SELECT consulta.consulta_data FROM consulta GROUP BY consulta_data;
+SELECT * FROM agendamento WHERE data_consulta="15/07/2021" AND hora_consulta= "10:30" AND agendamento_vetcrmv= "CR12";
+DELETE FROM paciente WHERE codigopet = "C104";
+UPDATE paciente SET nomepet = "WOLFA", raca = "HUSKY", IDADE = "2", PESO = "12,6", sexo = FEMNINO Where codigopet = "C104";
+INSERT INTO paciente (codigopet, dono_cpf, nomepet, raca, idade, peso, sexo) VALUES( "C104", "32726305890", "WOLFA", "HUSKY", "2", "12,60", "FEMININO");
+ALTER TABLE dono CHANGE email email VARCHAR (100) NOT NULL;
+
+
+
 

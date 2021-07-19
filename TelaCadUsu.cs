@@ -277,6 +277,8 @@ namespace ProjInter
 
                         // LIMPEZA DOS CAMPOS APÓS CONFIRMADA A EXCLUSÃO PELO BANCO
 
+                        tb_Senha.Clear();
+
                         //TextBox do Administrativo
                         tb_CPF_Adm.Clear();
                         tb_Nome_Adm.Clear();
@@ -349,8 +351,8 @@ namespace ProjInter
 
                             administrativoupdate.Parameters.Clear();
 
-                            administrativoupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = administrativo.nome;
-                            administrativoupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 10).Value = administrativo.rua;
+                            administrativoupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 255).Value = administrativo.nome;
+                            administrativoupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 50).Value = administrativo.rua;
                             administrativoupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = administrativo.numero;
                             administrativoupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = administrativo.CEP;
                             administrativoupdate.Parameters.Add("@cidade", MySqlDbType.VarChar, 10).Value = administrativo.cidade;
@@ -417,8 +419,8 @@ namespace ProjInter
                             MySqlCommand veterinarioupdate = new MySqlCommand("UPDATE Veterinario SET nome = ?, rua= ?, numero = ?, cep = ?, cidade = ?,  UF = ? WHERE crmv= ?", conexaoupdate);
 
                             veterinarioupdate.Parameters.Clear();
-                            veterinarioupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 10).Value = veterinario.nome;
-                            veterinarioupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 10).Value = veterinario.rua;
+                            veterinarioupdate.Parameters.Add("@nome", MySqlDbType.VarChar, 255).Value = veterinario.nome;
+                            veterinarioupdate.Parameters.Add("@rua", MySqlDbType.VarChar, 50).Value = veterinario.rua;
                             veterinarioupdate.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = veterinario.numero;
                             veterinarioupdate.Parameters.Add("@cep", MySqlDbType.VarChar, 10).Value = veterinario.cep;
                             veterinarioupdate.Parameters.Add("@cidade", MySqlDbType.VarChar, 10).Value = veterinario.cidade;

@@ -310,11 +310,16 @@ namespace ProjInter
 
             Paragraph paragrafo4 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
             paragrafo4.Alignment = Element.ALIGN_LEFT;
-            paragrafo4.Add("Dono PET: " + nomedono + "  -  Vet Resp.: " + nomevetselect + " - CRMV: "+codvetselect);
+            paragrafo4.Add("Dono PET: " + nomedono);
 
-            Paragraph paragrafo5 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
-            paragrafo5.Alignment = Element.ALIGN_CENTER;
-            paragrafo5.Add("\nPRESCRIÇÃO\n\n");
+            Paragraph paragrafo5 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+            paragrafo5.Alignment = Element.ALIGN_LEFT;
+            paragrafo5.Add("Vet Resp.: " + nomevetselect + " - CRMV: " + codvetselect);
+
+
+            Paragraph paragrafo6 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
+            paragrafo6.Alignment = Element.ALIGN_CENTER;
+            paragrafo6.Add("\nPRESCRIÇÃO\n\n");
 
             PdfPTable tabela = new PdfPTable(3);
             tabela.DefaultCell.FixedHeight = 20;
@@ -329,13 +334,13 @@ namespace ProjInter
             tabela.AddCell(exame);
 
 
-            Paragraph paragrafo6 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
-            paragrafo6.Alignment = Element.ALIGN_LEFT;
-            paragrafo6.Add("Obs: " + obs);
-
             Paragraph paragrafo7 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
             paragrafo7.Alignment = Element.ALIGN_LEFT;
-            paragrafo7.Add("\n\n HISTÓRICO DE CONSULTA\n\n");
+            paragrafo7.Add("Obs: " + obs);
+
+            Paragraph paragrafo8 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+            paragrafo8.Alignment = Element.ALIGN_LEFT;
+            paragrafo8.Add("\n\n HISTÓRICO DE CONSULTA\n\n");
 
 
 
@@ -373,9 +378,10 @@ namespace ProjInter
             doc.Add(paragrafo3);
             doc.Add(paragrafo4);
             doc.Add(paragrafo5);
-            doc.Add(tabela);
             doc.Add(paragrafo6);
+            doc.Add(tabela);            
             doc.Add(paragrafo7);
+            doc.Add(paragrafo8);
             doc.Add(tabela2);
 
             doc.Close();

@@ -32,7 +32,7 @@ namespace ProjInter
 
         private void btn_Acessar_Click(object sender, EventArgs e)
         {
-            /*string usuario = tb_Usu_login.Text;
+            string usuario = tb_Usu_login.Text;
             string senha = tb_Senha_login.Text;
 
             if (usuario == "" || senha == "")
@@ -49,11 +49,11 @@ namespace ProjInter
                     dt = BancoDados.Consulta(sql);
 
                     if (dt.Rows.Count == 1)
-                    {*/
+                    {
                         this.Hide();
                         TelaInicial tela_inicial = new TelaInicial(this);
                         tela_inicial.Show();
-                   /* }
+                   }
                     else
                     {                                                
                        
@@ -68,7 +68,7 @@ namespace ProjInter
                 {
                     MessageBox.Show("Erro de login!" + erro);
                 }
-            }*/
+            }
                       
         }
 
