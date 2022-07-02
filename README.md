@@ -13,7 +13,7 @@ Emite relatórios das consultas realizadas e receita médica da consulta.
 
 
 ## Objetivo
-> O objetivo principal do PetFX é ser um sistema prático para o gerenciamento de clientes e histórico de consultas 
+> O objetivo principal do HashPetSharp é ser um sistema prático para o gerenciamento de clientes e histórico de consultas 
 realizadas por veterinários autonômos ou clinícas de pequeno porte.
 
 ## Tecnologias Utilizadas
