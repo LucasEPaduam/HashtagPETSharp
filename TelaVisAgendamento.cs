@@ -407,7 +407,7 @@ namespace ProjInter
 
                         var client = new SmtpClient("smtp.gmail.com", 587)
                         {
-                            Credentials = new NetworkCredential("hpetsharp@gmail.com", "irlawolfa"),
+                            Credentials = new NetworkCredential("", ""),
                             EnableSsl = true
                         };
                         var mailMessage = new MailMessage
